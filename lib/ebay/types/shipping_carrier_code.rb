@@ -5,6 +5,7 @@ module Ebay # :nodoc:
       extend Enumeration
       UPS = 'UPS'
       USPS = 'USPS'
+      FedEx = 'FedEx'
       DeutschePost = 'DeutschePost'
       DHL = 'DHL'
       Hermes = 'Hermes'
@@ -16,6 +17,7 @@ module Ebay # :nodoc:
       Correos = 'Correos'
       Seur = 'Seur'
       Nacex = 'Nacex'
+      GlobalShippingMultiCarrier = 'GlobalShipping_MultiCarrier'
     end
   end
 end

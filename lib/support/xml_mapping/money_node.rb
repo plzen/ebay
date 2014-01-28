@@ -2,9 +2,10 @@ require 'money'
 require 'xml/mapping/base'
 
 class MoneyNode < XML::Mapping::SingleAttributeNode
-  def initialize_impl(path)
-    @amount_path = XML::XXPath.new(path + "/")
-    @currency_path = XML::XXPath.new(path + "/@currencyID")
+  def initialize(*args)
+    @path,*args = super(*args)
+    @amount_path = XML::XXPath.new(@path + "/")
+    @currency_path = XML::XXPath.new(@path + "/@currencyID")
   end
 
   def extract_attr_value(xml)

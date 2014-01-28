@@ -119,7 +119,7 @@ module Ebay #:nodoc:
       params[:username] = username
       params[:password] = password
       params[:auth_token] = auth_token
-      
+
       request = request_class.new(params)
       yield request if block_given?
       invoke(request, format)

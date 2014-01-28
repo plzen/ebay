@@ -3,12 +3,12 @@ require 'ebay/types/product_search'
 module Ebay # :nodoc:
   module Requests # :nodoc:
     # == Attributes
-    #  array_node :product_searches, 'ProductSearch', :class => ProductSearch, :default_value => []
+    #  object_node :product_search, 'ProductSearch', :class => ProductSearch
     class GetProductSearchResults < Abstract
       include XML::Mapping
       include Initializer
       root_element_name 'GetProductSearchResultsRequest'
-      array_node :product_searches, 'ProductSearch', :class => ProductSearch, :default_value => []
+      object_node :product_search, 'ProductSearch', :class => ProductSearch
     end
   end
 end

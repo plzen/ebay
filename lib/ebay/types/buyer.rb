@@ -3,12 +3,12 @@ require 'ebay/types/address'
 module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
-    #  object_node :shipping_address, 'ShippingAddress', :class => Address, :optional => true
+    #  array_node :shipping_addresses, 'ShippingAddress', :class => Address, :default_value => []
     class Buyer
       include XML::Mapping
       include Initializer
       root_element_name 'Buyer'
-      object_node :shipping_address, 'ShippingAddress', :class => Address, :optional => true
+      array_node :shipping_addresses, 'ShippingAddress', :class => Address, :default_value => []
     end
   end
 end

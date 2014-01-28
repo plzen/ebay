@@ -1,8 +1,12 @@
-class ValueArrayNode < XML::Mapping::ArrayNode
-  def initialize_impl(path,path2=nil)
-    @options[:marshaller] = proc{ |xml, value| xml.text = value}
-    @options[:unmarshaller] = proc{ |xml| xml.text }
+require 'xml/mapping/base'
 
-    super
+class ValueArrayNode < XML::Mapping::ArrayNode
+  def initialize(*args)
+    if @options.nil?
+      @options = Hash.new
+    end
+    @options[:marshaller] = proc{ |xml, value| xml.text = value }
+    @options[:unmarshaller] = proc{ |xml| xml.text }
+    args
   end
 end
