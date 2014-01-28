@@ -92,7 +92,7 @@ module Ebay
     #
     # Returns Ebay::Responses##{name}
     #
-    # Official Documentation for #{name}[http://developer.ebay.com/DevZone/XML/docs/Reference/eBay/io_#{name}.html]
+    # Official Documentation for #{name}[http://developer.ebay.com/DevZone/XML/docs/Reference/eBay/#{name}.html]
     def #{ebay_underscore(name)}(params = {})
       commit(Ebay::Requests::#{name}, params)
     end
@@ -128,16 +128,15 @@ module Ebay
       end
 
       def remove_unused_files
-        @unused_files.uniq!.each do |file|
-          if File.exists?(file)
-            puts "Removing #{file}"
-            File.delete(file)
-          end
-        end 
+        unless @unused_files.empty?
+          @unused_files.uniq!.each do |file|
+            if File.exists?(file)
+              puts "Removing #{file}"
+              File.delete(file)
+            end
+          end 
+        end
       end
     end
   end
 end
-
-
-

@@ -1,10 +1,12 @@
 $:.unshift File.join(File.dirname(__FILE__), 'lib')
+
+require "bundler/gem_tasks"
 require 'rubygems'
+require 'rubygems/package_task'
 require 'rake'
 require 'rake/testtask'
-require 'rake/rdoctask'
-require 'rake/gempackagetask'
 require 'rake/contrib/rubyforgepublisher'
+require 'rdoc/task'
 
 PKG_VERSION = "0.12.0"
 PKG_NAME = "ebayapi"
@@ -23,14 +25,14 @@ namespace :test do
   desc 'Run all unit tests.'
   Rake::TestTask.new(:units) do |t|
     t.libs << "test"
-  	t.pattern = 'test/unit/**/*_test.rb'
+          t.pattern = 'test/unit/**/*_test.rb'
     t.verbose = true
   end
   
   desc 'Run all unit tests.'
   Rake::TestTask.new(:mapping) do |t|
     t.libs << "test"
-  	t.pattern = 'test/mapping/**/*_test.rb'
+          t.pattern = 'test/mapping/**/*_test.rb'
     t.verbose = true
   end
 end
@@ -43,20 +45,20 @@ namespace :schema do
   task :update do
     puts 'Updating the eBay schema'
   
-    folder = File.dirname(__FILE__) + "/lib/ebay/schema"
-    url = 'http://developer.ebay.com/webservices/latest/ebaySvc.xsd'
+      folder = File.dirname(__FILE__) + "/lib/ebay/schema"
+      url = 'http://developer.ebay.com/webservices/latest/ebaySvc.xsd'
 
-    cd folder do
-      rm_f 'ebaySvc.xsd'
-      system("wget #{url}")
-    end
+      cd folder do
+        rm_f 'ebaySvc.xsd'
+        system("wget #{url}")
+      end
   end
-  
+
   desc "Update the schema version"
   task :update_version do
     schema = File.dirname(__FILE__) + '/lib/ebay/schema/ebaySvc.xsd'
     # Update the schema version string
-    
+
     File.read(schema) =~ /Version (\d+)/m
     if version = $1
       version_file_path = File.dirname(__FILE__) + "/lib/ebay/schema/version.rb"
@@ -69,14 +71,14 @@ namespace :schema do
       raise "Unable to parse the version from the schema"
     end
   end
-  
 end
 
 namespace :classes do
   desc "Remove the generated Ruby classes"
   task :cleanup do
     FileList[
-      "lib/ebay/requests.rb", "lib/ebay/responses.rb", "lib/ebay/types.rb", "lib/ebay/requests/*.rb", "lib/ebay/responses/*.rb", "lib/ebay/types/*.rb"
+      "lib/ebay/requests.rb", "lib/ebay/responses.rb", "lib/ebay/types.rb", "lib/ebay/requests/*.rb", 
+      "lib/ebay/responses/*.rb", "lib/ebay/types/*.rb"
     ].each{|f| rm_rf f }
   end 
   
@@ -118,7 +120,7 @@ spec = Gem::Specification.new do |s|
   s.add_dependency('money', '= 1.7.1')
 end
 
-Rake::GemPackageTask.new(spec) do |p|
+Gem::PackageTask.new(spec) do |p|
   p.gem_spec = spec
   p.need_tar = true
   p.need_zip = true

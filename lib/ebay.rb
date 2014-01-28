@@ -1,5 +1,7 @@
 $:.unshift(File.dirname(__FILE__)) unless $:.include?(File.dirname(__FILE__)) || $:.include?(File.expand_path(File.dirname(__FILE__)))
 
+require 'xml/libxml'
+
 begin
   require 'xml/mapping'
 rescue LoadError
@@ -21,4 +23,7 @@ require 'support/cattr_accessor'
 require 'support/xml_mapping'
 
 # Include the main program file
-require 'ebay/ebay'
+require "ebay/ebay"
+
+# Include version
+require "ebay/version"

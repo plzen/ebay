@@ -9,7 +9,6 @@ require 'mapper/xsd2ebay'
 
 module Ebay
   module Schema
-    Namespace = 'urn:ebay:apis:eBLBaseComponents'
+	Namespace = 'urn:ebay:apis:eBLBaseComponents'
   end
 end
-

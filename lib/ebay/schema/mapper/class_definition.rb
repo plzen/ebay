@@ -44,6 +44,10 @@ module Ebay
       def customization
         @customization ||= ''
       end
+
+      def get_binding
+        return binding()
+      end
     end
   end
 end
