@@ -4,9 +4,9 @@ module Ebay # :nodoc:
   module Requests # :nodoc:
     # == Attributes
     #  value_array_node :item_ids, 'ItemID', :default_value => []
-    #  text_node :best_offer_id, 'BestOfferID'
+    #  text_node :best_offer_id, 'BestOfferID', :default_value => ''
     #  value_array_node :actions, 'Action', :default_value => []
-    #  text_node :seller_response, 'SellerResponse'
+    #  text_node :seller_response, 'SellerResponse', :default_value => ''
     #  array_node :counter_offer_prices, 'CounterOfferPrice', :class => Amount, :default_value => []
     #  numeric_node :counter_offer_quantity, 'CounterOfferQuantity'
     class RespondToBestOffer < Abstract
@@ -14,9 +14,9 @@ module Ebay # :nodoc:
       include Initializer
       root_element_name 'RespondToBestOfferRequest'
       value_array_node :item_ids, 'ItemID', :default_value => []
-      text_node :best_offer_id, 'BestOfferID'
+      text_node :best_offer_id, 'BestOfferID', :default_value => ''
       value_array_node :actions, 'Action', :default_value => []
-      text_node :seller_response, 'SellerResponse'
+      text_node :seller_response, 'SellerResponse', :default_value => ''
       array_node :counter_offer_prices, 'CounterOfferPrice', :class => Amount, :default_value => []
       numeric_node :counter_offer_quantity, 'CounterOfferQuantity'
     end

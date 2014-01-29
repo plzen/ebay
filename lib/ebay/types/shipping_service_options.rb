@@ -5,7 +5,7 @@ module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
     #  array_node :shipping_insurance_costs, 'ShippingInsuranceCost', :class => Amount, :default_value => []
-    #  text_node :shipping_service, 'ShippingService'
+    #  text_node :shipping_service, 'ShippingService', :default_value => ''
     #  array_node :shipping_service_costs, 'ShippingServiceCost', :class => Amount, :default_value => []
     #  array_node :shipping_service_additional_costs, 'ShippingServiceAdditionalCost', :class => Amount, :default_value => []
     #  numeric_node :shipping_service_priority, 'ShippingServicePriority'
@@ -22,7 +22,7 @@ module Ebay # :nodoc:
       include Initializer
       root_element_name 'ShippingServiceOptions'
       array_node :shipping_insurance_costs, 'ShippingInsuranceCost', :class => Amount, :default_value => []
-      text_node :shipping_service, 'ShippingService'
+      text_node :shipping_service, 'ShippingService', :default_value => ''
       array_node :shipping_service_costs, 'ShippingServiceCost', :class => Amount, :default_value => []
       array_node :shipping_service_additional_costs, 'ShippingServiceAdditionalCost', :class => Amount, :default_value => []
       numeric_node :shipping_service_priority, 'ShippingServicePriority'

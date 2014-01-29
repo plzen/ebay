@@ -3,11 +3,11 @@ require 'ebay/types/category_item_specifics'
 module Ebay # :nodoc:
   module Requests # :nodoc:
     # == Attributes
-    #  text_node :category_id, 'CategoryID'
-    #  time_node :last_update_time, 'LastUpdateTime'
+    #  text_node :category_id, 'CategoryID', :default_value => ''
+    #  time_node :last_update_time, 'LastUpdateTime', :default_value => ''
     #  numeric_node :max_names, 'MaxNames'
     #  numeric_node :max_values_per_name, 'MaxValuesPerName'
-    #  text_node :name, 'Name'
+    #  text_node :name, 'Name', :default_value => ''
     #  object_node :category_specific, 'CategorySpecific', :class => CategoryItemSpecifics
     #  boolean_node :exclude_relationships, 'ExcludeRelationships', 'true', 'false'
     #  boolean_node :include_confidence, 'IncludeConfidence', 'true', 'false'
@@ -16,11 +16,11 @@ module Ebay # :nodoc:
       include XML::Mapping
       include Initializer
       root_element_name 'GetCategorySpecificsRequest'
-      text_node :category_id, 'CategoryID'
-      time_node :last_update_time, 'LastUpdateTime'
+      text_node :category_id, 'CategoryID', :default_value => ''
+      time_node :last_update_time, 'LastUpdateTime', :default_value => ''
       numeric_node :max_names, 'MaxNames'
       numeric_node :max_values_per_name, 'MaxValuesPerName'
-      text_node :name, 'Name'
+      text_node :name, 'Name', :default_value => ''
       object_node :category_specific, 'CategorySpecific', :class => CategoryItemSpecifics
       boolean_node :exclude_relationships, 'ExcludeRelationships', 'true', 'false'
       boolean_node :include_confidence, 'IncludeConfidence', 'true', 'false'

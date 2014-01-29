@@ -5,15 +5,15 @@ module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
     #  value_array_node :best_offer_ids, 'BestOfferID', :default_value => []
-    #  time_node :expiration_time, 'ExpirationTime'
+    #  time_node :expiration_time, 'ExpirationTime', :default_value => ''
     #  array_node :buyers, 'Buyer', :class => User, :default_value => []
     #  array_node :prices, 'Price', :class => Amount, :default_value => []
     #  value_array_node :statuses, 'Status', :default_value => []
     #  numeric_node :quantity, 'Quantity'
-    #  text_node :buyer_message, 'BuyerMessage'
-    #  text_node :seller_message, 'SellerMessage'
+    #  text_node :buyer_message, 'BuyerMessage', :default_value => ''
+    #  text_node :seller_message, 'SellerMessage', :default_value => ''
     #  value_array_node :best_offer_code_types, 'BestOfferCodeType', :default_value => []
-    #  text_node :call_status, 'CallStatus'
+    #  text_node :call_status, 'CallStatus', :default_value => ''
     #  boolean_node :new_best_offer, 'NewBestOffer', 'true', 'false'
     #  boolean_node :immediate_pay_eligible, 'ImmediatePayEligible', 'true', 'false'
     class BestOffer
@@ -21,15 +21,15 @@ module Ebay # :nodoc:
       include Initializer
       root_element_name 'BestOffer'
       value_array_node :best_offer_ids, 'BestOfferID', :default_value => []
-      time_node :expiration_time, 'ExpirationTime'
+      time_node :expiration_time, 'ExpirationTime', :default_value => ''
       array_node :buyers, 'Buyer', :class => User, :default_value => []
       array_node :prices, 'Price', :class => Amount, :default_value => []
       value_array_node :statuses, 'Status', :default_value => []
       numeric_node :quantity, 'Quantity'
-      text_node :buyer_message, 'BuyerMessage'
-      text_node :seller_message, 'SellerMessage'
+      text_node :buyer_message, 'BuyerMessage', :default_value => ''
+      text_node :seller_message, 'SellerMessage', :default_value => ''
       value_array_node :best_offer_code_types, 'BestOfferCodeType', :default_value => []
-      text_node :call_status, 'CallStatus'
+      text_node :call_status, 'CallStatus', :default_value => ''
       boolean_node :new_best_offer, 'NewBestOffer', 'true', 'false'
       boolean_node :immediate_pay_eligible, 'ImmediatePayEligible', 'true', 'false'
     end

@@ -4,30 +4,30 @@ require 'ebay/types/bot_block_request'
 module Ebay # :nodoc:
   module Requests # :nodoc:
     # == Attributes
-    #  text_node :detail_level, 'DetailLevel'
-    #  text_node :error_language, 'ErrorLanguage'
-    #  text_node :message_id, 'MessageID'
-    #  text_node :version, 'Version'
-    #  text_node :end_user_ip, 'EndUserIP'
+    #  text_node :detail_level, 'DetailLevel', :default_value => ''
+    #  text_node :error_language, 'ErrorLanguage', :default_value => ''
+    #  text_node :message_id, 'MessageID', :default_value => ''
+    #  text_node :version, 'Version', :default_value => ''
+    #  text_node :end_user_ip, 'EndUserIP', :default_value => ''
     #  array_node :requester_credentials, 'RequesterCredentials', :class => XMLRequesterCredentials, :default_value => []
     #  value_array_node :error_handlings, 'ErrorHandling', :default_value => []
     #  value_array_node :invocation_ids, 'InvocationID', :default_value => []
-    #  text_node :output_selector, 'OutputSelector'
+    #  text_node :output_selector, 'OutputSelector', :default_value => ''
     #  value_array_node :warning_levels, 'WarningLevel', :default_value => []
     #  array_node :bot_blocks, 'BotBlock', :class => BotBlockRequest, :default_value => []
     class Abstract < Base
       include XML::Mapping
       include Initializer
       root_element_name 'AbstractRequest'
-      text_node :detail_level, 'DetailLevel'
-      text_node :error_language, 'ErrorLanguage'
-      text_node :message_id, 'MessageID'
-      text_node :version, 'Version'
-      text_node :end_user_ip, 'EndUserIP'
+      text_node :detail_level, 'DetailLevel', :default_value => ''
+      text_node :error_language, 'ErrorLanguage', :default_value => ''
+      text_node :message_id, 'MessageID', :default_value => ''
+      text_node :version, 'Version', :default_value => ''
+      text_node :end_user_ip, 'EndUserIP', :default_value => ''
       array_node :requester_credentials, 'RequesterCredentials', :class => XMLRequesterCredentials, :default_value => []
       value_array_node :error_handlings, 'ErrorHandling', :default_value => []
       value_array_node :invocation_ids, 'InvocationID', :default_value => []
-      text_node :output_selector, 'OutputSelector'
+      text_node :output_selector, 'OutputSelector', :default_value => ''
       value_array_node :warning_levels, 'WarningLevel', :default_value => []
       array_node :bot_blocks, 'BotBlock', :class => BotBlockRequest, :default_value => []
       # eBay specifies the detail level as a collection.  The usual case is to use
@@ -35,7 +35,11 @@ module Ebay # :nodoc:
       # the normal case.
       # Reads the first detail level from the detail_levels Array.
       def detail_level
-        @detail_levels.first
+        unless @detail_levels.nil?
+          @detail_levels.first
+        else
+          ""
+        end
       end
       
       # Overwrites the details_levels Array with a new Array containing only the 

@@ -7,7 +7,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  array_node :searches, 'Search', :class => SellingManagerSearch, :default_value => []
     #  numeric_node :store_category_id, 'StoreCategoryID'
-    #  text_node :filter, 'Filter'
+    #  text_node :filter, 'Filter', :default_value => ''
     #  boolean_node :archived, 'Archived', 'true', 'false'
     #  value_array_node :sorts, 'Sort', :default_value => []
     #  value_array_node :sort_orders, 'SortOrder', :default_value => []
@@ -19,7 +19,7 @@ module Ebay # :nodoc:
       root_element_name 'GetSellingManagerSoldListingsRequest'
       array_node :searches, 'Search', :class => SellingManagerSearch, :default_value => []
       numeric_node :store_category_id, 'StoreCategoryID'
-      text_node :filter, 'Filter'
+      text_node :filter, 'Filter', :default_value => ''
       boolean_node :archived, 'Archived', 'true', 'false'
       value_array_node :sorts, 'Sort', :default_value => []
       value_array_node :sort_orders, 'SortOrder', :default_value => []

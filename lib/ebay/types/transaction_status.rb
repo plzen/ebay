@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  value_array_node :ebay_payment_statuses, 'eBayPaymentStatus', :default_value => []
     #  value_array_node :checkout_statuses, 'CheckoutStatus', :default_value => []
-    #  time_node :last_time_modified, 'LastTimeModified'
+    #  time_node :last_time_modified, 'LastTimeModified', :default_value => ''
     #  value_array_node :payment_method_useds, 'PaymentMethodUsed', :default_value => []
     #  value_array_node :complete_statuses, 'CompleteStatus', :default_value => []
     #  boolean_node :buyer_selected_shipping, 'BuyerSelectedShipping', 'true', 'false'
@@ -18,7 +18,7 @@ module Ebay # :nodoc:
       root_element_name 'TransactionStatus'
       value_array_node :ebay_payment_statuses, 'eBayPaymentStatus', :default_value => []
       value_array_node :checkout_statuses, 'CheckoutStatus', :default_value => []
-      time_node :last_time_modified, 'LastTimeModified'
+      time_node :last_time_modified, 'LastTimeModified', :default_value => ''
       value_array_node :payment_method_useds, 'PaymentMethodUsed', :default_value => []
       value_array_node :complete_statuses, 'CompleteStatus', :default_value => []
       boolean_node :buyer_selected_shipping, 'BuyerSelectedShipping', 'true', 'false'

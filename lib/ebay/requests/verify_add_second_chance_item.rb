@@ -7,7 +7,7 @@ module Ebay # :nodoc:
     #  array_node :buy_it_now_prices, 'BuyItNowPrice', :class => Amount, :default_value => []
     #  value_array_node :durations, 'Duration', :default_value => []
     #  value_array_node :item_ids, 'ItemID', :default_value => []
-    #  text_node :seller_message, 'SellerMessage'
+    #  text_node :seller_message, 'SellerMessage', :default_value => ''
     class VerifyAddSecondChanceItem < Abstract
       include XML::Mapping
       include Initializer
@@ -16,7 +16,7 @@ module Ebay # :nodoc:
       array_node :buy_it_now_prices, 'BuyItNowPrice', :class => Amount, :default_value => []
       value_array_node :durations, 'Duration', :default_value => []
       value_array_node :item_ids, 'ItemID', :default_value => []
-      text_node :seller_message, 'SellerMessage'
+      text_node :seller_message, 'SellerMessage', :default_value => ''
     end
   end
 end

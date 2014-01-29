@@ -5,7 +5,7 @@ require 'ebay/types/my_ebay_favorite_seller_list'
 module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
-    #  text_node :name, 'Name'
+    #  text_node :name, 'Name', :default_value => ''
     #  numeric_node :item_count, 'ItemCount'
     #  numeric_node :favorite_seller_count, 'FavoriteSellerCount'
     #  array_node :items, 'ItemArray', :class => ItemArray, :default_value => []
@@ -15,7 +15,7 @@ module Ebay # :nodoc:
       include XML::Mapping
       include Initializer
       root_element_name 'UserDefinedList'
-      text_node :name, 'Name'
+      text_node :name, 'Name', :default_value => ''
       numeric_node :item_count, 'ItemCount'
       numeric_node :favorite_seller_count, 'FavoriteSellerCount'
       array_node :items, 'ItemArray', :class => ItemArray, :default_value => []

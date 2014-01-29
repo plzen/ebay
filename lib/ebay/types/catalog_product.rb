@@ -5,9 +5,9 @@ require 'ebay/types/review_details'
 module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
-    #  text_node :title, 'Title'
-    #  text_node :details_url, 'DetailsURL'
-    #  text_node :stock_photo_url, 'StockPhotoURL'
+    #  text_node :title, 'Title', :default_value => ''
+    #  text_node :details_url, 'DetailsURL', :default_value => ''
+    #  text_node :stock_photo_url, 'StockPhotoURL', :default_value => ''
     #  boolean_node :display_stock_photos, 'DisplayStockPhotos', 'true', 'false'
     #  numeric_node :item_count, 'ItemCount'
     #  array_node :external_product_ids, 'ExternalProductID', :class => ExternalProductID, :default_value => []
@@ -21,9 +21,9 @@ module Ebay # :nodoc:
       include XML::Mapping
       include Initializer
       root_element_name 'CatalogProduct'
-      text_node :title, 'Title'
-      text_node :details_url, 'DetailsURL'
-      text_node :stock_photo_url, 'StockPhotoURL'
+      text_node :title, 'Title', :default_value => ''
+      text_node :details_url, 'DetailsURL', :default_value => ''
+      text_node :stock_photo_url, 'StockPhotoURL', :default_value => ''
       boolean_node :display_stock_photos, 'DisplayStockPhotos', 'true', 'false'
       numeric_node :item_count, 'ItemCount'
       array_node :external_product_ids, 'ExternalProductID', :class => ExternalProductID, :default_value => []

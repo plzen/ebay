@@ -4,9 +4,9 @@ module Ebay # :nodoc:
   module Requests # :nodoc:
     # == Attributes
     #  value_array_node :account_history_selections, 'AccountHistorySelection', :default_value => []
-    #  time_node :invoice_date, 'InvoiceDate'
-    #  time_node :begin_date, 'BeginDate'
-    #  time_node :end_date, 'EndDate'
+    #  time_node :invoice_date, 'InvoiceDate', :default_value => ''
+    #  time_node :begin_date, 'BeginDate', :default_value => ''
+    #  time_node :end_date, 'EndDate', :default_value => ''
     #  array_node :paginations, 'Pagination', :class => Pagination, :default_value => []
     #  boolean_node :exclude_balance, 'ExcludeBalance', 'true', 'false'
     #  boolean_node :exclude_summary, 'ExcludeSummary', 'true', 'false'
@@ -19,9 +19,9 @@ module Ebay # :nodoc:
       include Initializer
       root_element_name 'GetAccountRequest'
       value_array_node :account_history_selections, 'AccountHistorySelection', :default_value => []
-      time_node :invoice_date, 'InvoiceDate'
-      time_node :begin_date, 'BeginDate'
-      time_node :end_date, 'EndDate'
+      time_node :invoice_date, 'InvoiceDate', :default_value => ''
+      time_node :begin_date, 'BeginDate', :default_value => ''
+      time_node :end_date, 'EndDate', :default_value => ''
       array_node :paginations, 'Pagination', :class => Pagination, :default_value => []
       boolean_node :exclude_balance, 'ExcludeBalance', 'true', 'false'
       boolean_node :exclude_summary, 'ExcludeSummary', 'true', 'false'

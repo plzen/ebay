@@ -4,13 +4,13 @@ module Ebay # :nodoc:
   module Requests # :nodoc:
     # == Attributes
     #  array_node :items, 'Item', :class => Item, :default_value => []
-    #  text_node :deleted_field, 'DeletedField'
+    #  text_node :deleted_field, 'DeletedField', :default_value => ''
     class ReviseFixedPriceItem < Abstract
       include XML::Mapping
       include Initializer
       root_element_name 'ReviseFixedPriceItemRequest'
       array_node :items, 'Item', :class => Item, :default_value => []
-      text_node :deleted_field, 'DeletedField'
+      text_node :deleted_field, 'DeletedField', :default_value => ''
     end
   end
 end

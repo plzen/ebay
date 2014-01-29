@@ -54,9 +54,11 @@ module Ebay #:nodoc:
     end
 
     def http
-      http             = Net::HTTP.new(@site.host, @site.port)
-      http.use_ssl     = @site.is_a?(URI::HTTPS)
-      http.verify_mode = OpenSSL::SSL::VERIFY_NONE if http.use_ssl
+      http = Net::HTTP.start(@site.host, @site.port, :use_ssl => true)
+      if @site.scheme == 'https'
+        http.use_ssl = true
+        http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+      end
       http
     end
   end

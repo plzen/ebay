@@ -14,12 +14,12 @@ module Ebay # :nodoc:
     #  numeric_node :units_available, 'UnitsAvailable'
     #  array_node :unit_costs, 'UnitCost', :class => Amount, :default_value => []
     #  array_node :selling_statuses, 'SellingStatus', :class => SellingStatus, :default_value => []
-    #  text_node :variation_title, 'VariationTitle'
-    #  text_node :variation_view_item_url, 'VariationViewItemURL'
+    #  text_node :variation_title, 'VariationTitle', :default_value => ''
+    #  text_node :variation_view_item_url, 'VariationViewItemURL', :default_value => ''
     #  boolean_node :delete, 'Delete', 'true', 'false'
     #  array_node :selling_manager_product_inventory_statuses, 'SellingManagerProductInventoryStatus', :class => SellingManagerProductInventoryStatus, :default_value => []
     #  numeric_node :watch_count, 'WatchCount'
-    #  text_node :private_notes, 'PrivateNotes'
+    #  text_node :private_notes, 'PrivateNotes', :default_value => ''
     #  array_node :discount_price_infos, 'DiscountPriceInfo', :class => DiscountPriceInfo, :default_value => []
     class Variation
       include XML::Mapping
@@ -32,12 +32,12 @@ module Ebay # :nodoc:
       numeric_node :units_available, 'UnitsAvailable'
       array_node :unit_costs, 'UnitCost', :class => Amount, :default_value => []
       array_node :selling_statuses, 'SellingStatus', :class => SellingStatus, :default_value => []
-      text_node :variation_title, 'VariationTitle'
-      text_node :variation_view_item_url, 'VariationViewItemURL'
+      text_node :variation_title, 'VariationTitle', :default_value => ''
+      text_node :variation_view_item_url, 'VariationViewItemURL', :default_value => ''
       boolean_node :delete, 'Delete', 'true', 'false'
       array_node :selling_manager_product_inventory_statuses, 'SellingManagerProductInventoryStatus', :class => SellingManagerProductInventoryStatus, :default_value => []
       numeric_node :watch_count, 'WatchCount'
-      text_node :private_notes, 'PrivateNotes'
+      text_node :private_notes, 'PrivateNotes', :default_value => ''
       array_node :discount_price_infos, 'DiscountPriceInfo', :class => DiscountPriceInfo, :default_value => []
     end
   end

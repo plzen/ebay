@@ -20,8 +20,8 @@ module Ebay # :nodoc:
     #  boolean_node :ean, 'EAN', 'true', 'false'
     #  object_node :shipping_cost_paid_by, 'ShippingCostPaidBy', :class => ShippingCostPaidByDetails
     #  object_node :restocking_fee_value, 'RestockingFeeValue', :class => RestockingFeeValueDetails
-    #  text_node :detail_version, 'DetailVersion'
-    #  time_node :update_time, 'UpdateTime'
+    #  text_node :detail_version, 'DetailVersion', :default_value => ''
+    #  time_node :update_time, 'UpdateTime', :default_value => ''
     class ReturnPolicyDetails
       include XML::Mapping
       include Initializer
@@ -36,8 +36,8 @@ module Ebay # :nodoc:
       boolean_node :ean, 'EAN', 'true', 'false'
       object_node :shipping_cost_paid_by, 'ShippingCostPaidBy', :class => ShippingCostPaidByDetails
       object_node :restocking_fee_value, 'RestockingFeeValue', :class => RestockingFeeValueDetails
-      text_node :detail_version, 'DetailVersion'
-      time_node :update_time, 'UpdateTime'
+      text_node :detail_version, 'DetailVersion', :default_value => ''
+      time_node :update_time, 'UpdateTime', :default_value => ''
     end
   end
 end

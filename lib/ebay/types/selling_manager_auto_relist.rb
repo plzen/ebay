@@ -7,7 +7,7 @@ module Ebay # :nodoc:
     #  value_array_node :relist_conditions, 'RelistCondition', :default_value => []
     #  numeric_node :relist_after_days, 'RelistAfterDays'
     #  numeric_node :relist_after_hours, 'RelistAfterHours'
-    #  hour_node :relist_at_specific_time_of_day, 'RelistAtSpecificTimeOfDay'
+    #  hour_node :relist_at_specific_time_of_day, 'RelistAtSpecificTimeOfDay', :default_value => ''
     #  array_node :best_offer_details, 'BestOfferDetails', :class => BestOfferDetails, :default_value => []
     #  numeric_node :listing_hold_inventory_level, 'ListingHoldInventoryLevel'
     class SellingManagerAutoRelist
@@ -18,7 +18,7 @@ module Ebay # :nodoc:
       value_array_node :relist_conditions, 'RelistCondition', :default_value => []
       numeric_node :relist_after_days, 'RelistAfterDays'
       numeric_node :relist_after_hours, 'RelistAfterHours'
-      hour_node :relist_at_specific_time_of_day, 'RelistAtSpecificTimeOfDay'
+      hour_node :relist_at_specific_time_of_day, 'RelistAtSpecificTimeOfDay', :default_value => ''
       array_node :best_offer_details, 'BestOfferDetails', :class => BestOfferDetails, :default_value => []
       numeric_node :listing_hold_inventory_level, 'ListingHoldInventoryLevel'
     end

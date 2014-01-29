@@ -7,7 +7,7 @@ module Ebay # :nodoc:
     #  boolean_node :include_favorite_seller_count, 'IncludeFavoriteSellerCount', 'true', 'false'
     #  value_array_node :sorts, 'Sort', :default_value => []
     #  numeric_node :max_results, 'MaxResults'
-    #  text_node :user_defined_list_name, 'UserDefinedListName'
+    #  text_node :user_defined_list_name, 'UserDefinedListName', :default_value => ''
     #  boolean_node :include_list_contents, 'IncludeListContents', 'true', 'false'
     class MyeBaySelection
       include XML::Mapping
@@ -18,7 +18,7 @@ module Ebay # :nodoc:
       boolean_node :include_favorite_seller_count, 'IncludeFavoriteSellerCount', 'true', 'false'
       value_array_node :sorts, 'Sort', :default_value => []
       numeric_node :max_results, 'MaxResults'
-      text_node :user_defined_list_name, 'UserDefinedListName'
+      text_node :user_defined_list_name, 'UserDefinedListName', :default_value => ''
       boolean_node :include_list_contents, 'IncludeListContents', 'true', 'false'
     end
   end

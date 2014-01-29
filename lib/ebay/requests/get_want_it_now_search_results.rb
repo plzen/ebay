@@ -3,8 +3,8 @@ require 'ebay/types/pagination'
 module Ebay # :nodoc:
   module Requests # :nodoc:
     # == Attributes
-    #  text_node :category_id, 'CategoryID'
-    #  text_node :query, 'Query'
+    #  text_node :category_id, 'CategoryID', :default_value => ''
+    #  text_node :query, 'Query', :default_value => ''
     #  boolean_node :search_in_description, 'SearchInDescription', 'true', 'false'
     #  boolean_node :search_worldwide, 'SearchWorldwide', 'true', 'false'
     #  array_node :paginations, 'Pagination', :class => Pagination, :default_value => []
@@ -12,8 +12,8 @@ module Ebay # :nodoc:
       include XML::Mapping
       include Initializer
       root_element_name 'GetWantItNowSearchResultsRequest'
-      text_node :category_id, 'CategoryID'
-      text_node :query, 'Query'
+      text_node :category_id, 'CategoryID', :default_value => ''
+      text_node :query, 'Query', :default_value => ''
       boolean_node :search_in_description, 'SearchInDescription', 'true', 'false'
       boolean_node :search_worldwide, 'SearchWorldwide', 'true', 'false'
       array_node :paginations, 'Pagination', :class => Pagination, :default_value => []

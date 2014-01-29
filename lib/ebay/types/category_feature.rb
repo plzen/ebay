@@ -7,7 +7,7 @@ require 'ebay/types/condition_values'
 module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
-    #  text_node :category_id, 'CategoryID'
+    #  text_node :category_id, 'CategoryID', :default_value => ''
     #  object_node :listing_duration, 'ListingDuration', :class => ListingDurationReference
     #  boolean_node :shipping_terms_required, 'ShippingTermsRequired', 'true', 'false'
     #  boolean_node :best_offer_enabled, 'BestOfferEnabled', 'true', 'false'
@@ -107,7 +107,7 @@ module Ebay # :nodoc:
     #  array_node :group1_max_flat_shipping_costs, 'Group1MaxFlatShippingCost', :class => Amount, :default_value => []
     #  array_node :group2_max_flat_shipping_costs, 'Group2MaxFlatShippingCost', :class => Amount, :default_value => []
     #  array_node :group3_max_flat_shipping_costs, 'Group3MaxFlatShippingCost', :class => Amount, :default_value => []
-    #  text_node :payment_method, 'PaymentMethod'
+    #  text_node :payment_method, 'PaymentMethod', :default_value => ''
     #  boolean_node :variations_enabled, 'VariationsEnabled', 'true', 'false'
     #  value_array_node :attribute_conversion_enableds, 'AttributeConversionEnabled', :default_value => []
     #  boolean_node :free_gallery_plus_enabled, 'FreeGalleryPlusEnabled', 'true', 'false'
@@ -120,7 +120,7 @@ module Ebay # :nodoc:
     #  boolean_node :value_category, 'ValueCategory', 'true', 'false'
     #  value_array_node :product_creation_enableds, 'ProductCreationEnabled', :default_value => []
     #  numeric_node :max_granular_fitment_count, 'MaxGranularFitmentCount'
-    #  text_node :compatible_vehicle_type, 'CompatibleVehicleType'
+    #  text_node :compatible_vehicle_type, 'CompatibleVehicleType', :default_value => ''
     #  value_array_node :payment_options_groups, 'PaymentOptionsGroup', :default_value => []
     #  value_array_node :shipping_profile_category_groups, 'ShippingProfileCategoryGroup', :default_value => []
     #  value_array_node :payment_profile_category_groups, 'PaymentProfileCategoryGroup', :default_value => []
@@ -135,7 +135,7 @@ module Ebay # :nodoc:
       include XML::Mapping
       include Initializer
       root_element_name 'CategoryFeature'
-      text_node :category_id, 'CategoryID'
+      text_node :category_id, 'CategoryID', :default_value => ''
       object_node :listing_duration, 'ListingDuration', :class => ListingDurationReference
       boolean_node :shipping_terms_required, 'ShippingTermsRequired', 'true', 'false'
       boolean_node :best_offer_enabled, 'BestOfferEnabled', 'true', 'false'
@@ -235,7 +235,7 @@ module Ebay # :nodoc:
       array_node :group1_max_flat_shipping_costs, 'Group1MaxFlatShippingCost', :class => Amount, :default_value => []
       array_node :group2_max_flat_shipping_costs, 'Group2MaxFlatShippingCost', :class => Amount, :default_value => []
       array_node :group3_max_flat_shipping_costs, 'Group3MaxFlatShippingCost', :class => Amount, :default_value => []
-      text_node :payment_method, 'PaymentMethod'
+      text_node :payment_method, 'PaymentMethod', :default_value => ''
       boolean_node :variations_enabled, 'VariationsEnabled', 'true', 'false'
       value_array_node :attribute_conversion_enableds, 'AttributeConversionEnabled', :default_value => []
       boolean_node :free_gallery_plus_enabled, 'FreeGalleryPlusEnabled', 'true', 'false'
@@ -248,7 +248,7 @@ module Ebay # :nodoc:
       boolean_node :value_category, 'ValueCategory', 'true', 'false'
       value_array_node :product_creation_enableds, 'ProductCreationEnabled', :default_value => []
       numeric_node :max_granular_fitment_count, 'MaxGranularFitmentCount'
-      text_node :compatible_vehicle_type, 'CompatibleVehicleType'
+      text_node :compatible_vehicle_type, 'CompatibleVehicleType', :default_value => ''
       value_array_node :payment_options_groups, 'PaymentOptionsGroup', :default_value => []
       value_array_node :shipping_profile_category_groups, 'ShippingProfileCategoryGroup', :default_value => []
       value_array_node :payment_profile_category_groups, 'PaymentProfileCategoryGroup', :default_value => []

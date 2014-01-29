@@ -2,7 +2,7 @@ require 'xml/mapping/base'
 
 class CdataNode < XML::Mapping::TextNode
   def initialize(*args)
-    super(*args)
+  	super(*args)
     args 
   end
 

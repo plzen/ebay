@@ -5,14 +5,14 @@ module Ebay # :nodoc:
     # == Attributes
     #  array_node :balances, 'Balance', :class => Amount, :default_value => []
     #  value_array_node :currencies, 'Currency', :default_value => []
-    #  text_node :account_code, 'AccountCode'
+    #  text_node :account_code, 'AccountCode', :default_value => ''
     class AdditionalAccount
       include XML::Mapping
       include Initializer
       root_element_name 'AdditionalAccount'
       array_node :balances, 'Balance', :class => Amount, :default_value => []
       value_array_node :currencies, 'Currency', :default_value => []
-      text_node :account_code, 'AccountCode'
+      text_node :account_code, 'AccountCode', :default_value => ''
     end
   end
 end

@@ -5,14 +5,14 @@ module Ebay # :nodoc:
     # == Attributes
     #  object_node :attribute, 'Attribute', :class => Attribute
     #  numeric_node :attribute_set_id, '@attributeSetID', :optional => true
-    #  text_node :attribute_set_version, '@attributeSetVersion', :optional => true
+    #  text_node :attribute_set_version, '@attributeSetVersion', :default_value => '', :optional => true
     class AttributeSet
       include XML::Mapping
       include Initializer
       root_element_name 'AttributeSet'
       object_node :attribute, 'Attribute', :class => Attribute
       numeric_node :attribute_set_id, '@attributeSetID', :optional => true
-      text_node :attribute_set_version, '@attributeSetVersion', :optional => true
+      text_node :attribute_set_version, '@attributeSetVersion', :default_value => '', :optional => true
     end
   end
 end

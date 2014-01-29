@@ -6,7 +6,7 @@ module Ebay # :nodoc:
     #  boolean_node :opt_in_status, 'OptInStatus', 'true', 'false'
     #  boolean_node :auto_relist, 'AutoRelist', 'true', 'false'
     #  boolean_node :remove_all_excluded_users, 'RemoveAllExcludedUsers', 'true', 'false'
-    #  text_node :excluded_user, 'ExcludedUser'
+    #  text_node :excluded_user, 'ExcludedUser', :default_value => ''
     #  boolean_node :auto_opt_donation_refund, 'AutoOptDonationRefund', 'true', 'false'
     class UnpaidItemAssistancePreferences
       include XML::Mapping
@@ -16,7 +16,7 @@ module Ebay # :nodoc:
       boolean_node :opt_in_status, 'OptInStatus', 'true', 'false'
       boolean_node :auto_relist, 'AutoRelist', 'true', 'false'
       boolean_node :remove_all_excluded_users, 'RemoveAllExcludedUsers', 'true', 'false'
-      text_node :excluded_user, 'ExcludedUser'
+      text_node :excluded_user, 'ExcludedUser', :default_value => ''
       boolean_node :auto_opt_donation_refund, 'AutoOptDonationRefund', 'true', 'false'
     end
   end

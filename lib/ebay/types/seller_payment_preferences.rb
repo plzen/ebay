@@ -6,7 +6,7 @@ module Ebay # :nodoc:
     #  boolean_node :always_use_this_payment_address, 'AlwaysUseThisPaymentAddress', 'true', 'false'
     #  value_array_node :display_pay_now_buttons, 'DisplayPayNowButton', :default_value => []
     #  boolean_node :paypal_preferred, 'PayPalPreferred', 'true', 'false'
-    #  text_node :default_paypal_email_address, 'DefaultPayPalEmailAddress'
+    #  text_node :default_paypal_email_address, 'DefaultPayPalEmailAddress', :default_value => ''
     #  boolean_node :paypal_always_on, 'PayPalAlwaysOn', 'true', 'false'
     #  array_node :seller_payment_addresses, 'SellerPaymentAddress', :class => Address, :default_value => []
     #  value_array_node :ups_rate_options, 'UPSRateOption', :default_value => []
@@ -19,7 +19,7 @@ module Ebay # :nodoc:
       boolean_node :always_use_this_payment_address, 'AlwaysUseThisPaymentAddress', 'true', 'false'
       value_array_node :display_pay_now_buttons, 'DisplayPayNowButton', :default_value => []
       boolean_node :paypal_preferred, 'PayPalPreferred', 'true', 'false'
-      text_node :default_paypal_email_address, 'DefaultPayPalEmailAddress'
+      text_node :default_paypal_email_address, 'DefaultPayPalEmailAddress', :default_value => ''
       boolean_node :paypal_always_on, 'PayPalAlwaysOn', 'true', 'false'
       array_node :seller_payment_addresses, 'SellerPaymentAddress', :class => Address, :default_value => []
       value_array_node :ups_rate_options, 'UPSRateOption', :default_value => []

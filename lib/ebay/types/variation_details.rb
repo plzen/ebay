@@ -5,8 +5,8 @@ module Ebay # :nodoc:
     #  numeric_node :max_variations_per_item, 'MaxVariationsPerItem'
     #  numeric_node :max_names_per_variation_specifics_set, 'MaxNamesPerVariationSpecificsSet'
     #  numeric_node :max_values_per_variation_specifics_set_name, 'MaxValuesPerVariationSpecificsSetName'
-    #  text_node :detail_version, 'DetailVersion'
-    #  time_node :update_time, 'UpdateTime'
+    #  text_node :detail_version, 'DetailVersion', :default_value => ''
+    #  time_node :update_time, 'UpdateTime', :default_value => ''
     class VariationDetails
       include XML::Mapping
       include Initializer
@@ -14,8 +14,8 @@ module Ebay # :nodoc:
       numeric_node :max_variations_per_item, 'MaxVariationsPerItem'
       numeric_node :max_names_per_variation_specifics_set, 'MaxNamesPerVariationSpecificsSet'
       numeric_node :max_values_per_variation_specifics_set_name, 'MaxValuesPerVariationSpecificsSetName'
-      text_node :detail_version, 'DetailVersion'
-      time_node :update_time, 'UpdateTime'
+      text_node :detail_version, 'DetailVersion', :default_value => ''
+      time_node :update_time, 'UpdateTime', :default_value => ''
     end
   end
 end

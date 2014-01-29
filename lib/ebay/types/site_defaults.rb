@@ -33,9 +33,9 @@ module Ebay # :nodoc:
     #  boolean_node :store_inventory_enabled, 'StoreInventoryEnabled', 'true', 'false'
     #  boolean_node :skype_me_transactional_enabled, 'SkypeMeTransactionalEnabled', 'true', 'false'
     #  boolean_node :skype_me_non_transactional_enabled, 'SkypeMeNonTransactionalEnabled', 'true', 'false'
-    #  text_node :local_listing_distances_regular, 'LocalListingDistancesRegular'
-    #  text_node :local_listing_distances_specialty, 'LocalListingDistancesSpecialty'
-    #  text_node :local_listing_distances_non_subscription, 'LocalListingDistancesNonSubscription'
+    #  text_node :local_listing_distances_regular, 'LocalListingDistancesRegular', :default_value => ''
+    #  text_node :local_listing_distances_specialty, 'LocalListingDistancesSpecialty', :default_value => ''
+    #  text_node :local_listing_distances_non_subscription, 'LocalListingDistancesNonSubscription', :default_value => ''
     #  value_array_node :classified_ad_payment_method_enableds, 'ClassifiedAdPaymentMethodEnabled', :default_value => []
     #  boolean_node :classified_ad_shipping_method_enabled, 'ClassifiedAdShippingMethodEnabled', 'true', 'false'
     #  value_array_node :classified_ad_best_offer_enableds, 'ClassifiedAdBestOfferEnabled', :default_value => []
@@ -110,7 +110,7 @@ module Ebay # :nodoc:
     #  array_node :group1_max_flat_shipping_costs, 'Group1MaxFlatShippingCost', :class => Amount, :default_value => []
     #  array_node :group2_max_flat_shipping_costs, 'Group2MaxFlatShippingCost', :class => Amount, :default_value => []
     #  array_node :group3_max_flat_shipping_costs, 'Group3MaxFlatShippingCost', :class => Amount, :default_value => []
-    #  text_node :payment_method, 'PaymentMethod'
+    #  text_node :payment_method, 'PaymentMethod', :default_value => ''
     #  boolean_node :variations_enabled, 'VariationsEnabled', 'true', 'false'
     #  value_array_node :attribute_conversion_enableds, 'AttributeConversionEnabled', :default_value => []
     #  boolean_node :free_gallery_plus_enabled, 'FreeGalleryPlusEnabled', 'true', 'false'
@@ -123,7 +123,7 @@ module Ebay # :nodoc:
     #  boolean_node :value_category, 'ValueCategory', 'true', 'false'
     #  value_array_node :product_creation_enableds, 'ProductCreationEnabled', :default_value => []
     #  numeric_node :max_granular_fitment_count, 'MaxGranularFitmentCount'
-    #  text_node :compatible_vehicle_type, 'CompatibleVehicleType'
+    #  text_node :compatible_vehicle_type, 'CompatibleVehicleType', :default_value => ''
     #  value_array_node :payment_options_groups, 'PaymentOptionsGroup', :default_value => []
     #  value_array_node :shipping_profile_category_groups, 'ShippingProfileCategoryGroup', :default_value => []
     #  value_array_node :payment_profile_category_groups, 'PaymentProfileCategoryGroup', :default_value => []
@@ -164,9 +164,9 @@ module Ebay # :nodoc:
       boolean_node :store_inventory_enabled, 'StoreInventoryEnabled', 'true', 'false'
       boolean_node :skype_me_transactional_enabled, 'SkypeMeTransactionalEnabled', 'true', 'false'
       boolean_node :skype_me_non_transactional_enabled, 'SkypeMeNonTransactionalEnabled', 'true', 'false'
-      text_node :local_listing_distances_regular, 'LocalListingDistancesRegular'
-      text_node :local_listing_distances_specialty, 'LocalListingDistancesSpecialty'
-      text_node :local_listing_distances_non_subscription, 'LocalListingDistancesNonSubscription'
+      text_node :local_listing_distances_regular, 'LocalListingDistancesRegular', :default_value => ''
+      text_node :local_listing_distances_specialty, 'LocalListingDistancesSpecialty', :default_value => ''
+      text_node :local_listing_distances_non_subscription, 'LocalListingDistancesNonSubscription', :default_value => ''
       value_array_node :classified_ad_payment_method_enableds, 'ClassifiedAdPaymentMethodEnabled', :default_value => []
       boolean_node :classified_ad_shipping_method_enabled, 'ClassifiedAdShippingMethodEnabled', 'true', 'false'
       value_array_node :classified_ad_best_offer_enableds, 'ClassifiedAdBestOfferEnabled', :default_value => []
@@ -241,7 +241,7 @@ module Ebay # :nodoc:
       array_node :group1_max_flat_shipping_costs, 'Group1MaxFlatShippingCost', :class => Amount, :default_value => []
       array_node :group2_max_flat_shipping_costs, 'Group2MaxFlatShippingCost', :class => Amount, :default_value => []
       array_node :group3_max_flat_shipping_costs, 'Group3MaxFlatShippingCost', :class => Amount, :default_value => []
-      text_node :payment_method, 'PaymentMethod'
+      text_node :payment_method, 'PaymentMethod', :default_value => ''
       boolean_node :variations_enabled, 'VariationsEnabled', 'true', 'false'
       value_array_node :attribute_conversion_enableds, 'AttributeConversionEnabled', :default_value => []
       boolean_node :free_gallery_plus_enabled, 'FreeGalleryPlusEnabled', 'true', 'false'
@@ -254,7 +254,7 @@ module Ebay # :nodoc:
       boolean_node :value_category, 'ValueCategory', 'true', 'false'
       value_array_node :product_creation_enableds, 'ProductCreationEnabled', :default_value => []
       numeric_node :max_granular_fitment_count, 'MaxGranularFitmentCount'
-      text_node :compatible_vehicle_type, 'CompatibleVehicleType'
+      text_node :compatible_vehicle_type, 'CompatibleVehicleType', :default_value => ''
       value_array_node :payment_options_groups, 'PaymentOptionsGroup', :default_value => []
       value_array_node :shipping_profile_category_groups, 'ShippingProfileCategoryGroup', :default_value => []
       value_array_node :payment_profile_category_groups, 'PaymentProfileCategoryGroup', :default_value => []

@@ -3,7 +3,7 @@ module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
     #  numeric_node :group_id, 'GroupID'
-    #  text_node :group_name, 'GroupName'
+    #  text_node :group_name, 'GroupName', :default_value => ''
     #  numeric_node :theme_id, 'ThemeID'
     #  numeric_node :theme_total, 'ThemeTotal'
     class ThemeGroup
@@ -11,7 +11,7 @@ module Ebay # :nodoc:
       include Initializer
       root_element_name 'ThemeGroup'
       numeric_node :group_id, 'GroupID'
-      text_node :group_name, 'GroupName'
+      text_node :group_name, 'GroupName', :default_value => ''
       numeric_node :theme_id, 'ThemeID'
       numeric_node :theme_total, 'ThemeTotal'
     end

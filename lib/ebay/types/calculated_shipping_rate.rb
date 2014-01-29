@@ -4,7 +4,7 @@ require 'ebay/types/amount'
 module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
-    #  text_node :originating_postal_code, 'OriginatingPostalCode'
+    #  text_node :originating_postal_code, 'OriginatingPostalCode', :default_value => ''
     #  value_array_node :measurement_units, 'MeasurementUnit', :default_value => []
     #  array_node :package_depths, 'PackageDepth', :class => Measure, :default_value => []
     #  array_node :package_lengths, 'PackageLength', :class => Measure, :default_value => []
@@ -19,7 +19,7 @@ module Ebay # :nodoc:
       include XML::Mapping
       include Initializer
       root_element_name 'CalculatedShippingRate'
-      text_node :originating_postal_code, 'OriginatingPostalCode'
+      text_node :originating_postal_code, 'OriginatingPostalCode', :default_value => ''
       value_array_node :measurement_units, 'MeasurementUnit', :default_value => []
       array_node :package_depths, 'PackageDepth', :class => Measure, :default_value => []
       array_node :package_lengths, 'PackageLength', :class => Measure, :default_value => []

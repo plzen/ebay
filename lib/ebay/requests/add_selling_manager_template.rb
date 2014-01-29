@@ -4,14 +4,14 @@ module Ebay # :nodoc:
   module Requests # :nodoc:
     # == Attributes
     #  array_node :items, 'Item', :class => Item, :default_value => []
-    #  text_node :sale_template_name, 'SaleTemplateName'
+    #  text_node :sale_template_name, 'SaleTemplateName', :default_value => ''
     #  numeric_node :product_id, 'ProductID'
     class AddSellingManagerTemplate < Abstract
       include XML::Mapping
       include Initializer
       root_element_name 'AddSellingManagerTemplateRequest'
       array_node :items, 'Item', :class => Item, :default_value => []
-      text_node :sale_template_name, 'SaleTemplateName'
+      text_node :sale_template_name, 'SaleTemplateName', :default_value => ''
       numeric_node :product_id, 'ProductID'
     end
   end

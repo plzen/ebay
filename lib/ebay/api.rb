@@ -179,7 +179,10 @@ module Ebay #:nodoc:
         xml = REXML::Document.new(content)
         # Fixes the wrong case of API returned by eBay
         fix_root_element_name(xml)
-        result = XML::Mapping.load_object_from_xml(xml.root)
+
+        #XML::Mapping.get_classese(xml.root)
+
+        result = XML::Mapping.load_object_from_xml(xml.root, :mapping=>:_default)
         case result.ack
         when Ebay::Types::AckCode::Failure, Ebay::Types::AckCode::PartialFailure
           raise RequestError.new(result.errors)

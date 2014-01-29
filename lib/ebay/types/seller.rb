@@ -24,7 +24,7 @@ module Ebay # :nodoc:
     #  array_node :seller_payment_addresses, 'SellerPaymentAddress', :class => Address, :default_value => []
     #  array_node :scheduling_infos, 'SchedulingInfo', :class => SchedulingInfo, :default_value => []
     #  boolean_node :store_owner, 'StoreOwner', 'true', 'false'
-    #  text_node :store_url, 'StoreURL'
+    #  text_node :store_url, 'StoreURL', :default_value => ''
     #  value_array_node :seller_business_types, 'SellerBusinessType', :default_value => []
     #  boolean_node :registered_business_seller, 'RegisteredBusinessSeller', 'true', 'false'
     #  value_array_node :store_sites, 'StoreSite', :default_value => []
@@ -61,7 +61,7 @@ module Ebay # :nodoc:
       array_node :seller_payment_addresses, 'SellerPaymentAddress', :class => Address, :default_value => []
       array_node :scheduling_infos, 'SchedulingInfo', :class => SchedulingInfo, :default_value => []
       boolean_node :store_owner, 'StoreOwner', 'true', 'false'
-      text_node :store_url, 'StoreURL'
+      text_node :store_url, 'StoreURL', :default_value => ''
       value_array_node :seller_business_types, 'SellerBusinessType', :default_value => []
       boolean_node :registered_business_seller, 'RegisteredBusinessSeller', 'true', 'false'
       value_array_node :store_sites, 'StoreSite', :default_value => []

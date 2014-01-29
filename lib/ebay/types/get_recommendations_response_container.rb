@@ -14,10 +14,10 @@ module Ebay # :nodoc:
     #  array_node :pricing_recommendations, 'PricingRecommendations', :class => PricingRecommendations, :default_value => []
     #  array_node :attribute_recommendations, 'AttributeRecommendations', :class => AttributeRecommendations, :default_value => []
     #  array_node :product_recommendations, 'ProductRecommendations', :class => ProductRecommendations, :default_value => []
-    #  text_node :correlation_id, 'CorrelationID'
+    #  text_node :correlation_id, 'CorrelationID', :default_value => ''
     #  array_node :recommendations, 'Recommendations', :class => Recommendations, :default_value => []
     #  array_node :product_listing_details, 'ProductListingDetails', :class => ProductListingDetails, :default_value => []
-    #  text_node :title, 'Title'
+    #  text_node :title, 'Title', :default_value => ''
     class GetRecommendationsResponseContainer
       include XML::Mapping
       include Initializer
@@ -27,10 +27,10 @@ module Ebay # :nodoc:
       array_node :pricing_recommendations, 'PricingRecommendations', :class => PricingRecommendations, :default_value => []
       array_node :attribute_recommendations, 'AttributeRecommendations', :class => AttributeRecommendations, :default_value => []
       array_node :product_recommendations, 'ProductRecommendations', :class => ProductRecommendations, :default_value => []
-      text_node :correlation_id, 'CorrelationID'
+      text_node :correlation_id, 'CorrelationID', :default_value => ''
       array_node :recommendations, 'Recommendations', :class => Recommendations, :default_value => []
       array_node :product_listing_details, 'ProductListingDetails', :class => ProductListingDetails, :default_value => []
-      text_node :title, 'Title'
+      text_node :title, 'Title', :default_value => ''
     end
   end
 end

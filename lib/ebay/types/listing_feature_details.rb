@@ -10,8 +10,8 @@ module Ebay # :nodoc:
     #  value_array_node :featured_firsts, 'FeaturedFirst', :default_value => []
     #  value_array_node :featured_plus, 'FeaturedPlus', :default_value => []
     #  value_array_node :pro_packs, 'ProPack', :default_value => []
-    #  text_node :detail_version, 'DetailVersion'
-    #  time_node :update_time, 'UpdateTime'
+    #  text_node :detail_version, 'DetailVersion', :default_value => ''
+    #  time_node :update_time, 'UpdateTime', :default_value => ''
     class ListingFeatureDetails
       include XML::Mapping
       include Initializer
@@ -24,8 +24,8 @@ module Ebay # :nodoc:
       value_array_node :featured_firsts, 'FeaturedFirst', :default_value => []
       value_array_node :featured_plus, 'FeaturedPlus', :default_value => []
       value_array_node :pro_packs, 'ProPack', :default_value => []
-      text_node :detail_version, 'DetailVersion'
-      time_node :update_time, 'UpdateTime'
+      text_node :detail_version, 'DetailVersion', :default_value => ''
+      time_node :update_time, 'UpdateTime', :default_value => ''
     end
   end
 end

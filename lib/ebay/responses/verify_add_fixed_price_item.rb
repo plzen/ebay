@@ -10,9 +10,9 @@ module Ebay # :nodoc:
     #  array_node :fees, 'Fees', :class => Fees, :default_value => []
     #  boolean_node :express_listing, 'ExpressListing', 'true', 'false'
     #  array_node :express_item_requirements, 'ExpressItemRequirements', :class => ExpressItemRequirements, :default_value => []
-    #  text_node :category_id, 'CategoryID'
-    #  text_node :category2_id, 'Category2ID'
-    #  text_node :discount_reason, 'DiscountReason'
+    #  text_node :category_id, 'CategoryID', :default_value => ''
+    #  text_node :category2_id, 'Category2ID', :default_value => ''
+    #  text_node :discount_reason, 'DiscountReason', :default_value => ''
     #  array_node :listing_recommendations, 'ListingRecommendations', :class => ListingRecommendations, :default_value => []
     class VerifyAddFixedPriceItem < Abstract
       include XML::Mapping
@@ -23,9 +23,9 @@ module Ebay # :nodoc:
       array_node :fees, 'Fees', :class => Fees, :default_value => []
       boolean_node :express_listing, 'ExpressListing', 'true', 'false'
       array_node :express_item_requirements, 'ExpressItemRequirements', :class => ExpressItemRequirements, :default_value => []
-      text_node :category_id, 'CategoryID'
-      text_node :category2_id, 'Category2ID'
-      text_node :discount_reason, 'DiscountReason'
+      text_node :category_id, 'CategoryID', :default_value => ''
+      text_node :category2_id, 'Category2ID', :default_value => ''
+      text_node :discount_reason, 'DiscountReason', :default_value => ''
       array_node :listing_recommendations, 'ListingRecommendations', :class => ListingRecommendations, :default_value => []
     end
   end

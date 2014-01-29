@@ -3,13 +3,13 @@ module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
     #  numeric_node :payment_profile_id, 'PaymentProfileID'
-    #  text_node :payment_profile_name, 'PaymentProfileName'
+    #  text_node :payment_profile_name, 'PaymentProfileName', :default_value => ''
     class SellerPaymentProfile
       include XML::Mapping
       include Initializer
       root_element_name 'SellerPaymentProfile'
       numeric_node :payment_profile_id, 'PaymentProfileID'
-      text_node :payment_profile_name, 'PaymentProfileName'
+      text_node :payment_profile_name, 'PaymentProfileName', :default_value => ''
     end
   end
 end

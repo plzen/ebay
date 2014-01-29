@@ -4,26 +4,26 @@ module Ebay # :nodoc:
     # == Attributes
     #  value_array_node :name_faces, 'NameFace', :default_value => []
     #  value_array_node :name_sizes, 'NameSize', :default_value => []
-    #  text_node :name_color, 'NameColor'
+    #  text_node :name_color, 'NameColor', :default_value => ''
     #  value_array_node :title_faces, 'TitleFace', :default_value => []
     #  value_array_node :title_sizes, 'TitleSize', :default_value => []
-    #  text_node :title_color, 'TitleColor'
+    #  text_node :title_color, 'TitleColor', :default_value => ''
     #  value_array_node :desc_faces, 'DescFace', :default_value => []
     #  value_array_node :desc_sizes, 'DescSize', :default_value => []
-    #  text_node :desc_color, 'DescColor'
+    #  text_node :desc_color, 'DescColor', :default_value => ''
     class StoreFont
       include XML::Mapping
       include Initializer
       root_element_name 'StoreFont'
       value_array_node :name_faces, 'NameFace', :default_value => []
       value_array_node :name_sizes, 'NameSize', :default_value => []
-      text_node :name_color, 'NameColor'
+      text_node :name_color, 'NameColor', :default_value => ''
       value_array_node :title_faces, 'TitleFace', :default_value => []
       value_array_node :title_sizes, 'TitleSize', :default_value => []
-      text_node :title_color, 'TitleColor'
+      text_node :title_color, 'TitleColor', :default_value => ''
       value_array_node :desc_faces, 'DescFace', :default_value => []
       value_array_node :desc_sizes, 'DescSize', :default_value => []
-      text_node :desc_color, 'DescColor'
+      text_node :desc_color, 'DescColor', :default_value => ''
     end
   end
 end

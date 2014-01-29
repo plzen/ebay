@@ -6,9 +6,9 @@ module Ebay # :nodoc:
     #  value_array_node :item_ids, 'ItemID', :default_value => []
     #  value_array_node :primary_schemes, 'PrimaryScheme', :default_value => []
     #  value_array_node :promotion_methods, 'PromotionMethod', :default_value => []
-    #  text_node :seller_id, 'SellerID'
+    #  text_node :seller_id, 'SellerID', :default_value => ''
     #  boolean_node :shipping_discount, 'ShippingDiscount', 'true', 'false'
-    #  text_node :store_name, 'StoreName'
+    #  text_node :store_name, 'StoreName', :default_value => ''
     #  object_node :promoted_item, 'PromotedItem', :class => PromotedItem
     class CrossPromotions
       include XML::Mapping
@@ -17,9 +17,9 @@ module Ebay # :nodoc:
       value_array_node :item_ids, 'ItemID', :default_value => []
       value_array_node :primary_schemes, 'PrimaryScheme', :default_value => []
       value_array_node :promotion_methods, 'PromotionMethod', :default_value => []
-      text_node :seller_id, 'SellerID'
+      text_node :seller_id, 'SellerID', :default_value => ''
       boolean_node :shipping_discount, 'ShippingDiscount', 'true', 'false'
-      text_node :store_name, 'StoreName'
+      text_node :store_name, 'StoreName', :default_value => ''
       object_node :promoted_item, 'PromotedItem', :class => PromotedItem
     end
   end

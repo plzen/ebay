@@ -10,18 +10,18 @@ module Ebay # :nodoc:
     #  array_node :invoice_new_fees, 'InvoiceNewFee', :class => Amount, :default_value => []
     #  object_node :additional_account, 'AdditionalAccount', :class => AdditionalAccount
     #  array_node :amount_past_dues, 'AmountPastDue', :class => Amount, :default_value => []
-    #  text_node :bank_account_info, 'BankAccountInfo'
-    #  time_node :bank_modify_date, 'BankModifyDate'
+    #  text_node :bank_account_info, 'BankAccountInfo', :default_value => ''
+    #  time_node :bank_modify_date, 'BankModifyDate', :default_value => ''
     #  numeric_node :billing_cycle_date, 'BillingCycleDate'
-    #  time_node :credit_card_expiration, 'CreditCardExpiration'
-    #  text_node :credit_card_info, 'CreditCardInfo'
-    #  time_node :credit_card_modify_date, 'CreditCardModifyDate'
+    #  time_node :credit_card_expiration, 'CreditCardExpiration', :default_value => ''
+    #  text_node :credit_card_info, 'CreditCardInfo', :default_value => ''
+    #  time_node :credit_card_modify_date, 'CreditCardModifyDate', :default_value => ''
     #  array_node :current_balances, 'CurrentBalance', :class => Amount, :default_value => []
-    #  text_node :email, 'Email'
+    #  text_node :email, 'Email', :default_value => ''
     #  array_node :invoice_balances, 'InvoiceBalance', :class => Amount, :default_value => []
-    #  time_node :invoice_date, 'InvoiceDate'
+    #  time_node :invoice_date, 'InvoiceDate', :default_value => ''
     #  array_node :last_amount_paids, 'LastAmountPaid', :class => Amount, :default_value => []
-    #  time_node :last_payment_date, 'LastPaymentDate'
+    #  time_node :last_payment_date, 'LastPaymentDate', :default_value => ''
     #  boolean_node :past_due, 'PastDue', 'true', 'false'
     #  value_array_node :payment_methods, 'PaymentMethod', :default_value => []
     class AccountSummary
@@ -34,18 +34,18 @@ module Ebay # :nodoc:
       array_node :invoice_new_fees, 'InvoiceNewFee', :class => Amount, :default_value => []
       object_node :additional_account, 'AdditionalAccount', :class => AdditionalAccount
       array_node :amount_past_dues, 'AmountPastDue', :class => Amount, :default_value => []
-      text_node :bank_account_info, 'BankAccountInfo'
-      time_node :bank_modify_date, 'BankModifyDate'
+      text_node :bank_account_info, 'BankAccountInfo', :default_value => ''
+      time_node :bank_modify_date, 'BankModifyDate', :default_value => ''
       numeric_node :billing_cycle_date, 'BillingCycleDate'
-      time_node :credit_card_expiration, 'CreditCardExpiration'
-      text_node :credit_card_info, 'CreditCardInfo'
-      time_node :credit_card_modify_date, 'CreditCardModifyDate'
+      time_node :credit_card_expiration, 'CreditCardExpiration', :default_value => ''
+      text_node :credit_card_info, 'CreditCardInfo', :default_value => ''
+      time_node :credit_card_modify_date, 'CreditCardModifyDate', :default_value => ''
       array_node :current_balances, 'CurrentBalance', :class => Amount, :default_value => []
-      text_node :email, 'Email'
+      text_node :email, 'Email', :default_value => ''
       array_node :invoice_balances, 'InvoiceBalance', :class => Amount, :default_value => []
-      time_node :invoice_date, 'InvoiceDate'
+      time_node :invoice_date, 'InvoiceDate', :default_value => ''
       array_node :last_amount_paids, 'LastAmountPaid', :class => Amount, :default_value => []
-      time_node :last_payment_date, 'LastPaymentDate'
+      time_node :last_payment_date, 'LastPaymentDate', :default_value => ''
       boolean_node :past_due, 'PastDue', 'true', 'false'
       value_array_node :payment_methods, 'PaymentMethod', :default_value => []
     end

@@ -7,7 +7,7 @@ module Ebay # :nodoc:
     #  numeric_node :transaction_id, 'TransactionID'
     #  value_array_node :order_ids, 'OrderID', :default_value => []
     #  array_node :email_date_ranges, 'EmailDateRange', :class => TimeRange, :default_value => []
-    #  text_node :order_line_item_id, 'OrderLineItemID'
+    #  text_node :order_line_item_id, 'OrderLineItemID', :default_value => ''
     class GetSellingManagerEmailLog < Abstract
       include XML::Mapping
       include Initializer
@@ -16,7 +16,7 @@ module Ebay # :nodoc:
       numeric_node :transaction_id, 'TransactionID'
       value_array_node :order_ids, 'OrderID', :default_value => []
       array_node :email_date_ranges, 'EmailDateRange', :class => TimeRange, :default_value => []
-      text_node :order_line_item_id, 'OrderLineItemID'
+      text_node :order_line_item_id, 'OrderLineItemID', :default_value => ''
     end
   end
 end

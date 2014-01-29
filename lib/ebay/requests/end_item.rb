@@ -4,14 +4,14 @@ module Ebay # :nodoc:
     # == Attributes
     #  value_array_node :item_ids, 'ItemID', :default_value => []
     #  value_array_node :ending_reasons, 'EndingReason', :default_value => []
-    #  text_node :seller_inventory_id, 'SellerInventoryID'
+    #  text_node :seller_inventory_id, 'SellerInventoryID', :default_value => ''
     class EndItem < Abstract
       include XML::Mapping
       include Initializer
       root_element_name 'EndItemRequest'
       value_array_node :item_ids, 'ItemID', :default_value => []
       value_array_node :ending_reasons, 'EndingReason', :default_value => []
-      text_node :seller_inventory_id, 'SellerInventoryID'
+      text_node :seller_inventory_id, 'SellerInventoryID', :default_value => ''
     end
   end
 end

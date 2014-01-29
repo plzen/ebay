@@ -3,7 +3,7 @@ module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
     #  numeric_node :folder_id, 'FolderID'
-    #  text_node :folder_name, 'FolderName'
+    #  text_node :folder_name, 'FolderName', :default_value => ''
     #  numeric_node :new_alert_count, 'NewAlertCount'
     #  numeric_node :new_message_count, 'NewMessageCount'
     #  numeric_node :total_alert_count, 'TotalAlertCount'
@@ -15,7 +15,7 @@ module Ebay # :nodoc:
       include Initializer
       root_element_name 'MyMessagesFolderSummary'
       numeric_node :folder_id, 'FolderID'
-      text_node :folder_name, 'FolderName'
+      text_node :folder_name, 'FolderName', :default_value => ''
       numeric_node :new_alert_count, 'NewAlertCount'
       numeric_node :new_message_count, 'NewMessageCount'
       numeric_node :total_alert_count, 'TotalAlertCount'

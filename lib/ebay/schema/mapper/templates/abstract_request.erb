@@ -3,7 +3,11 @@
 # the normal case.
 # Reads the first detail level from the detail_levels Array.
 def detail_level
-  @detail_levels.first
+  unless @detail_levels.nil?
+    @detail_levels.first
+  else
+    ""
+  end
 end
 
 # Overwrites the details_levels Array with a new Array containing only the 

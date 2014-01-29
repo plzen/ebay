@@ -44,7 +44,7 @@ require 'ebay/types/pickup_in_store_details'
 module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
-    #  text_node :application_data, 'ApplicationData'
+    #  text_node :application_data, 'ApplicationData', :default_value => ''
     #  array_node :attribute_sets, 'AttributeSetArray', :class => AttributeSetArray, :default_value => []
     #  array_node :attributes, 'AttributeArray', :class => AttributeArray, :default_value => []
     #  array_node :lookup_attributes, 'LookupAttributeArray', :class => LookupAttributeArray, :default_value => []
@@ -59,49 +59,49 @@ module Ebay # :nodoc:
     #  value_array_node :countries, 'Country', :default_value => []
     #  array_node :cross_promotions, 'CrossPromotion', :class => CrossPromotions, :default_value => []
     #  value_array_node :currencies, 'Currency', :default_value => []
-    #  cdata_node :description, 'Description'
+    #  cdata_node :description, 'Description', :default_value => ''
     #  value_array_node :description_revise_modes, 'DescriptionReviseMode', :default_value => []
     #  array_node :distances, 'Distance', :class => Distance, :default_value => []
     #  numeric_node :gift_icon, 'GiftIcon'
-    #  text_node :gift_services, 'GiftServices'
+    #  text_node :gift_services, 'GiftServices', :default_value => ''
     #  value_array_node :hit_counters, 'HitCounter', :default_value => []
     #  value_array_node :item_ids, 'ItemID', :default_value => []
     #  array_node :listing_details, 'ListingDetails', :class => ListingDetails, :default_value => []
     #  array_node :listing_designers, 'ListingDesigner', :class => ListingDesigner, :default_value => []
-    #  text_node :listing_duration, 'ListingDuration'
-    #  text_node :listing_enhancement, 'ListingEnhancement'
+    #  text_node :listing_duration, 'ListingDuration', :default_value => ''
+    #  text_node :listing_enhancement, 'ListingEnhancement', :default_value => ''
     #  value_array_node :listing_types, 'ListingType', :default_value => []
-    #  text_node :location, 'Location'
+    #  text_node :location, 'Location', :default_value => ''
     #  numeric_node :lot_size, 'LotSize'
-    #  text_node :partner_code, 'PartnerCode'
-    #  text_node :partner_name, 'PartnerName'
-    #  text_node :payment_methods, 'PaymentMethods'
-    #  text_node :paypal_email_address, 'PayPalEmailAddress'
+    #  text_node :partner_code, 'PartnerCode', :default_value => ''
+    #  text_node :partner_name, 'PartnerName', :default_value => ''
+    #  text_node :payment_methods, 'PaymentMethods', :default_value => ''
+    #  text_node :paypal_email_address, 'PayPalEmailAddress', :default_value => ''
     #  array_node :primary_categories, 'PrimaryCategory', :class => Category, :default_value => []
     #  boolean_node :private_listing, 'PrivateListing', 'true', 'false'
     #  array_node :product_listing_details, 'ProductListingDetails', :class => ProductListingDetails, :default_value => []
     #  numeric_node :quantity, 'Quantity'
-    #  text_node :private_notes, 'PrivateNotes'
-    #  text_node :region_id, 'RegionID'
+    #  text_node :private_notes, 'PrivateNotes', :default_value => ''
+    #  text_node :region_id, 'RegionID', :default_value => ''
     #  boolean_node :relist_link, 'RelistLink', 'true', 'false'
     #  array_node :reserve_prices, 'ReservePrice', :class => Amount, :default_value => []
     #  array_node :revise_statuses, 'ReviseStatus', :class => ReviseStatus, :default_value => []
-    #  time_node :schedule_time, 'ScheduleTime'
+    #  time_node :schedule_time, 'ScheduleTime', :default_value => ''
     #  array_node :secondary_categories, 'SecondaryCategory', :class => Category, :default_value => []
     #  array_node :free_added_categories, 'FreeAddedCategory', :class => Category, :default_value => []
     #  array_node :sellers, 'Seller', :class => User, :default_value => []
     #  array_node :selling_statuses, 'SellingStatus', :class => SellingStatus, :default_value => []
     #  array_node :shipping_details, 'ShippingDetails', :class => ShippingDetails, :default_value => []
-    #  text_node :ship_to_locations, 'ShipToLocations'
+    #  text_node :ship_to_locations, 'ShipToLocations', :default_value => ''
     #  value_array_node :sites, 'Site', :default_value => []
     #  array_node :start_prices, 'StartPrice', :class => Amount, :default_value => []
     #  array_node :storefronts, 'Storefront', :class => Storefront, :default_value => []
-    #  text_node :sub_title, 'SubTitle'
-    #  text_node :time_left, 'TimeLeft'
-    #  text_node :title, 'Title'
+    #  text_node :sub_title, 'SubTitle', :default_value => ''
+    #  text_node :time_left, 'TimeLeft', :default_value => ''
+    #  text_node :title, 'Title', :default_value => ''
     #  value_array_node :uuids, 'UUID', :default_value => []
     #  array_node :vat_details, 'VATDetails', :class => VATDetails, :default_value => []
-    #  text_node :seller_vacation_note, 'SellerVacationNote'
+    #  text_node :seller_vacation_note, 'SellerVacationNote', :default_value => ''
     #  numeric_node :watch_count, 'WatchCount'
     #  numeric_node :hit_count, 'HitCount'
     #  boolean_node :disable_buyer_requirements, 'DisableBuyerRequirements', 'true', 'false'
@@ -112,22 +112,22 @@ module Ebay # :nodoc:
     #  boolean_node :get_it_fast, 'GetItFast', 'true', 'false'
     #  boolean_node :buyer_responsible_for_shipping, 'BuyerResponsibleForShipping', 'true', 'false'
     #  boolean_node :limited_warranty_eligible, 'LimitedWarrantyEligible', 'true', 'false'
-    #  text_node :ebay_notes, 'eBayNotes'
+    #  text_node :ebay_notes, 'eBayNotes', :default_value => ''
     #  numeric_node :question_count, 'QuestionCount'
     #  boolean_node :relisted, 'Relisted', 'true', 'false'
     #  numeric_node :quantity_available, 'QuantityAvailable'
     #  value_array_node :skus, 'SKU', :default_value => []
     #  boolean_node :category_based_attributes_prefill, 'CategoryBasedAttributesPrefill', 'true', 'false'
     #  array_node :search_details, 'SearchDetails', :class => SearchDetails, :default_value => []
-    #  text_node :postal_code, 'PostalCode'
+    #  text_node :postal_code, 'PostalCode', :default_value => ''
     #  boolean_node :shipping_terms_in_description, 'ShippingTermsInDescription', 'true', 'false'
     #  array_node :external_product_ids, 'ExternalProductID', :class => ExternalProductID, :default_value => []
-    #  text_node :seller_inventory_id, 'SellerInventoryID'
+    #  text_node :seller_inventory_id, 'SellerInventoryID', :default_value => ''
     #  array_node :picture_details, 'PictureDetails', :class => PictureDetails, :default_value => []
     #  numeric_node :dispatch_time_max, 'DispatchTimeMax'
     #  boolean_node :skype_enabled, 'SkypeEnabled', 'true', 'false'
-    #  text_node :skype_id, 'SkypeID'
-    #  text_node :skype_contact_option, 'SkypeContactOption'
+    #  text_node :skype_id, 'SkypeID', :default_value => ''
+    #  text_node :skype_contact_option, 'SkypeContactOption', :default_value => ''
     #  boolean_node :best_offer_enabled, 'BestOfferEnabled', 'true', 'false'
     #  boolean_node :local_listing, 'LocalListing', 'true', 'false'
     #  boolean_node :third_party_checkout_integration, 'ThirdPartyCheckoutIntegration', 'true', 'false'
@@ -139,7 +139,7 @@ module Ebay # :nodoc:
     #  numeric_node :lead_count, 'LeadCount'
     #  numeric_node :new_lead_count, 'NewLeadCount'
     #  array_node :item_specifics, 'ItemSpecifics', :class => NameValueListArray, :default_value => []
-    #  text_node :group_category_id, 'GroupCategoryID'
+    #  text_node :group_category_id, 'GroupCategoryID', :default_value => ''
     #  array_node :classified_ad_pay_per_lead_fees, 'ClassifiedAdPayPerLeadFee', :class => Amount, :default_value => []
     #  boolean_node :bid_group_item, 'BidGroupItem', 'true', 'false'
     #  array_node :apply_buyer_protections, 'ApplyBuyerProtection', :class => BuyerProtectionDetails, :default_value => []
@@ -148,31 +148,31 @@ module Ebay # :nodoc:
     #  boolean_node :update_seller_info, 'UpdateSellerInfo', 'true', 'false'
     #  boolean_node :update_return_policy, 'UpdateReturnPolicy', 'true', 'false'
     #  array_node :item_policy_violations, 'ItemPolicyViolation', :class => ItemPolicyViolation, :default_value => []
-    #  text_node :cross_border_trade, 'CrossBorderTrade'
+    #  text_node :cross_border_trade, 'CrossBorderTrade', :default_value => ''
     #  array_node :business_seller_details, 'BusinessSellerDetails', :class => BusinessSellerDetails, :default_value => []
     #  array_node :buyer_guarantee_prices, 'BuyerGuaranteePrice', :class => Amount, :default_value => []
     #  array_node :buyer_requirement_details, 'BuyerRequirementDetails', :class => BuyerRequirementDetails, :default_value => []
     #  array_node :return_policies, 'ReturnPolicy', :class => ReturnPolicy, :default_value => []
-    #  text_node :payment_allowed_site, 'PaymentAllowedSite'
+    #  text_node :payment_allowed_site, 'PaymentAllowedSite', :default_value => ''
     #  value_array_node :inventory_tracking_methods, 'InventoryTrackingMethod', :default_value => []
     #  boolean_node :integrated_merchant_credit_card_enabled, 'IntegratedMerchantCreditCardEnabled', 'true', 'false'
     #  array_node :variations, 'Variations', :class => Variations, :default_value => []
     #  array_node :item_compatibility_lists, 'ItemCompatibilityList', :class => ItemCompatibilityList, :default_value => []
     #  numeric_node :item_compatibility_count, 'ItemCompatibilityCount'
     #  numeric_node :condition_id, 'ConditionID'
-    #  text_node :condition_description, 'ConditionDescription'
-    #  text_node :condition_display_name, 'ConditionDisplayName'
-    #  text_node :tax_category, 'TaxCategory'
+    #  text_node :condition_description, 'ConditionDescription', :default_value => ''
+    #  text_node :condition_display_name, 'ConditionDisplayName', :default_value => ''
+    #  text_node :tax_category, 'TaxCategory', :default_value => ''
     #  value_array_node :quantity_available_hints, 'QuantityAvailableHint', :default_value => []
     #  numeric_node :quantity_threshold, 'QuantityThreshold'
     #  boolean_node :post_checkout_experience_enabled, 'PostCheckoutExperienceEnabled', 'true', 'false'
     #  array_node :discount_price_infos, 'DiscountPriceInfo', :class => DiscountPriceInfo, :default_value => []
     #  boolean_node :use_recommended_product, 'UseRecommendedProduct', 'true', 'false'
-    #  text_node :seller_provided_title, 'SellerProvidedTitle'
-    #  text_node :vin, 'VIN'
-    #  text_node :vin_link, 'VINLink'
-    #  text_node :vrm, 'VRM'
-    #  text_node :vrm_link, 'VRMLink'
+    #  text_node :seller_provided_title, 'SellerProvidedTitle', :default_value => ''
+    #  text_node :vin, 'VIN', :default_value => ''
+    #  text_node :vin_link, 'VINLink', :default_value => ''
+    #  text_node :vrm, 'VRM', :default_value => ''
+    #  text_node :vrm_link, 'VRMLink', :default_value => ''
     #  array_node :quantity_infos, 'QuantityInfo', :class => QuantityInfo, :default_value => []
     #  array_node :seller_profiles, 'SellerProfiles', :class => SellerProfiles, :default_value => []
     #  array_node :shipping_service_cost_override_lists, 'ShippingServiceCostOverrideList', :class => ShippingServiceCostOverrideList, :default_value => []
@@ -184,7 +184,7 @@ module Ebay # :nodoc:
     #  boolean_node :is_intermediated_shipping_eligible, 'IsIntermediatedShippingEligible', 'true', 'false'
     #  array_node :unit_infos, 'UnitInfo', :class => UnitInfo, :default_value => []
     #  numeric_node :relist_parent_id, 'RelistParentID'
-    #  text_node :condition_definition, 'ConditionDefinition'
+    #  text_node :condition_definition, 'ConditionDefinition', :default_value => ''
     #  boolean_node :hide_from_search, 'HideFromSearch', 'true', 'false'
     #  value_array_node :reason_hide_from_searches, 'ReasonHideFromSearch', :default_value => []
     #  boolean_node :include_recommendations, 'IncludeRecommendations', 'true', 'false'
@@ -195,7 +195,7 @@ module Ebay # :nodoc:
       include XML::Mapping
       include Initializer
       root_element_name 'Item'
-      text_node :application_data, 'ApplicationData'
+      text_node :application_data, 'ApplicationData', :default_value => ''
       array_node :attribute_sets, 'AttributeSetArray', :class => AttributeSetArray, :default_value => []
       array_node :attributes, 'AttributeArray', :class => AttributeArray, :default_value => []
       array_node :lookup_attributes, 'LookupAttributeArray', :class => LookupAttributeArray, :default_value => []
@@ -210,49 +210,49 @@ module Ebay # :nodoc:
       value_array_node :countries, 'Country', :default_value => []
       array_node :cross_promotions, 'CrossPromotion', :class => CrossPromotions, :default_value => []
       value_array_node :currencies, 'Currency', :default_value => []
-      cdata_node :description, 'Description'
+      cdata_node :description, 'Description', :default_value => ''
       value_array_node :description_revise_modes, 'DescriptionReviseMode', :default_value => []
       array_node :distances, 'Distance', :class => Distance, :default_value => []
       numeric_node :gift_icon, 'GiftIcon'
-      text_node :gift_services, 'GiftServices'
+      text_node :gift_services, 'GiftServices', :default_value => ''
       value_array_node :hit_counters, 'HitCounter', :default_value => []
       value_array_node :item_ids, 'ItemID', :default_value => []
       array_node :listing_details, 'ListingDetails', :class => ListingDetails, :default_value => []
       array_node :listing_designers, 'ListingDesigner', :class => ListingDesigner, :default_value => []
-      text_node :listing_duration, 'ListingDuration'
-      text_node :listing_enhancement, 'ListingEnhancement'
+      text_node :listing_duration, 'ListingDuration', :default_value => ''
+      text_node :listing_enhancement, 'ListingEnhancement', :default_value => ''
       value_array_node :listing_types, 'ListingType', :default_value => []
-      text_node :location, 'Location'
+      text_node :location, 'Location', :default_value => ''
       numeric_node :lot_size, 'LotSize'
-      text_node :partner_code, 'PartnerCode'
-      text_node :partner_name, 'PartnerName'
-      text_node :payment_methods, 'PaymentMethods'
-      text_node :paypal_email_address, 'PayPalEmailAddress'
+      text_node :partner_code, 'PartnerCode', :default_value => ''
+      text_node :partner_name, 'PartnerName', :default_value => ''
+      text_node :payment_methods, 'PaymentMethods', :default_value => ''
+      text_node :paypal_email_address, 'PayPalEmailAddress', :default_value => ''
       array_node :primary_categories, 'PrimaryCategory', :class => Category, :default_value => []
       boolean_node :private_listing, 'PrivateListing', 'true', 'false'
       array_node :product_listing_details, 'ProductListingDetails', :class => ProductListingDetails, :default_value => []
       numeric_node :quantity, 'Quantity'
-      text_node :private_notes, 'PrivateNotes'
-      text_node :region_id, 'RegionID'
+      text_node :private_notes, 'PrivateNotes', :default_value => ''
+      text_node :region_id, 'RegionID', :default_value => ''
       boolean_node :relist_link, 'RelistLink', 'true', 'false'
       array_node :reserve_prices, 'ReservePrice', :class => Amount, :default_value => []
       array_node :revise_statuses, 'ReviseStatus', :class => ReviseStatus, :default_value => []
-      time_node :schedule_time, 'ScheduleTime'
+      time_node :schedule_time, 'ScheduleTime', :default_value => ''
       array_node :secondary_categories, 'SecondaryCategory', :class => Category, :default_value => []
       array_node :free_added_categories, 'FreeAddedCategory', :class => Category, :default_value => []
       array_node :sellers, 'Seller', :class => User, :default_value => []
       array_node :selling_statuses, 'SellingStatus', :class => SellingStatus, :default_value => []
       array_node :shipping_details, 'ShippingDetails', :class => ShippingDetails, :default_value => []
-      text_node :ship_to_locations, 'ShipToLocations'
+      text_node :ship_to_locations, 'ShipToLocations', :default_value => ''
       value_array_node :sites, 'Site', :default_value => []
       array_node :start_prices, 'StartPrice', :class => Amount, :default_value => []
       array_node :storefronts, 'Storefront', :class => Storefront, :default_value => []
-      text_node :sub_title, 'SubTitle'
-      text_node :time_left, 'TimeLeft'
-      text_node :title, 'Title'
+      text_node :sub_title, 'SubTitle', :default_value => ''
+      text_node :time_left, 'TimeLeft', :default_value => ''
+      text_node :title, 'Title', :default_value => ''
       value_array_node :uuids, 'UUID', :default_value => []
       array_node :vat_details, 'VATDetails', :class => VATDetails, :default_value => []
-      text_node :seller_vacation_note, 'SellerVacationNote'
+      text_node :seller_vacation_note, 'SellerVacationNote', :default_value => ''
       numeric_node :watch_count, 'WatchCount'
       numeric_node :hit_count, 'HitCount'
       boolean_node :disable_buyer_requirements, 'DisableBuyerRequirements', 'true', 'false'
@@ -263,22 +263,22 @@ module Ebay # :nodoc:
       boolean_node :get_it_fast, 'GetItFast', 'true', 'false'
       boolean_node :buyer_responsible_for_shipping, 'BuyerResponsibleForShipping', 'true', 'false'
       boolean_node :limited_warranty_eligible, 'LimitedWarrantyEligible', 'true', 'false'
-      text_node :ebay_notes, 'eBayNotes'
+      text_node :ebay_notes, 'eBayNotes', :default_value => ''
       numeric_node :question_count, 'QuestionCount'
       boolean_node :relisted, 'Relisted', 'true', 'false'
       numeric_node :quantity_available, 'QuantityAvailable'
       value_array_node :skus, 'SKU', :default_value => []
       boolean_node :category_based_attributes_prefill, 'CategoryBasedAttributesPrefill', 'true', 'false'
       array_node :search_details, 'SearchDetails', :class => SearchDetails, :default_value => []
-      text_node :postal_code, 'PostalCode'
+      text_node :postal_code, 'PostalCode', :default_value => ''
       boolean_node :shipping_terms_in_description, 'ShippingTermsInDescription', 'true', 'false'
       array_node :external_product_ids, 'ExternalProductID', :class => ExternalProductID, :default_value => []
-      text_node :seller_inventory_id, 'SellerInventoryID'
+      text_node :seller_inventory_id, 'SellerInventoryID', :default_value => ''
       array_node :picture_details, 'PictureDetails', :class => PictureDetails, :default_value => []
       numeric_node :dispatch_time_max, 'DispatchTimeMax'
       boolean_node :skype_enabled, 'SkypeEnabled', 'true', 'false'
-      text_node :skype_id, 'SkypeID'
-      text_node :skype_contact_option, 'SkypeContactOption'
+      text_node :skype_id, 'SkypeID', :default_value => ''
+      text_node :skype_contact_option, 'SkypeContactOption', :default_value => ''
       boolean_node :best_offer_enabled, 'BestOfferEnabled', 'true', 'false'
       boolean_node :local_listing, 'LocalListing', 'true', 'false'
       boolean_node :third_party_checkout_integration, 'ThirdPartyCheckoutIntegration', 'true', 'false'
@@ -290,7 +290,7 @@ module Ebay # :nodoc:
       numeric_node :lead_count, 'LeadCount'
       numeric_node :new_lead_count, 'NewLeadCount'
       array_node :item_specifics, 'ItemSpecifics', :class => NameValueListArray, :default_value => []
-      text_node :group_category_id, 'GroupCategoryID'
+      text_node :group_category_id, 'GroupCategoryID', :default_value => ''
       array_node :classified_ad_pay_per_lead_fees, 'ClassifiedAdPayPerLeadFee', :class => Amount, :default_value => []
       boolean_node :bid_group_item, 'BidGroupItem', 'true', 'false'
       array_node :apply_buyer_protections, 'ApplyBuyerProtection', :class => BuyerProtectionDetails, :default_value => []
@@ -299,31 +299,31 @@ module Ebay # :nodoc:
       boolean_node :update_seller_info, 'UpdateSellerInfo', 'true', 'false'
       boolean_node :update_return_policy, 'UpdateReturnPolicy', 'true', 'false'
       array_node :item_policy_violations, 'ItemPolicyViolation', :class => ItemPolicyViolation, :default_value => []
-      text_node :cross_border_trade, 'CrossBorderTrade'
+      text_node :cross_border_trade, 'CrossBorderTrade', :default_value => ''
       array_node :business_seller_details, 'BusinessSellerDetails', :class => BusinessSellerDetails, :default_value => []
       array_node :buyer_guarantee_prices, 'BuyerGuaranteePrice', :class => Amount, :default_value => []
       array_node :buyer_requirement_details, 'BuyerRequirementDetails', :class => BuyerRequirementDetails, :default_value => []
       array_node :return_policies, 'ReturnPolicy', :class => ReturnPolicy, :default_value => []
-      text_node :payment_allowed_site, 'PaymentAllowedSite'
+      text_node :payment_allowed_site, 'PaymentAllowedSite', :default_value => ''
       value_array_node :inventory_tracking_methods, 'InventoryTrackingMethod', :default_value => []
       boolean_node :integrated_merchant_credit_card_enabled, 'IntegratedMerchantCreditCardEnabled', 'true', 'false'
       array_node :variations, 'Variations', :class => Variations, :default_value => []
       array_node :item_compatibility_lists, 'ItemCompatibilityList', :class => ItemCompatibilityList, :default_value => []
       numeric_node :item_compatibility_count, 'ItemCompatibilityCount'
       numeric_node :condition_id, 'ConditionID'
-      text_node :condition_description, 'ConditionDescription'
-      text_node :condition_display_name, 'ConditionDisplayName'
-      text_node :tax_category, 'TaxCategory'
+      text_node :condition_description, 'ConditionDescription', :default_value => ''
+      text_node :condition_display_name, 'ConditionDisplayName', :default_value => ''
+      text_node :tax_category, 'TaxCategory', :default_value => ''
       value_array_node :quantity_available_hints, 'QuantityAvailableHint', :default_value => []
       numeric_node :quantity_threshold, 'QuantityThreshold'
       boolean_node :post_checkout_experience_enabled, 'PostCheckoutExperienceEnabled', 'true', 'false'
       array_node :discount_price_infos, 'DiscountPriceInfo', :class => DiscountPriceInfo, :default_value => []
       boolean_node :use_recommended_product, 'UseRecommendedProduct', 'true', 'false'
-      text_node :seller_provided_title, 'SellerProvidedTitle'
-      text_node :vin, 'VIN'
-      text_node :vin_link, 'VINLink'
-      text_node :vrm, 'VRM'
-      text_node :vrm_link, 'VRMLink'
+      text_node :seller_provided_title, 'SellerProvidedTitle', :default_value => ''
+      text_node :vin, 'VIN', :default_value => ''
+      text_node :vin_link, 'VINLink', :default_value => ''
+      text_node :vrm, 'VRM', :default_value => ''
+      text_node :vrm_link, 'VRMLink', :default_value => ''
       array_node :quantity_infos, 'QuantityInfo', :class => QuantityInfo, :default_value => []
       array_node :seller_profiles, 'SellerProfiles', :class => SellerProfiles, :default_value => []
       array_node :shipping_service_cost_override_lists, 'ShippingServiceCostOverrideList', :class => ShippingServiceCostOverrideList, :default_value => []
@@ -335,7 +335,7 @@ module Ebay # :nodoc:
       boolean_node :is_intermediated_shipping_eligible, 'IsIntermediatedShippingEligible', 'true', 'false'
       array_node :unit_infos, 'UnitInfo', :class => UnitInfo, :default_value => []
       numeric_node :relist_parent_id, 'RelistParentID'
-      text_node :condition_definition, 'ConditionDefinition'
+      text_node :condition_definition, 'ConditionDefinition', :default_value => ''
       boolean_node :hide_from_search, 'HideFromSearch', 'true', 'false'
       value_array_node :reason_hide_from_searches, 'ReasonHideFromSearch', :default_value => []
       boolean_node :include_recommendations, 'IncludeRecommendations', 'true', 'false'

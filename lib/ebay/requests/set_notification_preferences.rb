@@ -10,7 +10,7 @@ module Ebay # :nodoc:
     #  array_node :user_delivery_preferences, 'UserDeliveryPreferenceArray', :class => NotificationEnableArray, :default_value => []
     #  array_node :user_data, 'UserData', :class => NotificationUserData, :default_value => []
     #  object_node :event_property, 'EventProperty', :class => NotificationEventProperty
-    #  text_node :delivery_url_name, 'DeliveryURLName'
+    #  text_node :delivery_url_name, 'DeliveryURLName', :default_value => ''
     class SetNotificationPreferences < Abstract
       include XML::Mapping
       include Initializer
@@ -19,7 +19,7 @@ module Ebay # :nodoc:
       array_node :user_delivery_preferences, 'UserDeliveryPreferenceArray', :class => NotificationEnableArray, :default_value => []
       array_node :user_data, 'UserData', :class => NotificationUserData, :default_value => []
       object_node :event_property, 'EventProperty', :class => NotificationEventProperty
-      text_node :delivery_url_name, 'DeliveryURLName'
+      text_node :delivery_url_name, 'DeliveryURLName', :default_value => ''
     end
   end
 end

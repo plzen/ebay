@@ -7,10 +7,10 @@ module Ebay # :nodoc:
     #  value_array_node :mail_message_types, 'MailMessageType', :default_value => []
     #  value_array_node :message_statuses, 'MessageStatus', :default_value => []
     #  boolean_node :display_to_public, 'DisplayToPublic', 'true', 'false'
-    #  time_node :start_creation_time, 'StartCreationTime'
-    #  time_node :end_creation_time, 'EndCreationTime'
+    #  time_node :start_creation_time, 'StartCreationTime', :default_value => ''
+    #  time_node :end_creation_time, 'EndCreationTime', :default_value => ''
     #  array_node :paginations, 'Pagination', :class => Pagination, :default_value => []
-    #  text_node :member_message_id, 'MemberMessageID'
+    #  text_node :member_message_id, 'MemberMessageID', :default_value => ''
     #  value_array_node :sender_ids, 'SenderID', :default_value => []
     class GetMemberMessages < Abstract
       include XML::Mapping
@@ -20,10 +20,10 @@ module Ebay # :nodoc:
       value_array_node :mail_message_types, 'MailMessageType', :default_value => []
       value_array_node :message_statuses, 'MessageStatus', :default_value => []
       boolean_node :display_to_public, 'DisplayToPublic', 'true', 'false'
-      time_node :start_creation_time, 'StartCreationTime'
-      time_node :end_creation_time, 'EndCreationTime'
+      time_node :start_creation_time, 'StartCreationTime', :default_value => ''
+      time_node :end_creation_time, 'EndCreationTime', :default_value => ''
       array_node :paginations, 'Pagination', :class => Pagination, :default_value => []
-      text_node :member_message_id, 'MemberMessageID'
+      text_node :member_message_id, 'MemberMessageID', :default_value => ''
       value_array_node :sender_ids, 'SenderID', :default_value => []
     end
   end

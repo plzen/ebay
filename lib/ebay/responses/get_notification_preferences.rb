@@ -7,7 +7,7 @@ module Ebay # :nodoc:
   module Responses # :nodoc:
     # == Attributes
     #  array_node :application_delivery_preferences, 'ApplicationDeliveryPreferences', :class => ApplicationDeliveryPreferences, :default_value => []
-    #  text_node :delivery_url_name, 'DeliveryURLName'
+    #  text_node :delivery_url_name, 'DeliveryURLName', :default_value => ''
     #  array_node :user_delivery_preferences, 'UserDeliveryPreferenceArray', :class => NotificationEnableArray, :default_value => []
     #  array_node :user_data, 'UserData', :class => NotificationUserData, :default_value => []
     #  object_node :event_property, 'EventProperty', :class => NotificationEventProperty
@@ -16,7 +16,7 @@ module Ebay # :nodoc:
       include Initializer
       root_element_name 'GetNotificationPreferencesResponse'
       array_node :application_delivery_preferences, 'ApplicationDeliveryPreferences', :class => ApplicationDeliveryPreferences, :default_value => []
-      text_node :delivery_url_name, 'DeliveryURLName'
+      text_node :delivery_url_name, 'DeliveryURLName', :default_value => ''
       array_node :user_delivery_preferences, 'UserDeliveryPreferenceArray', :class => NotificationEnableArray, :default_value => []
       array_node :user_data, 'UserData', :class => NotificationUserData, :default_value => []
       object_node :event_property, 'EventProperty', :class => NotificationEventProperty

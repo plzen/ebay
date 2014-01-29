@@ -10,7 +10,7 @@ module Ebay # :nodoc:
     #  value_array_node :sort_orders, 'SortOrder', :default_value => []
     #  array_node :searches, 'Search', :class => SellingManagerSearch, :default_value => []
     #  numeric_node :store_category_id, 'StoreCategoryID'
-    #  text_node :filter, 'Filter'
+    #  text_node :filter, 'Filter', :default_value => ''
     class GetSellingManagerInventory < Abstract
       include XML::Mapping
       include Initializer
@@ -21,7 +21,7 @@ module Ebay # :nodoc:
       value_array_node :sort_orders, 'SortOrder', :default_value => []
       array_node :searches, 'Search', :class => SellingManagerSearch, :default_value => []
       numeric_node :store_category_id, 'StoreCategoryID'
-      text_node :filter, 'Filter'
+      text_node :filter, 'Filter', :default_value => ''
     end
   end
 end

@@ -12,18 +12,18 @@ module Ebay # :nodoc:
     #  boolean_node :has_reserve_price, 'HasReservePrice', 'true', 'false'
     #  value_array_node :relisted_item_ids, 'RelistedItemID', :default_value => []
     #  value_array_node :second_chance_original_item_ids, 'SecondChanceOriginalItemID', :default_value => []
-    #  time_node :start_time, 'StartTime'
-    #  time_node :end_time, 'EndTime'
-    #  text_node :view_item_url, 'ViewItemURL'
+    #  time_node :start_time, 'StartTime', :default_value => ''
+    #  time_node :end_time, 'EndTime', :default_value => ''
+    #  text_node :view_item_url, 'ViewItemURL', :default_value => ''
     #  boolean_node :has_unanswered_questions, 'HasUnansweredQuestions', 'true', 'false'
     #  boolean_node :has_public_messages, 'HasPublicMessages', 'true', 'false'
     #  boolean_node :buy_it_now_available, 'BuyItNowAvailable', 'true', 'false'
     #  value_array_node :seller_business_types, 'SellerBusinessType', :default_value => []
     #  array_node :minimum_best_offer_prices, 'MinimumBestOfferPrice', :class => Amount, :default_value => []
-    #  text_node :minimum_best_offer_message, 'MinimumBestOfferMessage'
-    #  text_node :local_listing_distance, 'LocalListingDistance'
+    #  text_node :minimum_best_offer_message, 'MinimumBestOfferMessage', :default_value => ''
+    #  text_node :local_listing_distance, 'LocalListingDistance', :default_value => ''
     #  value_array_node :tcr_original_item_ids, 'TCROriginalItemID', :default_value => []
-    #  text_node :view_item_url_for_natural_search, 'ViewItemURLForNaturalSearch'
+    #  text_node :view_item_url_for_natural_search, 'ViewItemURLForNaturalSearch', :default_value => ''
     #  boolean_node :pay_per_lead_enabled, 'PayPerLeadEnabled', 'true', 'false'
     #  array_node :best_offer_auto_accept_prices, 'BestOfferAutoAcceptPrice', :class => Amount, :default_value => []
     #  value_array_node :ending_reasons, 'EndingReason', :default_value => []
@@ -40,18 +40,18 @@ module Ebay # :nodoc:
       boolean_node :has_reserve_price, 'HasReservePrice', 'true', 'false'
       value_array_node :relisted_item_ids, 'RelistedItemID', :default_value => []
       value_array_node :second_chance_original_item_ids, 'SecondChanceOriginalItemID', :default_value => []
-      time_node :start_time, 'StartTime'
-      time_node :end_time, 'EndTime'
-      text_node :view_item_url, 'ViewItemURL'
+      time_node :start_time, 'StartTime', :default_value => ''
+      time_node :end_time, 'EndTime', :default_value => ''
+      text_node :view_item_url, 'ViewItemURL', :default_value => ''
       boolean_node :has_unanswered_questions, 'HasUnansweredQuestions', 'true', 'false'
       boolean_node :has_public_messages, 'HasPublicMessages', 'true', 'false'
       boolean_node :buy_it_now_available, 'BuyItNowAvailable', 'true', 'false'
       value_array_node :seller_business_types, 'SellerBusinessType', :default_value => []
       array_node :minimum_best_offer_prices, 'MinimumBestOfferPrice', :class => Amount, :default_value => []
-      text_node :minimum_best_offer_message, 'MinimumBestOfferMessage'
-      text_node :local_listing_distance, 'LocalListingDistance'
+      text_node :minimum_best_offer_message, 'MinimumBestOfferMessage', :default_value => ''
+      text_node :local_listing_distance, 'LocalListingDistance', :default_value => ''
       value_array_node :tcr_original_item_ids, 'TCROriginalItemID', :default_value => []
-      text_node :view_item_url_for_natural_search, 'ViewItemURLForNaturalSearch'
+      text_node :view_item_url_for_natural_search, 'ViewItemURLForNaturalSearch', :default_value => ''
       boolean_node :pay_per_lead_enabled, 'PayPerLeadEnabled', 'true', 'false'
       array_node :best_offer_auto_accept_prices, 'BestOfferAutoAcceptPrice', :class => Amount, :default_value => []
       value_array_node :ending_reasons, 'EndingReason', :default_value => []

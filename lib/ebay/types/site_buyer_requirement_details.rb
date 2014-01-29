@@ -14,8 +14,8 @@ module Ebay # :nodoc:
     #  array_node :minimum_feedback_scores, 'MinimumFeedbackScore', :class => MinimumFeedbackScoreDetails, :default_value => []
     #  boolean_node :ship_to_registration_country, 'ShipToRegistrationCountry', 'true', 'false'
     #  array_node :verified_user_requirements, 'VerifiedUserRequirements', :class => VerifiedUserRequirementsDetails, :default_value => []
-    #  text_node :detail_version, 'DetailVersion'
-    #  time_node :update_time, 'UpdateTime'
+    #  text_node :detail_version, 'DetailVersion', :default_value => ''
+    #  time_node :update_time, 'UpdateTime', :default_value => ''
     class SiteBuyerRequirementDetails
       include XML::Mapping
       include Initializer
@@ -27,8 +27,8 @@ module Ebay # :nodoc:
       array_node :minimum_feedback_scores, 'MinimumFeedbackScore', :class => MinimumFeedbackScoreDetails, :default_value => []
       boolean_node :ship_to_registration_country, 'ShipToRegistrationCountry', 'true', 'false'
       array_node :verified_user_requirements, 'VerifiedUserRequirements', :class => VerifiedUserRequirementsDetails, :default_value => []
-      text_node :detail_version, 'DetailVersion'
-      time_node :update_time, 'UpdateTime'
+      text_node :detail_version, 'DetailVersion', :default_value => ''
+      time_node :update_time, 'UpdateTime', :default_value => ''
     end
   end
 end

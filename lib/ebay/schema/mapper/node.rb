@@ -54,6 +54,7 @@ module Ebay
       def to_s
         result = "#{declaration}, "
         result << (@field.nil? ? "'#{@name}'" : "'#{@field}'")
+        result << ", :default_value => ''"
         result << ', :optional => true' if optional?
         if @name == 'Type'
           result += <<-ENDMETHOD

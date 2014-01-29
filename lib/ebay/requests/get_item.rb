@@ -11,7 +11,7 @@ module Ebay # :nodoc:
     #  value_array_node :skus, 'SKU', :default_value => []
     #  value_array_node :variation_skus, 'VariationSKU', :default_value => []
     #  array_node :variation_specifics, 'VariationSpecifics', :class => NameValueListArray, :default_value => []
-    #  text_node :transaction_id, 'TransactionID'
+    #  text_node :transaction_id, 'TransactionID', :default_value => ''
     #  boolean_node :include_item_compatibility_list, 'IncludeItemCompatibilityList', 'true', 'false'
     class GetItem < Abstract
       include XML::Mapping
@@ -25,7 +25,7 @@ module Ebay # :nodoc:
       value_array_node :skus, 'SKU', :default_value => []
       value_array_node :variation_skus, 'VariationSKU', :default_value => []
       array_node :variation_specifics, 'VariationSpecifics', :class => NameValueListArray, :default_value => []
-      text_node :transaction_id, 'TransactionID'
+      text_node :transaction_id, 'TransactionID', :default_value => ''
       boolean_node :include_item_compatibility_list, 'IncludeItemCompatibilityList', 'true', 'false'
     end
   end

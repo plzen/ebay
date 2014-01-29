@@ -4,14 +4,14 @@ module Ebay # :nodoc:
   module Requests # :nodoc:
     # == Attributes
     #  array_node :items, 'Item', :class => Item, :default_value => []
-    #  text_node :deleted_field, 'DeletedField'
+    #  text_node :deleted_field, 'DeletedField', :default_value => ''
     #  boolean_node :verify_only, 'VerifyOnly', 'true', 'false'
     class ReviseItem < Abstract
       include XML::Mapping
       include Initializer
       root_element_name 'ReviseItemRequest'
       array_node :items, 'Item', :class => Item, :default_value => []
-      text_node :deleted_field, 'DeletedField'
+      text_node :deleted_field, 'DeletedField', :default_value => ''
       boolean_node :verify_only, 'VerifyOnly', 'true', 'false'
     end
   end

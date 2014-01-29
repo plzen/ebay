@@ -7,9 +7,9 @@ module Ebay # :nodoc:
     # == Attributes
     #  value_array_node :item_ids, 'ItemID', :default_value => []
     #  array_node :fees, 'Fees', :class => Fees, :default_value => []
-    #  time_node :start_time, 'StartTime'
-    #  time_node :end_time, 'EndTime'
-    #  text_node :discount_reason, 'DiscountReason'
+    #  time_node :start_time, 'StartTime', :default_value => ''
+    #  time_node :end_time, 'EndTime', :default_value => ''
+    #  text_node :discount_reason, 'DiscountReason', :default_value => ''
     #  array_node :product_suggestions, 'ProductSuggestions', :class => ProductSuggestions, :default_value => []
     #  array_node :listing_recommendations, 'ListingRecommendations', :class => ListingRecommendations, :default_value => []
     class VerifyRelistItem < Abstract
@@ -18,9 +18,9 @@ module Ebay # :nodoc:
       root_element_name 'VerifyRelistItemResponse'
       value_array_node :item_ids, 'ItemID', :default_value => []
       array_node :fees, 'Fees', :class => Fees, :default_value => []
-      time_node :start_time, 'StartTime'
-      time_node :end_time, 'EndTime'
-      text_node :discount_reason, 'DiscountReason'
+      time_node :start_time, 'StartTime', :default_value => ''
+      time_node :end_time, 'EndTime', :default_value => ''
+      text_node :discount_reason, 'DiscountReason', :default_value => ''
       array_node :product_suggestions, 'ProductSuggestions', :class => ProductSuggestions, :default_value => []
       array_node :listing_recommendations, 'ListingRecommendations', :class => ListingRecommendations, :default_value => []
     end

@@ -5,7 +5,7 @@ require 'ebay/types/pagination_result'
 module Ebay # :nodoc:
   module Responses # :nodoc:
     # == Attributes
-    #  text_node :account_id, 'AccountID'
+    #  text_node :account_id, 'AccountID', :default_value => ''
     #  array_node :account_summaries, 'AccountSummary', :class => AccountSummary, :default_value => []
     #  value_array_node :currencies, 'Currency', :default_value => []
     #  array_node :account_entries, 'AccountEntries', :class => AccountEntries, :default_value => []
@@ -17,7 +17,7 @@ module Ebay # :nodoc:
       include XML::Mapping
       include Initializer
       root_element_name 'GetAccountResponse'
-      text_node :account_id, 'AccountID'
+      text_node :account_id, 'AccountID', :default_value => ''
       array_node :account_summaries, 'AccountSummary', :class => AccountSummary, :default_value => []
       value_array_node :currencies, 'Currency', :default_value => []
       array_node :account_entries, 'AccountEntries', :class => AccountEntries, :default_value => []

@@ -6,7 +6,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  array_node :mapped_categories, 'MappedCategoryArray', :class => CategoryArray, :default_value => []
     #  array_node :unmapped_categories, 'UnmappedCategoryArray', :class => CategoryArray, :default_value => []
-    #  text_node :attribute_system_version, 'AttributeSystemVersion'
+    #  text_node :attribute_system_version, 'AttributeSystemVersion', :default_value => ''
     #  object_node :site_wide_characteristic_sets, 'SiteWideCharacteristicSets', :class => SiteWideCharacteristics
     class GetCategory2CS < Abstract
       include XML::Mapping
@@ -14,7 +14,7 @@ module Ebay # :nodoc:
       root_element_name 'GetCategory2CSResponse'
       array_node :mapped_categories, 'MappedCategoryArray', :class => CategoryArray, :default_value => []
       array_node :unmapped_categories, 'UnmappedCategoryArray', :class => CategoryArray, :default_value => []
-      text_node :attribute_system_version, 'AttributeSystemVersion'
+      text_node :attribute_system_version, 'AttributeSystemVersion', :default_value => ''
       object_node :site_wide_characteristic_sets, 'SiteWideCharacteristicSets', :class => SiteWideCharacteristics
     end
   end

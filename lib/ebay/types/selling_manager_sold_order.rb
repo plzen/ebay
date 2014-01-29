@@ -24,20 +24,20 @@ module Ebay # :nodoc:
     #  array_node :vat_total_amounts, 'VATTotalAmount', :class => Amount, :default_value => []
     #  array_node :actual_shipping_costs, 'ActualShippingCost', :class => Amount, :default_value => []
     #  array_node :adjustment_amounts, 'AdjustmentAmount', :class => Amount, :default_value => []
-    #  text_node :notes_to_buyer, 'NotesToBuyer'
-    #  text_node :notes_from_buyer, 'NotesFromBuyer'
-    #  text_node :notes_to_seller, 'NotesToSeller'
+    #  text_node :notes_to_buyer, 'NotesToBuyer', :default_value => ''
+    #  text_node :notes_from_buyer, 'NotesFromBuyer', :default_value => ''
+    #  text_node :notes_to_seller, 'NotesToSeller', :default_value => ''
     #  array_node :order_statuses, 'OrderStatus', :class => SellingManagerOrderStatus, :default_value => []
     #  value_array_node :unpaid_item_statuses, 'UnpaidItemStatus', :default_value => []
     #  array_node :sale_prices, 'SalePrice', :class => Amount, :default_value => []
     #  numeric_node :emails_sent, 'EmailsSent'
     #  numeric_node :days_since_sale, 'DaysSinceSale'
-    #  text_node :buyer_id, 'BuyerID'
-    #  text_node :buyer_email, 'BuyerEmail'
+    #  text_node :buyer_id, 'BuyerID', :default_value => ''
+    #  text_node :buyer_email, 'BuyerEmail', :default_value => ''
     #  numeric_node :sale_record_id, 'SaleRecordID'
-    #  time_node :creation_time, 'CreationTime'
+    #  time_node :creation_time, 'CreationTime', :default_value => ''
     #  array_node :refund_amounts, 'RefundAmount', :class => Amount, :default_value => []
-    #  text_node :refund_status, 'RefundStatus'
+    #  text_node :refund_status, 'RefundStatus', :default_value => ''
     class SellingManagerSoldOrder
       include XML::Mapping
       include Initializer
@@ -58,20 +58,20 @@ module Ebay # :nodoc:
       array_node :vat_total_amounts, 'VATTotalAmount', :class => Amount, :default_value => []
       array_node :actual_shipping_costs, 'ActualShippingCost', :class => Amount, :default_value => []
       array_node :adjustment_amounts, 'AdjustmentAmount', :class => Amount, :default_value => []
-      text_node :notes_to_buyer, 'NotesToBuyer'
-      text_node :notes_from_buyer, 'NotesFromBuyer'
-      text_node :notes_to_seller, 'NotesToSeller'
+      text_node :notes_to_buyer, 'NotesToBuyer', :default_value => ''
+      text_node :notes_from_buyer, 'NotesFromBuyer', :default_value => ''
+      text_node :notes_to_seller, 'NotesToSeller', :default_value => ''
       array_node :order_statuses, 'OrderStatus', :class => SellingManagerOrderStatus, :default_value => []
       value_array_node :unpaid_item_statuses, 'UnpaidItemStatus', :default_value => []
       array_node :sale_prices, 'SalePrice', :class => Amount, :default_value => []
       numeric_node :emails_sent, 'EmailsSent'
       numeric_node :days_since_sale, 'DaysSinceSale'
-      text_node :buyer_id, 'BuyerID'
-      text_node :buyer_email, 'BuyerEmail'
+      text_node :buyer_id, 'BuyerID', :default_value => ''
+      text_node :buyer_email, 'BuyerEmail', :default_value => ''
       numeric_node :sale_record_id, 'SaleRecordID'
-      time_node :creation_time, 'CreationTime'
+      time_node :creation_time, 'CreationTime', :default_value => ''
       array_node :refund_amounts, 'RefundAmount', :class => Amount, :default_value => []
-      text_node :refund_status, 'RefundStatus'
+      text_node :refund_status, 'RefundStatus', :default_value => ''
     end
   end
 end

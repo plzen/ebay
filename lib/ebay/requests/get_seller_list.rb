@@ -7,11 +7,11 @@ module Ebay # :nodoc:
     # == Attributes
     #  value_array_node :user_ids, 'UserID', :default_value => []
     #  array_node :motors_dealer_users, 'MotorsDealerUsers', :class => UserIDArray, :default_value => []
-    #  time_node :end_time_from, 'EndTimeFrom'
-    #  time_node :end_time_to, 'EndTimeTo'
+    #  time_node :end_time_from, 'EndTimeFrom', :default_value => ''
+    #  time_node :end_time_to, 'EndTimeTo', :default_value => ''
     #  numeric_node :sort, 'Sort'
-    #  time_node :start_time_from, 'StartTimeFrom'
-    #  time_node :start_time_to, 'StartTimeTo'
+    #  time_node :start_time_from, 'StartTimeFrom', :default_value => ''
+    #  time_node :start_time_to, 'StartTimeTo', :default_value => ''
     #  array_node :paginations, 'Pagination', :class => Pagination, :default_value => []
     #  value_array_node :granularity_levels, 'GranularityLevel', :default_value => []
     #  array_node :skus, 'SKUArray', :class => SKUArray, :default_value => []
@@ -25,11 +25,11 @@ module Ebay # :nodoc:
       root_element_name 'GetSellerListRequest'
       value_array_node :user_ids, 'UserID', :default_value => []
       array_node :motors_dealer_users, 'MotorsDealerUsers', :class => UserIDArray, :default_value => []
-      time_node :end_time_from, 'EndTimeFrom'
-      time_node :end_time_to, 'EndTimeTo'
+      time_node :end_time_from, 'EndTimeFrom', :default_value => ''
+      time_node :end_time_to, 'EndTimeTo', :default_value => ''
       numeric_node :sort, 'Sort'
-      time_node :start_time_from, 'StartTimeFrom'
-      time_node :start_time_to, 'StartTimeTo'
+      time_node :start_time_from, 'StartTimeFrom', :default_value => ''
+      time_node :start_time_to, 'StartTimeTo', :default_value => ''
       array_node :paginations, 'Pagination', :class => Pagination, :default_value => []
       value_array_node :granularity_levels, 'GranularityLevel', :default_value => []
       array_node :skus, 'SKUArray', :class => SKUArray, :default_value => []

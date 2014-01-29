@@ -2,7 +2,8 @@ require 'xml/mapping/base'
 
 class HourNode < XML::Mapping::SingleAttributeNode
   def initialize(*args)
-    @path,*args = super(*args)
+    path,*args = super(*args)
+    @path = XML::XXPath.new(path) 
     args
   end
 

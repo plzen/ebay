@@ -8,11 +8,11 @@ module Ebay # :nodoc:
     #  boolean_node :auto_pay_enabled, 'AutoPayEnabled', 'true', 'false'
     #  boolean_node :b2_bvat_enabled, 'B2BVATEnabled', 'true', 'false'
     #  boolean_node :catalog_enabled, 'CatalogEnabled', 'true', 'false'
-    #  text_node :category_id, 'CategoryID'
+    #  text_node :category_id, 'CategoryID', :default_value => ''
     #  numeric_node :category_level, 'CategoryLevel'
-    #  text_node :category_name, 'CategoryName'
-    #  text_node :category_parent_id, 'CategoryParentID'
-    #  text_node :category_parent_name, 'CategoryParentName'
+    #  text_node :category_name, 'CategoryName', :default_value => ''
+    #  text_node :category_parent_id, 'CategoryParentID', :default_value => ''
+    #  text_node :category_parent_name, 'CategoryParentName', :default_value => ''
     #  boolean_node :product_search_page_available, 'ProductSearchPageAvailable', 'true', 'false'
     #  object_node :product_finder_ids, 'ProductFinderIDs', :class => ExtendedProductFinderID
     #  object_node :characteristics_sets, 'CharacteristicsSets', :class => CharacteristicsSet
@@ -25,7 +25,7 @@ module Ebay # :nodoc:
     #  boolean_node :orpa, 'ORPA', 'true', 'false'
     #  boolean_node :orra, 'ORRA', 'true', 'false'
     #  boolean_node :lsd, 'LSD', 'true', 'false'
-    #  text_node :keywords, 'Keywords'
+    #  text_node :keywords, 'Keywords', :default_value => ''
     class Category
       include XML::Mapping
       include Initializer
@@ -34,11 +34,11 @@ module Ebay # :nodoc:
       boolean_node :auto_pay_enabled, 'AutoPayEnabled', 'true', 'false'
       boolean_node :b2_bvat_enabled, 'B2BVATEnabled', 'true', 'false'
       boolean_node :catalog_enabled, 'CatalogEnabled', 'true', 'false'
-      text_node :category_id, 'CategoryID'
+      text_node :category_id, 'CategoryID', :default_value => ''
       numeric_node :category_level, 'CategoryLevel'
-      text_node :category_name, 'CategoryName'
-      text_node :category_parent_id, 'CategoryParentID'
-      text_node :category_parent_name, 'CategoryParentName'
+      text_node :category_name, 'CategoryName', :default_value => ''
+      text_node :category_parent_id, 'CategoryParentID', :default_value => ''
+      text_node :category_parent_name, 'CategoryParentName', :default_value => ''
       boolean_node :product_search_page_available, 'ProductSearchPageAvailable', 'true', 'false'
       object_node :product_finder_ids, 'ProductFinderIDs', :class => ExtendedProductFinderID
       object_node :characteristics_sets, 'CharacteristicsSets', :class => CharacteristicsSet
@@ -51,7 +51,7 @@ module Ebay # :nodoc:
       boolean_node :orpa, 'ORPA', 'true', 'false'
       boolean_node :orra, 'ORRA', 'true', 'false'
       boolean_node :lsd, 'LSD', 'true', 'false'
-      text_node :keywords, 'Keywords'
+      text_node :keywords, 'Keywords', :default_value => ''
     end
   end
 end
