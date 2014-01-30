@@ -2,16 +2,16 @@
 module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
-    #  text_node :file_name, 'FileName', :default_value => ''
-    #  text_node :file_version, 'FileVersion', :default_value => ''
-    #  text_node :file_content, 'FileContent', :default_value => ''
+    #  text_node :file_name, 'FileName', :optional => true
+    #  text_node :file_version, 'FileVersion', :optional => true
+    #  text_node :file_content, 'FileContent', :optional => true
     class XSLFile
       include XML::Mapping
       include Initializer
       root_element_name 'XSLFile'
-      text_node :file_name, 'FileName', :default_value => ''
-      text_node :file_version, 'FileVersion', :default_value => ''
-      text_node :file_content, 'FileContent', :default_value => ''
+      text_node :file_name, 'FileName', :optional => true
+      text_node :file_version, 'FileVersion', :optional => true
+      text_node :file_content, 'FileContent', :optional => true
       # The content of the XSL stylesheet
       def file_content
         if @file_content

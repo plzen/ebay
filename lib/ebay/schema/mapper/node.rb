@@ -15,7 +15,7 @@ module Ebay
       end
 
       def optional?
-        @min == "0"
+        @min.to_s == "0"
       end
       
       def accessor_name
@@ -54,7 +54,6 @@ module Ebay
       def to_s
         result = "#{declaration}, "
         result << (@field.nil? ? "'#{@name}'" : "'#{@field}'")
-        result << ", :default_value => ''"
         result << ', :optional => true' if optional?
         if @name == 'Type'
           result += <<-ENDMETHOD
@@ -74,7 +73,7 @@ end
     class BooleanNode < Node
       def to_s
         result = "#{declaration}, '#{@name}', 'true', 'false'"
-        result << ', :optional => true' if @min == '0'
+        result << ', :optional => true' if optional?
         result
       end
     end
@@ -118,7 +117,7 @@ end
     class MoneyNode < Node
       def to_s
         result = "#{declaration}, '#{@name}'"
-        result << ', :optional => true' if @min == '0'
+        result << ', :optional => true' if optional?
         result
       end
     end
@@ -130,7 +129,7 @@ end
       
       def to_s
         result = "#{declaration}, '#{@name}', :class => #{class_name}"
-        result << ', :optional => true' if @min == '0'
+        result << ', :optional => true' if optional?
         result
       end
     end
@@ -142,7 +141,7 @@ end
       
       def to_s
         result = "#{declaration}, '#{@name}', :class => #{class_name}"
-        result << ', :optional => true' if @min == '0'
+        result << ', :optional => true' if optional?
         if @name == 'Type'
           result += <<-ENDMETHOD
 

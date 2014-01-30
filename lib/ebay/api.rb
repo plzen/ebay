@@ -115,7 +115,7 @@ module Ebay #:nodoc:
     private
     def commit(request_class, params)
       format = params.delete(:format) || @format
-      
+
       params[:username] = username
       params[:password] = password
       params[:auth_token] = auth_token
@@ -180,9 +180,8 @@ module Ebay #:nodoc:
         # Fixes the wrong case of API returned by eBay
         fix_root_element_name(xml)
 
-        #XML::Mapping.get_classese(xml.root)
+        result = XML::Mapping.load_object_from_xml(xml.root)
 
-        result = XML::Mapping.load_object_from_xml(xml.root, :mapping=>:_default)
         case result.ack
         when Ebay::Types::AckCode::Failure, Ebay::Types::AckCode::PartialFailure
           raise RequestError.new(result.errors)

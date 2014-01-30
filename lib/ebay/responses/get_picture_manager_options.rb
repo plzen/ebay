@@ -4,14 +4,14 @@ require 'ebay/types/picture_manager_picture_display'
 module Ebay # :nodoc:
   module Responses # :nodoc:
     # == Attributes
-    #  object_node :subscription, 'Subscription', :class => PictureManagerSubscription
-    #  object_node :picture_type, 'PictureType', :class => PictureManagerPictureDisplay
+    #  array_node :subscriptions, 'Subscription', :class => PictureManagerSubscription, :default_value => []
+    #  array_node :picture_types, 'PictureType', :class => PictureManagerPictureDisplay, :default_value => []
     class GetPictureManagerOptions < Abstract
       include XML::Mapping
       include Initializer
       root_element_name 'GetPictureManagerOptionsResponse'
-      object_node :subscription, 'Subscription', :class => PictureManagerSubscription
-      object_node :picture_type, 'PictureType', :class => PictureManagerPictureDisplay
+      array_node :subscriptions, 'Subscription', :class => PictureManagerSubscription, :default_value => []
+      array_node :picture_types, 'PictureType', :class => PictureManagerPictureDisplay, :default_value => []
     end
   end
 end

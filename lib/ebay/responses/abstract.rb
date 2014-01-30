@@ -5,40 +5,40 @@ require 'ebay/types/bot_block_response'
 module Ebay # :nodoc:
   module Responses # :nodoc:
     # == Attributes
-    #  time_node :timestamp, 'Timestamp', :default_value => ''
-    #  value_array_node :acks, 'Ack', :default_value => []
-    #  text_node :correlation_id, 'CorrelationID', :default_value => ''
-    #  object_node :errors, 'Errors', :class => Error
-    #  text_node :message, 'Message', :default_value => ''
-    #  text_node :version, 'Version', :default_value => ''
-    #  text_node :build, 'Build', :default_value => ''
-    #  text_node :notification_event_name, 'NotificationEventName', :default_value => ''
-    #  array_node :duplicate_invocation_details, 'DuplicateInvocationDetails', :class => DuplicateInvocationDetails, :default_value => []
-    #  text_node :recipient_user_id, 'RecipientUserID', :default_value => ''
-    #  text_node :eias_token, 'EIASToken', :default_value => ''
-    #  text_node :notification_signature, 'NotificationSignature', :default_value => ''
-    #  text_node :hard_expiration_warning, 'HardExpirationWarning', :default_value => ''
-    #  array_node :bot_blocks, 'BotBlock', :class => BotBlockResponse, :default_value => []
-    #  text_node :external_user_data, 'ExternalUserData', :default_value => ''
+    #  time_node :timestamp, 'Timestamp', :optional => true
+    #  text_node :ack, 'Ack', :optional => true
+    #  text_node :correlation_id, 'CorrelationID', :optional => true
+    #  array_node :errors, 'Errors', :class => Error, :default_value => []
+    #  text_node :message, 'Message', :optional => true
+    #  text_node :version, 'Version', :optional => true
+    #  text_node :build, 'Build', :optional => true
+    #  text_node :notification_event_name, 'NotificationEventName', :optional => true
+    #  object_node :duplicate_invocation_details, 'DuplicateInvocationDetails', :class => DuplicateInvocationDetails, :optional => true
+    #  text_node :recipient_user_id, 'RecipientUserID', :optional => true
+    #  text_node :eias_token, 'EIASToken', :optional => true
+    #  text_node :notification_signature, 'NotificationSignature', :optional => true
+    #  text_node :hard_expiration_warning, 'HardExpirationWarning', :optional => true
+    #  object_node :bot_block, 'BotBlock', :class => BotBlockResponse, :optional => true
+    #  text_node :external_user_data, 'ExternalUserData', :optional => true
     class Abstract < Base
       include XML::Mapping
       include Initializer
       root_element_name 'AbstractResponse'
-      time_node :timestamp, 'Timestamp', :default_value => ''
-      value_array_node :acks, 'Ack', :default_value => []
-      text_node :correlation_id, 'CorrelationID', :default_value => ''
-      object_node :errors, 'Errors', :class => Error
-      text_node :message, 'Message', :default_value => ''
-      text_node :version, 'Version', :default_value => ''
-      text_node :build, 'Build', :default_value => ''
-      text_node :notification_event_name, 'NotificationEventName', :default_value => ''
-      array_node :duplicate_invocation_details, 'DuplicateInvocationDetails', :class => DuplicateInvocationDetails, :default_value => []
-      text_node :recipient_user_id, 'RecipientUserID', :default_value => ''
-      text_node :eias_token, 'EIASToken', :default_value => ''
-      text_node :notification_signature, 'NotificationSignature', :default_value => ''
-      text_node :hard_expiration_warning, 'HardExpirationWarning', :default_value => ''
-      array_node :bot_blocks, 'BotBlock', :class => BotBlockResponse, :default_value => []
-      text_node :external_user_data, 'ExternalUserData', :default_value => ''
+      time_node :timestamp, 'Timestamp', :optional => true
+      text_node :ack, 'Ack', :optional => true
+      text_node :correlation_id, 'CorrelationID', :optional => true
+      array_node :errors, 'Errors', :class => Error, :default_value => []
+      text_node :message, 'Message', :optional => true
+      text_node :version, 'Version', :optional => true
+      text_node :build, 'Build', :optional => true
+      text_node :notification_event_name, 'NotificationEventName', :optional => true
+      object_node :duplicate_invocation_details, 'DuplicateInvocationDetails', :class => DuplicateInvocationDetails, :optional => true
+      text_node :recipient_user_id, 'RecipientUserID', :optional => true
+      text_node :eias_token, 'EIASToken', :optional => true
+      text_node :notification_signature, 'NotificationSignature', :optional => true
+      text_node :hard_expiration_warning, 'HardExpirationWarning', :optional => true
+      object_node :bot_block, 'BotBlock', :class => BotBlockResponse, :optional => true
+      text_node :external_user_data, 'ExternalUserData', :optional => true
     end
   end
 end

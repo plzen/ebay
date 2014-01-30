@@ -6,62 +6,62 @@ require 'ebay/types/message_media'
 module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
-    #  text_node :sender, 'Sender', :default_value => ''
-    #  text_node :recipient_user_id, 'RecipientUserID', :default_value => ''
-    #  text_node :send_to_name, 'SendToName', :default_value => ''
-    #  text_node :subject, 'Subject', :default_value => ''
-    #  value_array_node :message_ids, 'MessageID', :default_value => []
-    #  text_node :external_message_id, 'ExternalMessageID', :default_value => ''
-    #  text_node :content_type, 'ContentType', :default_value => ''
-    #  text_node :text, 'Text', :default_value => ''
-    #  boolean_node :flagged, 'Flagged', 'true', 'false'
-    #  boolean_node :read, 'Read', 'true', 'false'
-    #  time_node :creation_date, 'CreationDate', :default_value => ''
-    #  time_node :receive_date, 'ReceiveDate', :default_value => ''
-    #  time_node :expiration_date, 'ExpirationDate', :default_value => ''
-    #  value_array_node :item_ids, 'ItemID', :default_value => []
-    #  array_node :response_details, 'ResponseDetails', :class => MyMessagesResponseDetails, :default_value => []
-    #  array_node :forward_details, 'ForwardDetails', :class => MyMessagesForwardDetails, :default_value => []
-    #  array_node :folders, 'Folder', :class => MyMessagesFolder, :default_value => []
-    #  text_node :content, 'Content', :default_value => ''
-    #  value_array_node :message_types, 'MessageType', :default_value => []
-    #  value_array_node :listing_statuses, 'ListingStatus', :default_value => []
-    #  value_array_node :question_types, 'QuestionType', :default_value => []
-    #  boolean_node :replied, 'Replied', 'true', 'false'
-    #  boolean_node :high_priority, 'HighPriority', 'true', 'false'
-    #  time_node :item_end_time, 'ItemEndTime', :default_value => ''
-    #  text_node :item_title, 'ItemTitle', :default_value => ''
-    #  object_node :message_media, 'MessageMedia', :class => MessageMedia
+    #  text_node :sender, 'Sender', :optional => true
+    #  text_node :recipient_user_id, 'RecipientUserID', :optional => true
+    #  text_node :send_to_name, 'SendToName', :optional => true
+    #  text_node :subject, 'Subject', :optional => true
+    #  text_node :message_id, 'MessageID', :optional => true
+    #  text_node :external_message_id, 'ExternalMessageID', :optional => true
+    #  text_node :content_type, 'ContentType', :optional => true
+    #  text_node :text, 'Text', :optional => true
+    #  boolean_node :flagged, 'Flagged', 'true', 'false', :optional => true
+    #  boolean_node :read, 'Read', 'true', 'false', :optional => true
+    #  time_node :creation_date, 'CreationDate', :optional => true
+    #  time_node :receive_date, 'ReceiveDate', :optional => true
+    #  time_node :expiration_date, 'ExpirationDate', :optional => true
+    #  text_node :item_id, 'ItemID', :optional => true
+    #  object_node :response_details, 'ResponseDetails', :class => MyMessagesResponseDetails, :optional => true
+    #  object_node :forward_details, 'ForwardDetails', :class => MyMessagesForwardDetails, :optional => true
+    #  object_node :folder, 'Folder', :class => MyMessagesFolder, :optional => true
+    #  text_node :content, 'Content', :optional => true
+    #  text_node :message_type, 'MessageType', :optional => true
+    #  text_node :listing_status, 'ListingStatus', :optional => true
+    #  text_node :question_type, 'QuestionType', :optional => true
+    #  boolean_node :replied, 'Replied', 'true', 'false', :optional => true
+    #  boolean_node :high_priority, 'HighPriority', 'true', 'false', :optional => true
+    #  time_node :item_end_time, 'ItemEndTime', :optional => true
+    #  text_node :item_title, 'ItemTitle', :optional => true
+    #  array_node :message_media, 'MessageMedia', :class => MessageMedia, :default_value => []
     class MyMessagesMessage
       include XML::Mapping
       include Initializer
       root_element_name 'MyMessagesMessage'
-      text_node :sender, 'Sender', :default_value => ''
-      text_node :recipient_user_id, 'RecipientUserID', :default_value => ''
-      text_node :send_to_name, 'SendToName', :default_value => ''
-      text_node :subject, 'Subject', :default_value => ''
-      value_array_node :message_ids, 'MessageID', :default_value => []
-      text_node :external_message_id, 'ExternalMessageID', :default_value => ''
-      text_node :content_type, 'ContentType', :default_value => ''
-      text_node :text, 'Text', :default_value => ''
-      boolean_node :flagged, 'Flagged', 'true', 'false'
-      boolean_node :read, 'Read', 'true', 'false'
-      time_node :creation_date, 'CreationDate', :default_value => ''
-      time_node :receive_date, 'ReceiveDate', :default_value => ''
-      time_node :expiration_date, 'ExpirationDate', :default_value => ''
-      value_array_node :item_ids, 'ItemID', :default_value => []
-      array_node :response_details, 'ResponseDetails', :class => MyMessagesResponseDetails, :default_value => []
-      array_node :forward_details, 'ForwardDetails', :class => MyMessagesForwardDetails, :default_value => []
-      array_node :folders, 'Folder', :class => MyMessagesFolder, :default_value => []
-      text_node :content, 'Content', :default_value => ''
-      value_array_node :message_types, 'MessageType', :default_value => []
-      value_array_node :listing_statuses, 'ListingStatus', :default_value => []
-      value_array_node :question_types, 'QuestionType', :default_value => []
-      boolean_node :replied, 'Replied', 'true', 'false'
-      boolean_node :high_priority, 'HighPriority', 'true', 'false'
-      time_node :item_end_time, 'ItemEndTime', :default_value => ''
-      text_node :item_title, 'ItemTitle', :default_value => ''
-      object_node :message_media, 'MessageMedia', :class => MessageMedia
+      text_node :sender, 'Sender', :optional => true
+      text_node :recipient_user_id, 'RecipientUserID', :optional => true
+      text_node :send_to_name, 'SendToName', :optional => true
+      text_node :subject, 'Subject', :optional => true
+      text_node :message_id, 'MessageID', :optional => true
+      text_node :external_message_id, 'ExternalMessageID', :optional => true
+      text_node :content_type, 'ContentType', :optional => true
+      text_node :text, 'Text', :optional => true
+      boolean_node :flagged, 'Flagged', 'true', 'false', :optional => true
+      boolean_node :read, 'Read', 'true', 'false', :optional => true
+      time_node :creation_date, 'CreationDate', :optional => true
+      time_node :receive_date, 'ReceiveDate', :optional => true
+      time_node :expiration_date, 'ExpirationDate', :optional => true
+      text_node :item_id, 'ItemID', :optional => true
+      object_node :response_details, 'ResponseDetails', :class => MyMessagesResponseDetails, :optional => true
+      object_node :forward_details, 'ForwardDetails', :class => MyMessagesForwardDetails, :optional => true
+      object_node :folder, 'Folder', :class => MyMessagesFolder, :optional => true
+      text_node :content, 'Content', :optional => true
+      text_node :message_type, 'MessageType', :optional => true
+      text_node :listing_status, 'ListingStatus', :optional => true
+      text_node :question_type, 'QuestionType', :optional => true
+      boolean_node :replied, 'Replied', 'true', 'false', :optional => true
+      boolean_node :high_priority, 'HighPriority', 'true', 'false', :optional => true
+      time_node :item_end_time, 'ItemEndTime', :optional => true
+      text_node :item_title, 'ItemTitle', :optional => true
+      array_node :message_media, 'MessageMedia', :class => MessageMedia, :default_value => []
     end
   end
 end

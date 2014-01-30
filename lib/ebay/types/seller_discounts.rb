@@ -1,19 +1,18 @@
-require 'ebay/types/amount'
 require 'ebay/types/seller_discount'
 
 module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
-    #  array_node :original_item_prices, 'OriginalItemPrice', :class => Amount, :default_value => []
-    #  array_node :original_item_shipping_costs, 'OriginalItemShippingCost', :class => Amount, :default_value => []
-    #  object_node :seller_discount, 'SellerDiscount', :class => SellerDiscount
+    #  money_node :original_item_price, 'OriginalItemPrice', :optional => true
+    #  money_node :original_item_shipping_cost, 'OriginalItemShippingCost', :optional => true
+    #  array_node :seller_discounts, 'SellerDiscount', :class => SellerDiscount, :default_value => []
     class SellerDiscounts
       include XML::Mapping
       include Initializer
       root_element_name 'SellerDiscounts'
-      array_node :original_item_prices, 'OriginalItemPrice', :class => Amount, :default_value => []
-      array_node :original_item_shipping_costs, 'OriginalItemShippingCost', :class => Amount, :default_value => []
-      object_node :seller_discount, 'SellerDiscount', :class => SellerDiscount
+      money_node :original_item_price, 'OriginalItemPrice', :optional => true
+      money_node :original_item_shipping_cost, 'OriginalItemShippingCost', :optional => true
+      array_node :seller_discounts, 'SellerDiscount', :class => SellerDiscount, :default_value => []
     end
   end
 end

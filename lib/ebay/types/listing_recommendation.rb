@@ -2,30 +2,30 @@
 module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
-    #  text_node :type, 'Type', :default_value => ''
+    #  text_node :type, 'Type', :optional => true
 def type
   @type
 end
 
-    #  text_node :group, 'Group', :default_value => ''
-    #  text_node :field_name, 'FieldName', :default_value => ''
-    #  text_node :code, 'Code', :default_value => ''
-    #  text_node :value, 'Value', :default_value => ''
-    #  text_node :message, 'Message', :default_value => ''
+    #  text_node :group, 'Group', :optional => true
+    #  text_node :field_name, 'FieldName', :optional => true
+    #  text_node :code, 'Code', :optional => true
+    #  text_node :value, 'Value', :optional => true
+    #  text_node :message, 'Message', :optional => true
     class ListingRecommendation
       include XML::Mapping
       include Initializer
       root_element_name 'ListingRecommendation'
-      text_node :type, 'Type', :default_value => ''
+      text_node :type, 'Type', :optional => true
 def type
   @type
 end
 
-      text_node :group, 'Group', :default_value => ''
-      text_node :field_name, 'FieldName', :default_value => ''
-      text_node :code, 'Code', :default_value => ''
-      text_node :value, 'Value', :default_value => ''
-      text_node :message, 'Message', :default_value => ''
+      text_node :group, 'Group', :optional => true
+      text_node :field_name, 'FieldName', :optional => true
+      text_node :code, 'Code', :optional => true
+      text_node :value, 'Value', :optional => true
+      text_node :message, 'Message', :optional => true
     end
   end
 end

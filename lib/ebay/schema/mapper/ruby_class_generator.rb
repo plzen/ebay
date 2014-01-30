@@ -9,7 +9,7 @@ module Ebay
 
       def initialize(type, simple_types, complex_types, xml)
         @xml = xml
-                
+
         @indent = 2
         @type = type
         @simple_types, @complex_types = simple_types, complex_types
@@ -205,6 +205,7 @@ module Ebay
         type = element.type.name
         min = element.minoccurs || "1"
         max = element.maxoccurs || "1"
+        max = nil if element.maxoccurs.nil?
 
         options = { :type => type,
           :min => min,
@@ -243,12 +244,12 @@ module Ebay
         min, max = options[:min], options[:max]
         simple_type = @simple_types.find_name(type)
 
-        case max
+        case max.to_s
         when "1"
           if simple_type
             TextNode.new(name, options)
           elsif element = @complex_types.find_name(type)
-            if element.elements.size == 1 && element.elements[0].maxoccurs == "unbounded"
+            if element.elements.size == 1 && element.elements[0].maxoccurs.nil?
               # Found a container!
               child = element.elements[0]
 

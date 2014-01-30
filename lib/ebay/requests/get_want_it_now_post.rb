@@ -2,12 +2,12 @@
 module Ebay # :nodoc:
   module Requests # :nodoc:
     # == Attributes
-    #  value_array_node :post_ids, 'PostID', :default_value => []
+    #  text_node :post_id, 'PostID', :optional => true
     class GetWantItNowPost < Abstract
       include XML::Mapping
       include Initializer
       root_element_name 'GetWantItNowPostRequest'
-      value_array_node :post_ids, 'PostID', :default_value => []
+      text_node :post_id, 'PostID', :optional => true
     end
   end
 end

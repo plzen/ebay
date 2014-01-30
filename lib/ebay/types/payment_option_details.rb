@@ -2,18 +2,18 @@
 module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
-    #  value_array_node :payment_options, 'PaymentOption', :default_value => []
-    #  text_node :description, 'Description', :default_value => ''
-    #  text_node :detail_version, 'DetailVersion', :default_value => ''
-    #  time_node :update_time, 'UpdateTime', :default_value => ''
+    #  text_node :payment_option, 'PaymentOption', :optional => true
+    #  text_node :description, 'Description', :optional => true
+    #  text_node :detail_version, 'DetailVersion', :optional => true
+    #  time_node :update_time, 'UpdateTime', :optional => true
     class PaymentOptionDetails
       include XML::Mapping
       include Initializer
       root_element_name 'PaymentOptionDetails'
-      value_array_node :payment_options, 'PaymentOption', :default_value => []
-      text_node :description, 'Description', :default_value => ''
-      text_node :detail_version, 'DetailVersion', :default_value => ''
-      time_node :update_time, 'UpdateTime', :default_value => ''
+      text_node :payment_option, 'PaymentOption', :optional => true
+      text_node :description, 'Description', :optional => true
+      text_node :detail_version, 'DetailVersion', :optional => true
+      time_node :update_time, 'UpdateTime', :optional => true
     end
   end
 end

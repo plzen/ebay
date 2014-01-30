@@ -4,7 +4,7 @@ require 'xml/mapping/base'
 class MoneyNode < XML::Mapping::SingleAttributeNode
   def initialize(*args)
     @path,*args = super(*args)
-    @amount_path = XML::XXPath.new(@path + "/")
+    @amount_path = XML::XXPath.new(@path)
     @currency_path = XML::XXPath.new(@path + "/@currencyID")
   end
 

@@ -3,12 +3,12 @@ require 'ebay/types/want_it_now_post'
 module Ebay # :nodoc:
   module Responses # :nodoc:
     # == Attributes
-    #  array_node :want_it_now_posts, 'WantItNowPost', :class => WantItNowPost, :default_value => []
+    #  object_node :want_it_now_post, 'WantItNowPost', :class => WantItNowPost, :optional => true
     class GetWantItNowPost < Abstract
       include XML::Mapping
       include Initializer
       root_element_name 'GetWantItNowPostResponse'
-      array_node :want_it_now_posts, 'WantItNowPost', :class => WantItNowPost, :default_value => []
+      object_node :want_it_now_post, 'WantItNowPost', :class => WantItNowPost, :optional => true
     end
   end
 end

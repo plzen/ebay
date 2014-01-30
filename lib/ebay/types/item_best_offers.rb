@@ -1,19 +1,19 @@
-require 'ebay/types/best_offer_array'
+require 'ebay/types/best_offer'
 require 'ebay/types/item'
 
 module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
-    #  value_array_node :roles, 'Role', :default_value => []
-    #  array_node :best_offers, 'BestOfferArray', :class => BestOfferArray, :default_value => []
-    #  array_node :items, 'Item', :class => Item, :default_value => []
+    #  text_node :role, 'Role', :optional => true
+    #  array_node :best_offers, 'BestOfferArray', 'BestOffer', :class => BestOffer, :default_value => []
+    #  object_node :item, 'Item', :class => Item, :optional => true
     class ItemBestOffers
       include XML::Mapping
       include Initializer
       root_element_name 'ItemBestOffers'
-      value_array_node :roles, 'Role', :default_value => []
-      array_node :best_offers, 'BestOfferArray', :class => BestOfferArray, :default_value => []
-      array_node :items, 'Item', :class => Item, :default_value => []
+      text_node :role, 'Role', :optional => true
+      array_node :best_offers, 'BestOfferArray', 'BestOffer', :class => BestOffer, :default_value => []
+      object_node :item, 'Item', :class => Item, :optional => true
     end
   end
 end
