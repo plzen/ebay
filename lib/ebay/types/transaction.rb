@@ -63,7 +63,6 @@ module Ebay # :nodoc:
     #  money_node :buyer_guarantee_price, 'BuyerGuaranteePrice', :optional => true
     #  object_node :variation, 'Variation', :class => Variation, :optional => true
     #  text_node :buyer_checkout_message, 'BuyerCheckoutMessage', :optional => true
-    #  money_node :total_transaction_price, 'TotalTransactionPrice', :optional => true
     #  object_node :taxes, 'Taxes', :class => Taxes, :optional => true
     #  boolean_node :bundle_purchase, 'BundlePurchase', 'true', 'false', :optional => true
     #  money_node :actual_shipping_cost, 'ActualShippingCost', :optional => true
@@ -127,7 +126,6 @@ module Ebay # :nodoc:
       money_node :buyer_guarantee_price, 'BuyerGuaranteePrice', :optional => true
       object_node :variation, 'Variation', :class => Variation, :optional => true
       text_node :buyer_checkout_message, 'BuyerCheckoutMessage', :optional => true
-      money_node :total_transaction_price, 'TotalTransactionPrice', :optional => true
       object_node :taxes, 'Taxes', :class => Taxes, :optional => true
       boolean_node :bundle_purchase, 'BundlePurchase', 'true', 'false', :optional => true
       money_node :actual_shipping_cost, 'ActualShippingCost', :optional => true
