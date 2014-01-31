@@ -54,7 +54,12 @@ class NodeTest < Test::Unit::TestCase
   end
     
   def test_create_datetime_node
-    node = DateTimeNode.new('Timestamp', :type => 'dateTime')
+    node = DatetimeNode.new('Timestamp', :type => 'dateTime')
+    assert_equal "datetime_node :timestamp, 'Timestamp'", node.to_s 
+  end
+
+  def test_create_time_node
+    node = TimeNode.new('Timestamp', :type => 'time')
     assert_equal "time_node :timestamp, 'Timestamp'", node.to_s 
   end
 
@@ -71,7 +76,7 @@ END
         @timestamp.to_time
       end
 END
-    assert_equal desired, input.collect{|l| "#{' ' * 6}#{l}"}.join
+    assert_equal desired, input.lines.collect{|l| "#{' ' * 6}#{l}"}.join
   end
 
   def test_optional_node
