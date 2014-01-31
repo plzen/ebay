@@ -1,12 +1,7 @@
 require File.dirname(__FILE__) + '/../test_helper'
 
 module TestModule
-  class Widget
-    include XML::Mapping
-    value_array_node :names, 'Names', 'Name', :default_value => []
-  end
-
-  class Name
+  class Name < String
     attr_reader :first_name, :last_name
     def initialize(first_name, last_name)
       @first_name, @last_name = first_name, last_name
@@ -15,6 +10,11 @@ module TestModule
     def to_s
       "#{first_name} #{last_name}"
     end
+  end
+
+  class Widget
+    include XML::Mapping
+    value_array_node :names, 'Names', 'Name', :class=>Name, :default_value => []
   end
 end
 
@@ -31,7 +31,7 @@ class CodeNodeTest < Test::Unit::TestCase
     <Name>Tobi</Name>
   </Names>
 </Widget>
-  END
+END
 
   end
 
