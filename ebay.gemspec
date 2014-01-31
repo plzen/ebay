@@ -6,11 +6,11 @@ require 'ebay/version'
 Gem::Specification.new do |spec|
   spec.name          = "ebayapi-ruby1.9"
   spec.version       = Ebay::VERSION
-  spec.authors       = ["Nikolay Voronin"]
+  spec.authors       = ["Mykola Voronin"]
   spec.email         = ["nickvor@gmail.com"]
-  spec.summary       = "Gem for working with eBay Trading API"
-  spec.description   = ""
-  spec.homepage      = ""
+  spec.summary       = "Ruby interface to the eBay XML Trading API"
+  spec.description   = "This is a modified version of the ebayapi library to work on Ruby version >= 1.9."
+  spec.homepage      = "https://github.com/plzen/ebay"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
@@ -19,6 +19,11 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "bundler", "~> 1.5"
-  spec.add_development_dependency "rake"
-  spec.add_development_dependency "soap4r-ruby1.9"
+  spec.add_development_dependency "rake", "~> 0"
+  spec.add_development_dependency "soap4r-ruby1.9", "~> 2.0"
+  spec.add_development_dependency "activesupport", "~> 4.0"
+  
+  spec.add_runtime_dependency "libxml-ruby", "~> 2.7"
+  spec.add_runtime_dependency "xml-mapping", "~> 0.9"
+  spec.add_runtime_dependency "money", "~> 6.0"
 end
