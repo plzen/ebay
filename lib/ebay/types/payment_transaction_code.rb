@@ -7,7 +7,7 @@ module Ebay # :nodoc:
     #  text_node :payment_status, 'PaymentStatus', :optional => true
     #  object_node :payer, 'Payer', :class => UserIdentity, :optional => true
     #  object_node :payee, 'Payee', :class => UserIdentity, :optional => true
-    #  time_node :payment_time, 'PaymentTime', :optional => true
+    #  datetime_node :payment_time, 'PaymentTime', :optional => true
     #  money_node :payment_amount, 'PaymentAmount', :optional => true
     #  object_node :reference_id, 'ReferenceID', :class => TransactionReference, :optional => true
     #  money_node :fee_or_credit_amount, 'FeeOrCreditAmount', :optional => true
@@ -19,7 +19,7 @@ module Ebay # :nodoc:
       text_node :payment_status, 'PaymentStatus', :optional => true
       object_node :payer, 'Payer', :class => UserIdentity, :optional => true
       object_node :payee, 'Payee', :class => UserIdentity, :optional => true
-      time_node :payment_time, 'PaymentTime', :optional => true
+      datetime_node :payment_time, 'PaymentTime', :optional => true
       money_node :payment_amount, 'PaymentAmount', :optional => true
       object_node :reference_id, 'ReferenceID', :class => TransactionReference, :optional => true
       money_node :fee_or_credit_amount, 'FeeOrCreditAmount', :optional => true

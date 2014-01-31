@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     #  numeric_node :dispatch_time_max, 'DispatchTimeMax', :optional => true
     #  text_node :description, 'Description', :optional => true
     #  text_node :detail_version, 'DetailVersion', :optional => true
-    #  time_node :update_time, 'UpdateTime', :optional => true
+    #  datetime_node :update_time, 'UpdateTime', :optional => true
     #  boolean_node :extended_handling, 'ExtendedHandling', 'true', 'false', :optional => true
     class DispatchTimeMaxDetails
       include XML::Mapping
@@ -14,7 +14,7 @@ module Ebay # :nodoc:
       numeric_node :dispatch_time_max, 'DispatchTimeMax', :optional => true
       text_node :description, 'Description', :optional => true
       text_node :detail_version, 'DetailVersion', :optional => true
-      time_node :update_time, 'UpdateTime', :optional => true
+      datetime_node :update_time, 'UpdateTime', :optional => true
       boolean_node :extended_handling, 'ExtendedHandling', 'true', 'false', :optional => true
     end
   end

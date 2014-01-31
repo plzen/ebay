@@ -16,9 +16,9 @@ module Ebay # :nodoc:
     #  text_node :text, 'Text', :optional => true
     #  boolean_node :flagged, 'Flagged', 'true', 'false', :optional => true
     #  boolean_node :read, 'Read', 'true', 'false', :optional => true
-    #  time_node :creation_date, 'CreationDate', :optional => true
-    #  time_node :receive_date, 'ReceiveDate', :optional => true
-    #  time_node :expiration_date, 'ExpirationDate', :optional => true
+    #  datetime_node :creation_date, 'CreationDate', :optional => true
+    #  datetime_node :receive_date, 'ReceiveDate', :optional => true
+    #  datetime_node :expiration_date, 'ExpirationDate', :optional => true
     #  text_node :item_id, 'ItemID', :optional => true
     #  object_node :response_details, 'ResponseDetails', :class => MyMessagesResponseDetails, :optional => true
     #  object_node :forward_details, 'ForwardDetails', :class => MyMessagesForwardDetails, :optional => true
@@ -29,7 +29,7 @@ module Ebay # :nodoc:
     #  text_node :question_type, 'QuestionType', :optional => true
     #  boolean_node :replied, 'Replied', 'true', 'false', :optional => true
     #  boolean_node :high_priority, 'HighPriority', 'true', 'false', :optional => true
-    #  time_node :item_end_time, 'ItemEndTime', :optional => true
+    #  datetime_node :item_end_time, 'ItemEndTime', :optional => true
     #  text_node :item_title, 'ItemTitle', :optional => true
     #  array_node :message_media, 'MessageMedia', :class => MessageMedia, :default_value => []
     class MyMessagesMessage
@@ -46,9 +46,9 @@ module Ebay # :nodoc:
       text_node :text, 'Text', :optional => true
       boolean_node :flagged, 'Flagged', 'true', 'false', :optional => true
       boolean_node :read, 'Read', 'true', 'false', :optional => true
-      time_node :creation_date, 'CreationDate', :optional => true
-      time_node :receive_date, 'ReceiveDate', :optional => true
-      time_node :expiration_date, 'ExpirationDate', :optional => true
+      datetime_node :creation_date, 'CreationDate', :optional => true
+      datetime_node :receive_date, 'ReceiveDate', :optional => true
+      datetime_node :expiration_date, 'ExpirationDate', :optional => true
       text_node :item_id, 'ItemID', :optional => true
       object_node :response_details, 'ResponseDetails', :class => MyMessagesResponseDetails, :optional => true
       object_node :forward_details, 'ForwardDetails', :class => MyMessagesForwardDetails, :optional => true
@@ -59,7 +59,7 @@ module Ebay # :nodoc:
       text_node :question_type, 'QuestionType', :optional => true
       boolean_node :replied, 'Replied', 'true', 'false', :optional => true
       boolean_node :high_priority, 'HighPriority', 'true', 'false', :optional => true
-      time_node :item_end_time, 'ItemEndTime', :optional => true
+      datetime_node :item_end_time, 'ItemEndTime', :optional => true
       text_node :item_title, 'ItemTitle', :optional => true
       array_node :message_media, 'MessageMedia', :class => MessageMedia, :default_value => []
     end

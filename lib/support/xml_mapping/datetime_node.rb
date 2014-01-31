@@ -1,6 +1,6 @@
 require 'xml/mapping/base'
 
-class TimeNode < XML::Mapping::SingleAttributeNode
+class DatetimeNode < XML::Mapping::SingleAttributeNode
   def initialize(*args)
     path,*args = super(*args)
     @path = XML::XXPath.new(path)

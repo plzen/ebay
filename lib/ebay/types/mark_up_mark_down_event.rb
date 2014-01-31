@@ -7,7 +7,7 @@ def type
   @type
 end
 
-    #  time_node :time, 'Time', :optional => true
+    #  datetime_node :time, 'Time', :optional => true
     #  text_node :reason, 'Reason', :optional => true
     class MarkUpMarkDownEvent
       include XML::Mapping
@@ -18,7 +18,7 @@ def type
   @type
 end
 
-      time_node :time, 'Time', :optional => true
+      datetime_node :time, 'Time', :optional => true
       text_node :reason, 'Reason', :optional => true
     end
   end

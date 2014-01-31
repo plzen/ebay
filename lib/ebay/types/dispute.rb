@@ -19,8 +19,8 @@ module Ebay # :nodoc:
     #  text_node :dispute_reason, 'DisputeReason', :optional => true
     #  text_node :dispute_explanation, 'DisputeExplanation', :optional => true
     #  text_node :dispute_credit_eligibility, 'DisputeCreditEligibility', :optional => true
-    #  time_node :dispute_created_time, 'DisputeCreatedTime', :optional => true
-    #  time_node :dispute_modified_time, 'DisputeModifiedTime', :optional => true
+    #  datetime_node :dispute_created_time, 'DisputeCreatedTime', :optional => true
+    #  datetime_node :dispute_modified_time, 'DisputeModifiedTime', :optional => true
     #  array_node :dispute_resolutions, 'DisputeResolution', :class => DisputeResolution, :default_value => []
     #  array_node :dispute_messages, 'DisputeMessage', :class => DisputeMessage, :default_value => []
     #  boolean_node :escalation, 'Escalation', 'true', 'false', :optional => true
@@ -44,8 +44,8 @@ module Ebay # :nodoc:
       text_node :dispute_reason, 'DisputeReason', :optional => true
       text_node :dispute_explanation, 'DisputeExplanation', :optional => true
       text_node :dispute_credit_eligibility, 'DisputeCreditEligibility', :optional => true
-      time_node :dispute_created_time, 'DisputeCreatedTime', :optional => true
-      time_node :dispute_modified_time, 'DisputeModifiedTime', :optional => true
+      datetime_node :dispute_created_time, 'DisputeCreatedTime', :optional => true
+      datetime_node :dispute_modified_time, 'DisputeModifiedTime', :optional => true
       array_node :dispute_resolutions, 'DisputeResolution', :class => DisputeResolution, :default_value => []
       array_node :dispute_messages, 'DisputeMessage', :class => DisputeMessage, :default_value => []
       boolean_node :escalation, 'Escalation', 'true', 'false', :optional => true

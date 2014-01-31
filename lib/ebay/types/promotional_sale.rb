@@ -8,8 +8,8 @@ module Ebay # :nodoc:
     #  text_node :status, 'Status', :optional => true
     #  text_node :discount_type, 'DiscountType', :optional => true
     #  numeric_node :discount_value, 'DiscountValue', :optional => true
-    #  time_node :promotional_sale_start_time, 'PromotionalSaleStartTime', :optional => true
-    #  time_node :promotional_sale_end_time, 'PromotionalSaleEndTime', :optional => true
+    #  datetime_node :promotional_sale_start_time, 'PromotionalSaleStartTime', :optional => true
+    #  datetime_node :promotional_sale_end_time, 'PromotionalSaleEndTime', :optional => true
     #  text_node :promotional_sale_type, 'PromotionalSaleType', :optional => true
     class PromotionalSale
       include XML::Mapping
@@ -21,8 +21,8 @@ module Ebay # :nodoc:
       text_node :status, 'Status', :optional => true
       text_node :discount_type, 'DiscountType', :optional => true
       numeric_node :discount_value, 'DiscountValue', :optional => true
-      time_node :promotional_sale_start_time, 'PromotionalSaleStartTime', :optional => true
-      time_node :promotional_sale_end_time, 'PromotionalSaleEndTime', :optional => true
+      datetime_node :promotional_sale_start_time, 'PromotionalSaleStartTime', :optional => true
+      datetime_node :promotional_sale_end_time, 'PromotionalSaleEndTime', :optional => true
       text_node :promotional_sale_type, 'PromotionalSaleType', :optional => true
     end
   end

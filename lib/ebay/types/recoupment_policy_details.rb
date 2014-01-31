@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     #  boolean_node :enforced_on_listing_site, 'EnforcedOnListingSite', 'true', 'false', :optional => true
     #  boolean_node :enforced_on_registration_site, 'EnforcedOnRegistrationSite', 'true', 'false', :optional => true
     #  text_node :detail_version, 'DetailVersion', :optional => true
-    #  time_node :update_time, 'UpdateTime', :optional => true
+    #  datetime_node :update_time, 'UpdateTime', :optional => true
     class RecoupmentPolicyDetails
       include XML::Mapping
       include Initializer
@@ -13,7 +13,7 @@ module Ebay # :nodoc:
       boolean_node :enforced_on_listing_site, 'EnforcedOnListingSite', 'true', 'false', :optional => true
       boolean_node :enforced_on_registration_site, 'EnforcedOnRegistrationSite', 'true', 'false', :optional => true
       text_node :detail_version, 'DetailVersion', :optional => true
-      time_node :update_time, 'UpdateTime', :optional => true
+      datetime_node :update_time, 'UpdateTime', :optional => true
     end
   end
 end

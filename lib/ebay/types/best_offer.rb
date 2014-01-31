@@ -4,7 +4,7 @@ module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
     #  text_node :best_offer_id, 'BestOfferID', :optional => true
-    #  time_node :expiration_time, 'ExpirationTime', :optional => true
+    #  datetime_node :expiration_time, 'ExpirationTime', :optional => true
     #  object_node :buyer, 'Buyer', :class => User, :optional => true
     #  money_node :price, 'Price', :optional => true
     #  text_node :status, 'Status', :optional => true
@@ -20,7 +20,7 @@ module Ebay # :nodoc:
       include Initializer
       root_element_name 'BestOffer'
       text_node :best_offer_id, 'BestOfferID', :optional => true
-      time_node :expiration_time, 'ExpirationTime', :optional => true
+      datetime_node :expiration_time, 'ExpirationTime', :optional => true
       object_node :buyer, 'Buyer', :class => User, :optional => true
       money_node :price, 'Price', :optional => true
       text_node :status, 'Status', :optional => true

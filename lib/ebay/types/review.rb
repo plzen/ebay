@@ -7,7 +7,7 @@ module Ebay # :nodoc:
     #  numeric_node :rating, 'Rating', :optional => true
     #  text_node :text, 'Text', :optional => true
     #  text_node :user_id, 'UserID', :optional => true
-    #  time_node :creation_time, 'CreationTime', :optional => true
+    #  datetime_node :creation_time, 'CreationTime', :optional => true
     class Review
       include XML::Mapping
       include Initializer
@@ -17,7 +17,7 @@ module Ebay # :nodoc:
       numeric_node :rating, 'Rating', :optional => true
       text_node :text, 'Text', :optional => true
       text_node :user_id, 'UserID', :optional => true
-      time_node :creation_time, 'CreationTime', :optional => true
+      datetime_node :creation_time, 'CreationTime', :optional => true
     end
   end
 end

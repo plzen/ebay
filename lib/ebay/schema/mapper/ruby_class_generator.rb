@@ -232,7 +232,7 @@ module Ebay
         when 'int', 'float', 'long', 'decimal', 'double'
           NumericNode.new(name, options)
         when 'dateTime'
-          DateTimeNode.new(name, options)
+          DatetimeNode.new(name, options)
         when 'boolean'
           BooleanNode.new(name, options)
         when 'time'

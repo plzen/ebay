@@ -8,7 +8,7 @@ module Ebay # :nodoc:
     #  object_node :address, 'Address', :class => Address, :optional => true
     #  text_node :best_time_to_call, 'BestTimeToCall', :optional => true
     #  text_node :email, 'Email', :optional => true
-    #  time_node :submitted_time, 'SubmittedTime', :optional => true
+    #  datetime_node :submitted_time, 'SubmittedTime', :optional => true
     #  text_node :item_id, 'ItemID', :optional => true
     #  text_node :item_title, 'ItemTitle', :optional => true
     #  text_node :user_id, 'UserID', :optional => true
@@ -31,7 +31,7 @@ module Ebay # :nodoc:
       object_node :address, 'Address', :class => Address, :optional => true
       text_node :best_time_to_call, 'BestTimeToCall', :optional => true
       text_node :email, 'Email', :optional => true
-      time_node :submitted_time, 'SubmittedTime', :optional => true
+      datetime_node :submitted_time, 'SubmittedTime', :optional => true
       text_node :item_id, 'ItemID', :optional => true
       text_node :item_title, 'ItemTitle', :optional => true
       text_node :user_id, 'UserID', :optional => true

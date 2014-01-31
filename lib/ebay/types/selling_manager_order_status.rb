@@ -13,10 +13,10 @@ module Ebay # :nodoc:
     #  numeric_node :total_emails_sent, 'TotalEmailsSent', :optional => true
     #  text_node :payment_hold_status, 'PaymentHoldStatus', :optional => true
     #  text_node :seller_invoice_number, 'SellerInvoiceNumber', :optional => true
-    #  time_node :shipped_time, 'ShippedTime', :optional => true
-    #  time_node :paid_time, 'PaidTime', :optional => true
-    #  time_node :last_email_sent_time, 'LastEmailSentTime', :optional => true
-    #  time_node :seller_invoice_time, 'SellerInvoiceTime', :optional => true
+    #  datetime_node :shipped_time, 'ShippedTime', :optional => true
+    #  datetime_node :paid_time, 'PaidTime', :optional => true
+    #  datetime_node :last_email_sent_time, 'LastEmailSentTime', :optional => true
+    #  datetime_node :seller_invoice_time, 'SellerInvoiceTime', :optional => true
     #  boolean_node :integrated_merchant_credit_card_enabled, 'IntegratedMerchantCreditCardEnabled', 'true', 'false', :optional => true
     class SellingManagerOrderStatus
       include XML::Mapping
@@ -33,10 +33,10 @@ module Ebay # :nodoc:
       numeric_node :total_emails_sent, 'TotalEmailsSent', :optional => true
       text_node :payment_hold_status, 'PaymentHoldStatus', :optional => true
       text_node :seller_invoice_number, 'SellerInvoiceNumber', :optional => true
-      time_node :shipped_time, 'ShippedTime', :optional => true
-      time_node :paid_time, 'PaidTime', :optional => true
-      time_node :last_email_sent_time, 'LastEmailSentTime', :optional => true
-      time_node :seller_invoice_time, 'SellerInvoiceTime', :optional => true
+      datetime_node :shipped_time, 'ShippedTime', :optional => true
+      datetime_node :paid_time, 'PaidTime', :optional => true
+      datetime_node :last_email_sent_time, 'LastEmailSentTime', :optional => true
+      datetime_node :seller_invoice_time, 'SellerInvoiceTime', :optional => true
       boolean_node :integrated_merchant_credit_card_enabled, 'IntegratedMerchantCreditCardEnabled', 'true', 'false', :optional => true
     end
   end

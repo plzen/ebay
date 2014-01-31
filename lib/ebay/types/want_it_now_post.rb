@@ -6,7 +6,7 @@ module Ebay # :nodoc:
     #  text_node :description, 'Description', :optional => true
     #  text_node :post_id, 'PostID', :optional => true
     #  text_node :site, 'Site', :optional => true
-    #  time_node :start_time, 'StartTime', :optional => true
+    #  datetime_node :start_time, 'StartTime', :optional => true
     #  numeric_node :response_count, 'ResponseCount', :optional => true
     #  text_node :title, 'Title', :optional => true
     class WantItNowPost
@@ -17,7 +17,7 @@ module Ebay # :nodoc:
       text_node :description, 'Description', :optional => true
       text_node :post_id, 'PostID', :optional => true
       text_node :site, 'Site', :optional => true
-      time_node :start_time, 'StartTime', :optional => true
+      datetime_node :start_time, 'StartTime', :optional => true
       numeric_node :response_count, 'ResponseCount', :optional => true
       text_node :title, 'Title', :optional => true
     end

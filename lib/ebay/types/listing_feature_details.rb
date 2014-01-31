@@ -11,7 +11,7 @@ module Ebay # :nodoc:
     #  text_node :featured_plus, 'FeaturedPlus', :optional => true
     #  text_node :pro_pack, 'ProPack', :optional => true
     #  text_node :detail_version, 'DetailVersion', :optional => true
-    #  time_node :update_time, 'UpdateTime', :optional => true
+    #  datetime_node :update_time, 'UpdateTime', :optional => true
     class ListingFeatureDetails
       include XML::Mapping
       include Initializer
@@ -25,7 +25,7 @@ module Ebay # :nodoc:
       text_node :featured_plus, 'FeaturedPlus', :optional => true
       text_node :pro_pack, 'ProPack', :optional => true
       text_node :detail_version, 'DetailVersion', :optional => true
-      time_node :update_time, 'UpdateTime', :optional => true
+      datetime_node :update_time, 'UpdateTime', :optional => true
     end
   end
 end

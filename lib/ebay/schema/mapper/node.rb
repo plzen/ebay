@@ -87,8 +87,7 @@ end
       end
     end
 
-    class DateTimeNode < TextNode
-      self.override_type = 'time_node'
+    class DatetimeNode < TextNode
     end
 
     class HourNode < TextNode

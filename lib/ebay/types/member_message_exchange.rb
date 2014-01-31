@@ -9,8 +9,8 @@ module Ebay # :nodoc:
     #  object_node :question, 'Question', :class => MemberMessage, :optional => true
     #  text_node :response, 'Response', :optional => true
     #  text_node :message_status, 'MessageStatus', :optional => true
-    #  time_node :creation_date, 'CreationDate', :optional => true
-    #  time_node :last_modified_date, 'LastModifiedDate', :optional => true
+    #  datetime_node :creation_date, 'CreationDate', :optional => true
+    #  datetime_node :last_modified_date, 'LastModifiedDate', :optional => true
     #  array_node :message_media, 'MessageMedia', :class => MessageMedia, :default_value => []
     class MemberMessageExchange
       include XML::Mapping
@@ -20,8 +20,8 @@ module Ebay # :nodoc:
       object_node :question, 'Question', :class => MemberMessage, :optional => true
       text_node :response, 'Response', :optional => true
       text_node :message_status, 'MessageStatus', :optional => true
-      time_node :creation_date, 'CreationDate', :optional => true
-      time_node :last_modified_date, 'LastModifiedDate', :optional => true
+      datetime_node :creation_date, 'CreationDate', :optional => true
+      datetime_node :last_modified_date, 'LastModifiedDate', :optional => true
       array_node :message_media, 'MessageMedia', :class => MessageMedia, :default_value => []
     end
   end

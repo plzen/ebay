@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     #  text_node :email_type, 'EmailType', :optional => true
     #  text_node :custom_email_name, 'CustomEmailName', :optional => true
     #  text_node :email_state, 'EmailState', :optional => true
-    #  time_node :event_time, 'EventTime', :optional => true
+    #  datetime_node :event_time, 'EventTime', :optional => true
     class SellingManagerEmailLog
       include XML::Mapping
       include Initializer
@@ -13,7 +13,7 @@ module Ebay # :nodoc:
       text_node :email_type, 'EmailType', :optional => true
       text_node :custom_email_name, 'CustomEmailName', :optional => true
       text_node :email_state, 'EmailState', :optional => true
-      time_node :event_time, 'EventTime', :optional => true
+      datetime_node :event_time, 'EventTime', :optional => true
     end
   end
 end

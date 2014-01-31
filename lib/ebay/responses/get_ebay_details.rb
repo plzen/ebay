@@ -48,7 +48,7 @@ module Ebay # :nodoc:
     #  array_node :listing_feature_details, 'ListingFeatureDetails', :class => ListingFeatureDetails, :default_value => []
     #  object_node :variation_details, 'VariationDetails', :class => VariationDetails, :optional => true
     #  array_node :exclude_shipping_location_details, 'ExcludeShippingLocationDetails', :class => ExcludeShippingLocationDetails, :default_value => []
-    #  time_node :update_time, 'UpdateTime', :optional => true
+    #  datetime_node :update_time, 'UpdateTime', :optional => true
     #  array_node :recoupment_policy_details, 'RecoupmentPolicyDetails', :class => RecoupmentPolicyDetails, :default_value => []
     #  array_node :shipping_category_details, 'ShippingCategoryDetails', :class => ShippingCategoryDetails, :default_value => []
     class GeteBayDetails < Abstract
@@ -77,7 +77,7 @@ module Ebay # :nodoc:
       array_node :listing_feature_details, 'ListingFeatureDetails', :class => ListingFeatureDetails, :default_value => []
       object_node :variation_details, 'VariationDetails', :class => VariationDetails, :optional => true
       array_node :exclude_shipping_location_details, 'ExcludeShippingLocationDetails', :class => ExcludeShippingLocationDetails, :default_value => []
-      time_node :update_time, 'UpdateTime', :optional => true
+      datetime_node :update_time, 'UpdateTime', :optional => true
       array_node :recoupment_policy_details, 'RecoupmentPolicyDetails', :class => RecoupmentPolicyDetails, :default_value => []
       array_node :shipping_category_details, 'ShippingCategoryDetails', :class => ShippingCategoryDetails, :default_value => []
     end

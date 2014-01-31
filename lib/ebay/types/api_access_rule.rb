@@ -14,8 +14,8 @@ module Ebay # :nodoc:
     #  numeric_node :periodic_hard_limit, 'PeriodicHardLimit', :optional => true
     #  numeric_node :periodic_soft_limit, 'PeriodicSoftLimit', :optional => true
     #  numeric_node :periodic_usage, 'PeriodicUsage', :optional => true
-    #  time_node :periodic_start_date, 'PeriodicStartDate', :optional => true
-    #  time_node :mod_time, 'ModTime', :optional => true
+    #  datetime_node :periodic_start_date, 'PeriodicStartDate', :optional => true
+    #  datetime_node :mod_time, 'ModTime', :optional => true
     #  text_node :rule_current_status, 'RuleCurrentStatus', :optional => true
     #  text_node :rule_status, 'RuleStatus', :optional => true
     class ApiAccessRule
@@ -34,8 +34,8 @@ module Ebay # :nodoc:
       numeric_node :periodic_hard_limit, 'PeriodicHardLimit', :optional => true
       numeric_node :periodic_soft_limit, 'PeriodicSoftLimit', :optional => true
       numeric_node :periodic_usage, 'PeriodicUsage', :optional => true
-      time_node :periodic_start_date, 'PeriodicStartDate', :optional => true
-      time_node :mod_time, 'ModTime', :optional => true
+      datetime_node :periodic_start_date, 'PeriodicStartDate', :optional => true
+      datetime_node :mod_time, 'ModTime', :optional => true
       text_node :rule_current_status, 'RuleCurrentStatus', :optional => true
       text_node :rule_status, 'RuleStatus', :optional => true
     end

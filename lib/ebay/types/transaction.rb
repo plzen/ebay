@@ -29,7 +29,7 @@ module Ebay # :nodoc:
     #  object_node :shipping_details, 'ShippingDetails', :class => ShippingDetails, :optional => true
     #  money_node :converted_amount_paid, 'ConvertedAmountPaid', :optional => true
     #  money_node :converted_transaction_price, 'ConvertedTransactionPrice', :optional => true
-    #  time_node :created_date, 'CreatedDate', :optional => true
+    #  datetime_node :created_date, 'CreatedDate', :optional => true
     #  text_node :deposit_type, 'DepositType', :optional => true
     #  object_node :item, 'Item', :class => Item, :optional => true
     #  numeric_node :quantity_purchased, 'QuantityPurchased', :optional => true
@@ -45,8 +45,8 @@ module Ebay # :nodoc:
     #  money_node :dutch_auction_bid, 'DutchAuctionBid', :optional => true
     #  text_node :buyer_paid_status, 'BuyerPaidStatus', :optional => true
     #  text_node :seller_paid_status, 'SellerPaidStatus', :optional => true
-    #  time_node :paid_time, 'PaidTime', :optional => true
-    #  time_node :shipped_time, 'ShippedTime', :optional => true
+    #  datetime_node :paid_time, 'PaidTime', :optional => true
+    #  datetime_node :shipped_time, 'ShippedTime', :optional => true
     #  money_node :total_price, 'TotalPrice', :optional => true
     #  object_node :feedback_left, 'FeedbackLeft', :class => FeedbackInfo, :optional => true
     #  object_node :feedback_received, 'FeedbackReceived', :class => FeedbackInfo, :optional => true
@@ -76,7 +76,7 @@ module Ebay # :nodoc:
     #  text_node :codice_fiscale, 'CodiceFiscale', :optional => true
     #  boolean_node :is_multi_leg_shipping, 'IsMultiLegShipping', 'true', 'false', :optional => true
     #  object_node :multi_leg_shipping_details, 'MultiLegShippingDetails', :class => MultiLegShippingDetails, :optional => true
-    #  time_node :invoice_sent_time, 'InvoiceSentTime', :optional => true
+    #  datetime_node :invoice_sent_time, 'InvoiceSentTime', :optional => true
     #  object_node :unpaid_item, 'UnpaidItem', :class => UnpaidItem, :optional => true
     #  boolean_node :intangible_item, 'IntangibleItem', 'true', 'false', :optional => true
     #  object_node :monetary_details, 'MonetaryDetails', :class => PaymentsInformation, :optional => true
@@ -93,7 +93,7 @@ module Ebay # :nodoc:
       object_node :shipping_details, 'ShippingDetails', :class => ShippingDetails, :optional => true
       money_node :converted_amount_paid, 'ConvertedAmountPaid', :optional => true
       money_node :converted_transaction_price, 'ConvertedTransactionPrice', :optional => true
-      time_node :created_date, 'CreatedDate', :optional => true
+      datetime_node :created_date, 'CreatedDate', :optional => true
       text_node :deposit_type, 'DepositType', :optional => true
       object_node :item, 'Item', :class => Item, :optional => true
       numeric_node :quantity_purchased, 'QuantityPurchased', :optional => true
@@ -109,8 +109,8 @@ module Ebay # :nodoc:
       money_node :dutch_auction_bid, 'DutchAuctionBid', :optional => true
       text_node :buyer_paid_status, 'BuyerPaidStatus', :optional => true
       text_node :seller_paid_status, 'SellerPaidStatus', :optional => true
-      time_node :paid_time, 'PaidTime', :optional => true
-      time_node :shipped_time, 'ShippedTime', :optional => true
+      datetime_node :paid_time, 'PaidTime', :optional => true
+      datetime_node :shipped_time, 'ShippedTime', :optional => true
       money_node :total_price, 'TotalPrice', :optional => true
       object_node :feedback_left, 'FeedbackLeft', :class => FeedbackInfo, :optional => true
       object_node :feedback_received, 'FeedbackReceived', :class => FeedbackInfo, :optional => true
@@ -140,7 +140,7 @@ module Ebay # :nodoc:
       text_node :codice_fiscale, 'CodiceFiscale', :optional => true
       boolean_node :is_multi_leg_shipping, 'IsMultiLegShipping', 'true', 'false', :optional => true
       object_node :multi_leg_shipping_details, 'MultiLegShippingDetails', :class => MultiLegShippingDetails, :optional => true
-      time_node :invoice_sent_time, 'InvoiceSentTime', :optional => true
+      datetime_node :invoice_sent_time, 'InvoiceSentTime', :optional => true
       object_node :unpaid_item, 'UnpaidItem', :class => UnpaidItem, :optional => true
       boolean_node :intangible_item, 'IntangibleItem', 'true', 'false', :optional => true
       object_node :monetary_details, 'MonetaryDetails', :class => PaymentsInformation, :optional => true

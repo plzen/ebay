@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     #  text_node :commenting_user, 'CommentingUser', :optional => true
     #  numeric_node :commenting_user_score, 'CommentingUserScore', :optional => true
     #  text_node :comment_text, 'CommentText', :optional => true
-    #  time_node :comment_time, 'CommentTime', :optional => true
+    #  datetime_node :comment_time, 'CommentTime', :optional => true
     #  text_node :comment_type, 'CommentType', :optional => true
     #  text_node :feedback_response, 'FeedbackResponse', :optional => true
     #  text_node :followup, 'Followup', :optional => true
@@ -28,7 +28,7 @@ module Ebay # :nodoc:
       text_node :commenting_user, 'CommentingUser', :optional => true
       numeric_node :commenting_user_score, 'CommentingUserScore', :optional => true
       text_node :comment_text, 'CommentText', :optional => true
-      time_node :comment_time, 'CommentTime', :optional => true
+      datetime_node :comment_time, 'CommentTime', :optional => true
       text_node :comment_type, 'CommentType', :optional => true
       text_node :feedback_response, 'FeedbackResponse', :optional => true
       text_node :followup, 'Followup', :optional => true

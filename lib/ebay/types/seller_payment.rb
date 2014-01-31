@@ -15,7 +15,7 @@ module Ebay # :nodoc:
     #  money_node :shipping_reimbursement, 'ShippingReimbursement', :optional => true
     #  money_node :commission, 'Commission', :optional => true
     #  money_node :amount_paid, 'AmountPaid', :optional => true
-    #  time_node :paid_time, 'PaidTime', :optional => true
+    #  datetime_node :paid_time, 'PaidTime', :optional => true
     #  text_node :order_line_item_id, 'OrderLineItemID', :optional => true
     class SellerPayment
       include XML::Mapping
@@ -33,7 +33,7 @@ module Ebay # :nodoc:
       money_node :shipping_reimbursement, 'ShippingReimbursement', :optional => true
       money_node :commission, 'Commission', :optional => true
       money_node :amount_paid, 'AmountPaid', :optional => true
-      time_node :paid_time, 'PaidTime', :optional => true
+      datetime_node :paid_time, 'PaidTime', :optional => true
       text_node :order_line_item_id, 'OrderLineItemID', :optional => true
     end
   end

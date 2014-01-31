@@ -20,12 +20,12 @@ module Ebay # :nodoc:
     #  boolean_node :ebay_good_standing, 'eBayGoodStanding', 'true', 'false', :optional => true
     #  boolean_node :new_user, 'NewUser', 'true', 'false', :optional => true
     #  object_node :registration_address, 'RegistrationAddress', :class => Address, :optional => true
-    #  time_node :registration_date, 'RegistrationDate', :optional => true
+    #  datetime_node :registration_date, 'RegistrationDate', :optional => true
     #  text_node :site, 'Site', :optional => true
     #  text_node :status, 'Status', :optional => true
     #  text_node :user_id, 'UserID', :optional => true
     #  boolean_node :user_id_changed, 'UserIDChanged', 'true', 'false', :optional => true
-    #  time_node :user_id_last_changed, 'UserIDLastChanged', :optional => true
+    #  datetime_node :user_id_last_changed, 'UserIDLastChanged', :optional => true
     #  text_node :vat_status, 'VATStatus', :optional => true
     #  object_node :buyer_info, 'BuyerInfo', :class => Buyer, :optional => true
     #  object_node :seller_info, 'SellerInfo', :class => Seller, :optional => true
@@ -66,12 +66,12 @@ module Ebay # :nodoc:
       boolean_node :ebay_good_standing, 'eBayGoodStanding', 'true', 'false', :optional => true
       boolean_node :new_user, 'NewUser', 'true', 'false', :optional => true
       object_node :registration_address, 'RegistrationAddress', :class => Address, :optional => true
-      time_node :registration_date, 'RegistrationDate', :optional => true
+      datetime_node :registration_date, 'RegistrationDate', :optional => true
       text_node :site, 'Site', :optional => true
       text_node :status, 'Status', :optional => true
       text_node :user_id, 'UserID', :optional => true
       boolean_node :user_id_changed, 'UserIDChanged', 'true', 'false', :optional => true
-      time_node :user_id_last_changed, 'UserIDLastChanged', :optional => true
+      datetime_node :user_id_last_changed, 'UserIDLastChanged', :optional => true
       text_node :vat_status, 'VATStatus', :optional => true
       object_node :buyer_info, 'BuyerInfo', :class => Buyer, :optional => true
       object_node :seller_info, 'SellerInfo', :class => Seller, :optional => true

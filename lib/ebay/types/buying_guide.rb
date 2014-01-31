@@ -8,7 +8,7 @@ module Ebay # :nodoc:
     #  numeric_node :product_finder_id, 'ProductFinderID', :optional => true
     #  text_node :title, 'Title', :optional => true
     #  text_node :text, 'Text', :optional => true
-    #  time_node :creation_time, 'CreationTime', :optional => true
+    #  datetime_node :creation_time, 'CreationTime', :optional => true
     #  text_node :user_id, 'UserID', :optional => true
     class BuyingGuide
       include XML::Mapping
@@ -20,7 +20,7 @@ module Ebay # :nodoc:
       numeric_node :product_finder_id, 'ProductFinderID', :optional => true
       text_node :title, 'Title', :optional => true
       text_node :text, 'Text', :optional => true
-      time_node :creation_time, 'CreationTime', :optional => true
+      datetime_node :creation_time, 'CreationTime', :optional => true
       text_node :user_id, 'UserID', :optional => true
     end
   end

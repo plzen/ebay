@@ -5,7 +5,7 @@ module Ebay # :nodoc:
     #  text_node :account_details_entry_type, 'AccountDetailsEntryType', :optional => true
     #  text_node :description, 'Description', :optional => true
     #  money_node :balance, 'Balance', :optional => true
-    #  time_node :date, 'Date', :optional => true
+    #  datetime_node :date, 'Date', :optional => true
     #  money_node :gross_detail_amount, 'GrossDetailAmount', :optional => true
     #  text_node :item_id, 'ItemID', :optional => true
     #  text_node :memo, 'Memo', :optional => true
@@ -24,7 +24,7 @@ module Ebay # :nodoc:
       text_node :account_details_entry_type, 'AccountDetailsEntryType', :optional => true
       text_node :description, 'Description', :optional => true
       money_node :balance, 'Balance', :optional => true
-      time_node :date, 'Date', :optional => true
+      datetime_node :date, 'Date', :optional => true
       money_node :gross_detail_amount, 'GrossDetailAmount', :optional => true
       text_node :item_id, 'ItemID', :optional => true
       text_node :memo, 'Memo', :optional => true

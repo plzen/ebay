@@ -8,8 +8,8 @@ module Ebay # :nodoc:
     #  text_node :category_id, 'CategoryID', :optional => true
     #  text_node :item_sort, 'ItemSort', :optional => true
     #  text_node :sort_order, 'SortOrder', :optional => true
-    #  time_node :end_time_from, 'EndTimeFrom', :optional => true
-    #  time_node :end_time_to, 'EndTimeTo', :optional => true
+    #  datetime_node :end_time_from, 'EndTimeFrom', :optional => true
+    #  datetime_node :end_time_to, 'EndTimeTo', :optional => true
     #  numeric_node :max_distance, 'MaxDistance', :optional => true
     #  text_node :postal_code, 'PostalCode', :optional => true
     #  text_node :item_type, 'ItemType', :optional => true
@@ -39,8 +39,8 @@ module Ebay # :nodoc:
       text_node :category_id, 'CategoryID', :optional => true
       text_node :item_sort, 'ItemSort', :optional => true
       text_node :sort_order, 'SortOrder', :optional => true
-      time_node :end_time_from, 'EndTimeFrom', :optional => true
-      time_node :end_time_to, 'EndTimeTo', :optional => true
+      datetime_node :end_time_from, 'EndTimeFrom', :optional => true
+      datetime_node :end_time_to, 'EndTimeTo', :optional => true
       numeric_node :max_distance, 'MaxDistance', :optional => true
       text_node :postal_code, 'PostalCode', :optional => true
       text_node :item_type, 'ItemType', :optional => true

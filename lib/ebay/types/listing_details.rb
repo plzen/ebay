@@ -11,8 +11,8 @@ module Ebay # :nodoc:
     #  boolean_node :has_reserve_price, 'HasReservePrice', 'true', 'false', :optional => true
     #  text_node :relisted_item_id, 'RelistedItemID', :optional => true
     #  text_node :second_chance_original_item_id, 'SecondChanceOriginalItemID', :optional => true
-    #  time_node :start_time, 'StartTime', :optional => true
-    #  time_node :end_time, 'EndTime', :optional => true
+    #  datetime_node :start_time, 'StartTime', :optional => true
+    #  datetime_node :end_time, 'EndTime', :optional => true
     #  text_node :view_item_url, 'ViewItemURL', :optional => true
     #  boolean_node :has_unanswered_questions, 'HasUnansweredQuestions', 'true', 'false', :optional => true
     #  boolean_node :has_public_messages, 'HasPublicMessages', 'true', 'false', :optional => true
@@ -39,8 +39,8 @@ module Ebay # :nodoc:
       boolean_node :has_reserve_price, 'HasReservePrice', 'true', 'false', :optional => true
       text_node :relisted_item_id, 'RelistedItemID', :optional => true
       text_node :second_chance_original_item_id, 'SecondChanceOriginalItemID', :optional => true
-      time_node :start_time, 'StartTime', :optional => true
-      time_node :end_time, 'EndTime', :optional => true
+      datetime_node :start_time, 'StartTime', :optional => true
+      datetime_node :end_time, 'EndTime', :optional => true
       text_node :view_item_url, 'ViewItemURL', :optional => true
       boolean_node :has_unanswered_questions, 'HasUnansweredQuestions', 'true', 'false', :optional => true
       boolean_node :has_public_messages, 'HasPublicMessages', 'true', 'false', :optional => true
