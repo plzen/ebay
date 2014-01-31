@@ -4,7 +4,7 @@ module Ebay # :nodoc:
     # == Attributes
     #  value_array_node :day_of_weeks, 'DayOfWeek', :default_value => []
     #  numeric_node :listing_period_in_weeks, 'ListingPeriodInWeeks', :optional => true
-    #  hour_node :list_at_specific_time_of_day, 'ListAtSpecificTimeOfDay', :optional => true
+    #  time_node :list_at_specific_time_of_day, 'ListAtSpecificTimeOfDay', :optional => true
     #  datetime_node :start_time, 'StartTime', :optional => true
     #  datetime_node :end_time, 'EndTime', :optional => true
     #  numeric_node :max_active_item_count, 'MaxActiveItemCount', :optional => true
@@ -15,7 +15,7 @@ module Ebay # :nodoc:
       root_element_name 'SellingManagerAutoListAccordingToSchedule'
       value_array_node :day_of_weeks, 'DayOfWeek', :default_value => []
       numeric_node :listing_period_in_weeks, 'ListingPeriodInWeeks', :optional => true
-      hour_node :list_at_specific_time_of_day, 'ListAtSpecificTimeOfDay', :optional => true
+      time_node :list_at_specific_time_of_day, 'ListAtSpecificTimeOfDay', :optional => true
       datetime_node :start_time, 'StartTime', :optional => true
       datetime_node :end_time, 'EndTime', :optional => true
       numeric_node :max_active_item_count, 'MaxActiveItemCount', :optional => true

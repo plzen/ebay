@@ -1,3 +1,4 @@
+require 'time'
 require 'xml/mapping/base'
 
 class DatetimeNode < XML::Mapping::SingleAttributeNode

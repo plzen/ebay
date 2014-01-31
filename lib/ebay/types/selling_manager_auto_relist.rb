@@ -11,7 +11,7 @@ end
     #  text_node :relist_condition, 'RelistCondition', :optional => true
     #  numeric_node :relist_after_days, 'RelistAfterDays', :optional => true
     #  numeric_node :relist_after_hours, 'RelistAfterHours', :optional => true
-    #  hour_node :relist_at_specific_time_of_day, 'RelistAtSpecificTimeOfDay', :optional => true
+    #  time_node :relist_at_specific_time_of_day, 'RelistAtSpecificTimeOfDay', :optional => true
     #  object_node :best_offer_details, 'BestOfferDetails', :class => BestOfferDetails, :optional => true
     #  numeric_node :listing_hold_inventory_level, 'ListingHoldInventoryLevel', :optional => true
     class SellingManagerAutoRelist
@@ -26,7 +26,7 @@ end
       text_node :relist_condition, 'RelistCondition', :optional => true
       numeric_node :relist_after_days, 'RelistAfterDays', :optional => true
       numeric_node :relist_after_hours, 'RelistAfterHours', :optional => true
-      hour_node :relist_at_specific_time_of_day, 'RelistAtSpecificTimeOfDay', :optional => true
+      time_node :relist_at_specific_time_of_day, 'RelistAtSpecificTimeOfDay', :optional => true
       object_node :best_offer_details, 'BestOfferDetails', :class => BestOfferDetails, :optional => true
       numeric_node :listing_hold_inventory_level, 'ListingHoldInventoryLevel', :optional => true
     end

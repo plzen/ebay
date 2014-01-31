@@ -236,7 +236,7 @@ module Ebay
         when 'boolean'
           BooleanNode.new(name, options)
         when 'time'
-          HourNode.new(name, options)
+          TimeNode.new(name, options)
         end
       end
 

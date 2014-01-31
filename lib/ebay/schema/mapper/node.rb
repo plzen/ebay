@@ -90,7 +90,7 @@ end
     class DatetimeNode < TextNode
     end
 
-    class HourNode < TextNode
+    class TimeNode < TextNode
     end
     
     class ValueArrayNode < Node
