@@ -130,7 +130,7 @@ module Ebay #:nodoc:
                                   build_body(request), 
                                   build_headers(request.call_name)
                                 )
-      
+
       parse decompress(response), format
     end
 

@@ -15,9 +15,6 @@ module Ebay # :nodoc:
 <% for node in nodes -%>
       <%= node.to_s %>
 <% end -%>
-<% if nodes.empty? -%>
-      text_node :fake, 'Fake', :optional=>true, :default_value=>''
-<% end -%>
 <% customization.each_line do |line| -%>
       <%= line.chomp %>
 <% end -%>
