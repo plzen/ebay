@@ -81,6 +81,7 @@ module Ebay # :nodoc:
     #  object_node :monetary_details, 'MonetaryDetails', :class => PaymentsInformation, :optional => true
     #  array_node :pickup_details, 'PickupDetails', 'PickupOptions', :class => PickupOptions, :default_value => []
     #  object_node :pickup_method_selected, 'PickupMethodSelected', :class => PickupMethodSelected, :optional => true
+    #  money_node :shipping_convenience_charge, 'ShippingConvenienceCharge', :optional => true
     class Transaction
       include XML::Mapping
       include Initializer
@@ -144,6 +145,7 @@ module Ebay # :nodoc:
       object_node :monetary_details, 'MonetaryDetails', :class => PaymentsInformation, :optional => true
       array_node :pickup_details, 'PickupDetails', 'PickupOptions', :class => PickupOptions, :default_value => []
       object_node :pickup_method_selected, 'PickupMethodSelected', :class => PickupMethodSelected, :optional => true
+      money_node :shipping_convenience_charge, 'ShippingConvenienceCharge', :optional => true
     end
   end
 end

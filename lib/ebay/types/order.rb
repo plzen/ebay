@@ -10,6 +10,7 @@ require 'ebay/types/multi_leg_shipping_details'
 require 'ebay/types/payments_information'
 require 'ebay/types/pickup_options'
 require 'ebay/types/pickup_method_selected'
+require 'ebay/types/cancel_detail'
 
 module Ebay # :nodoc:
   module Types # :nodoc:
@@ -51,6 +52,10 @@ module Ebay # :nodoc:
     #  text_node :seller_user_id, 'SellerUserID', :optional => true
     #  text_node :seller_eias_token, 'SellerEIASToken', :optional => true
     #  text_node :cancel_reason, 'CancelReason', :optional => true
+    #  text_node :cancel_status, 'CancelStatus', :optional => true
+    #  text_node :cancel_reason_details, 'CancelReasonDetails', :optional => true
+    #  money_node :shipping_convenience_charge, 'ShippingConvenienceCharge', :optional => true
+    #  array_node :cancel_details, 'CancelDetail', :class => CancelDetail, :default_value => []
     class Order
       include XML::Mapping
       include Initializer
@@ -92,6 +97,10 @@ module Ebay # :nodoc:
       text_node :seller_user_id, 'SellerUserID', :optional => true
       text_node :seller_eias_token, 'SellerEIASToken', :optional => true
       text_node :cancel_reason, 'CancelReason', :optional => true
+      text_node :cancel_status, 'CancelStatus', :optional => true
+      text_node :cancel_reason_details, 'CancelReasonDetails', :optional => true
+      money_node :shipping_convenience_charge, 'ShippingConvenienceCharge', :optional => true
+      array_node :cancel_details, 'CancelDetail', :class => CancelDetail, :default_value => []
     end
   end
 end

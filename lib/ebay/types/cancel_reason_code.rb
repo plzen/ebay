@@ -10,6 +10,10 @@ module Ebay # :nodoc:
       BuyerCancelOrder = 'BuyerCancelOrder'
       ValetDeliveryIssues = 'ValetDeliveryIssues'
       ValetUnavailable = 'ValetUnavailable'
+      OrderPlacedByMistake = 'OrderPlacedByMistake'
+      PriceTooHigh = 'PriceTooHigh'
+      FoundCheaperPrice = 'FoundCheaperPrice'
+      WontArriveInTime = 'WontArriveInTime'
     end
   end
 end

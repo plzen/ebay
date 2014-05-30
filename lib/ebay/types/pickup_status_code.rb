@@ -11,6 +11,7 @@ module Ebay # :nodoc:
       PickupCancelledOutOfStock = 'PickupCancelledOutOfStock'
       PickupCancelledBuyerRejected = 'PickupCancelledBuyerRejected'
       PickupCancelledBuyerNoShow = 'PickupCancelledBuyerNoShow'
+      PickupCancelled = 'PickupCancelled'
     end
   end
 end
