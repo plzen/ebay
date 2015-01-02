@@ -1,9 +1,8 @@
 module Ebay # :nodoc:
   module Types # :nodoc:
-    class PickupMethodCode
+    class LogisticsPlanCode
       extend Enumerable
       extend Enumeration
-      InStorePickup = 'InStorePickup'
       PickUpDropOff = 'PickUpDropOff'
     end
   end

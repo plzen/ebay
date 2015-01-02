@@ -21,6 +21,8 @@ module Ebay # :nodoc:
     #  boolean_node :show_dispatch_cutoff_time_preferences, 'ShowDispatchCutoffTimePreferences', 'true', 'false', :optional => true
     #  boolean_node :show_global_shipping_program_listing_preference, 'ShowGlobalShippingProgramListingPreference', 'true', 'false', :optional => true
     #  boolean_node :show_override_gsp_service_with_intl_service_preference, 'ShowOverrideGSPServiceWithIntlServicePreference', 'true', 'false', :optional => true
+    #  boolean_node :show_pickup_dropoff_preferences, 'ShowPickupDropoffPreferences', 'true', 'false', :optional => true
+    #  boolean_node :show_out_of_stock_control_preference, 'ShowOutOfStockControlPreference', 'true', 'false', :optional => true
     class GetUserPreferences < Abstract
       include XML::Mapping
       include Initializer
@@ -44,6 +46,8 @@ module Ebay # :nodoc:
       boolean_node :show_dispatch_cutoff_time_preferences, 'ShowDispatchCutoffTimePreferences', 'true', 'false', :optional => true
       boolean_node :show_global_shipping_program_listing_preference, 'ShowGlobalShippingProgramListingPreference', 'true', 'false', :optional => true
       boolean_node :show_override_gsp_service_with_intl_service_preference, 'ShowOverrideGSPServiceWithIntlServicePreference', 'true', 'false', :optional => true
+      boolean_node :show_pickup_dropoff_preferences, 'ShowPickupDropoffPreferences', 'true', 'false', :optional => true
+      boolean_node :show_out_of_stock_control_preference, 'ShowOutOfStockControlPreference', 'true', 'false', :optional => true
     end
   end
 end

@@ -37,6 +37,8 @@ module Ebay # :nodoc:
       StandardPayment = 'StandardPayment'
       DirectDebit = 'DirectDebit'
       CreditCard = 'CreditCard'
+      PayUponInvoice = 'PayUponInvoice'
+      QIWI = 'QIWI'
     end
   end
 end

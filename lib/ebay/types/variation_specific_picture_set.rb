@@ -1,3 +1,4 @@
+require 'ebay/types/picture_ur_ls'
 
 module Ebay # :nodoc:
   module Types # :nodoc:
@@ -6,6 +7,7 @@ module Ebay # :nodoc:
     #  text_node :picture_url, 'PictureURL', :optional => true
     #  text_node :gallery_url, 'GalleryURL', :optional => true
     #  text_node :external_picture_url, 'ExternalPictureURL', :optional => true
+    #  array_node :extended_picture_details, 'ExtendedPictureDetails', 'PictureURLs', :class => PictureURLs, :default_value => []
     class VariationSpecificPictureSet
       include XML::Mapping
       include Initializer
@@ -14,6 +16,7 @@ module Ebay # :nodoc:
       text_node :picture_url, 'PictureURL', :optional => true
       text_node :gallery_url, 'GalleryURL', :optional => true
       text_node :external_picture_url, 'ExternalPictureURL', :optional => true
+      array_node :extended_picture_details, 'ExtendedPictureDetails', 'PictureURLs', :class => PictureURLs, :default_value => []
     end
   end
 end

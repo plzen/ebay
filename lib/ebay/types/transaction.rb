@@ -18,6 +18,7 @@ require 'ebay/types/unpaid_item'
 require 'ebay/types/payments_information'
 require 'ebay/types/pickup_options'
 require 'ebay/types/pickup_method_selected'
+require 'ebay/types/buyer_package_enclosure'
 
 module Ebay # :nodoc:
   module Types # :nodoc:
@@ -82,6 +83,10 @@ module Ebay # :nodoc:
     #  array_node :pickup_details, 'PickupDetails', 'PickupOptions', :class => PickupOptions, :default_value => []
     #  object_node :pickup_method_selected, 'PickupMethodSelected', :class => PickupMethodSelected, :optional => true
     #  money_node :shipping_convenience_charge, 'ShippingConvenienceCharge', :optional => true
+    #  text_node :logistics_plan_type, 'LogisticsPlanType', :optional => true
+    #  array_node :buyer_package_enclosures, 'BuyerPackageEnclosures', 'BuyerPackageEnclosure', :class => BuyerPackageEnclosure, :default_value => []
+    #  text_node :inventory_reservation_id, 'InventoryReservationID', :optional => true
+    #  text_node :extended_order_id, 'ExtendedOrderID', :optional => true
     class Transaction
       include XML::Mapping
       include Initializer
@@ -146,6 +151,10 @@ module Ebay # :nodoc:
       array_node :pickup_details, 'PickupDetails', 'PickupOptions', :class => PickupOptions, :default_value => []
       object_node :pickup_method_selected, 'PickupMethodSelected', :class => PickupMethodSelected, :optional => true
       money_node :shipping_convenience_charge, 'ShippingConvenienceCharge', :optional => true
+      text_node :logistics_plan_type, 'LogisticsPlanType', :optional => true
+      array_node :buyer_package_enclosures, 'BuyerPackageEnclosures', 'BuyerPackageEnclosure', :class => BuyerPackageEnclosure, :default_value => []
+      text_node :inventory_reservation_id, 'InventoryReservationID', :optional => true
+      text_node :extended_order_id, 'ExtendedOrderID', :optional => true
     end
   end
 end

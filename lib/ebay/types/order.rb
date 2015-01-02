@@ -11,6 +11,8 @@ require 'ebay/types/payments_information'
 require 'ebay/types/pickup_options'
 require 'ebay/types/pickup_method_selected'
 require 'ebay/types/cancel_detail'
+require 'ebay/types/tax_identifier'
+require 'ebay/types/buyer_package_enclosure'
 
 module Ebay # :nodoc:
   module Types # :nodoc:
@@ -56,6 +58,10 @@ module Ebay # :nodoc:
     #  text_node :cancel_reason_details, 'CancelReasonDetails', :optional => true
     #  money_node :shipping_convenience_charge, 'ShippingConvenienceCharge', :optional => true
     #  array_node :cancel_details, 'CancelDetail', :class => CancelDetail, :default_value => []
+    #  text_node :logistics_plan_type, 'LogisticsPlanType', :optional => true
+    #  array_node :buyer_tax_identifiers, 'BuyerTaxIdentifier', :class => TaxIdentifier, :default_value => []
+    #  array_node :buyer_package_enclosures, 'BuyerPackageEnclosures', 'BuyerPackageEnclosure', :class => BuyerPackageEnclosure, :default_value => []
+    #  text_node :extended_order_id, 'ExtendedOrderID', :optional => true
     class Order
       include XML::Mapping
       include Initializer
@@ -101,6 +107,10 @@ module Ebay # :nodoc:
       text_node :cancel_reason_details, 'CancelReasonDetails', :optional => true
       money_node :shipping_convenience_charge, 'ShippingConvenienceCharge', :optional => true
       array_node :cancel_details, 'CancelDetail', :class => CancelDetail, :default_value => []
+      text_node :logistics_plan_type, 'LogisticsPlanType', :optional => true
+      array_node :buyer_tax_identifiers, 'BuyerTaxIdentifier', :class => TaxIdentifier, :default_value => []
+      array_node :buyer_package_enclosures, 'BuyerPackageEnclosures', 'BuyerPackageEnclosure', :class => BuyerPackageEnclosure, :default_value => []
+      text_node :extended_order_id, 'ExtendedOrderID', :optional => true
     end
   end
 end

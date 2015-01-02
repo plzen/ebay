@@ -1,10 +1,9 @@
 module Ebay # :nodoc:
   module Types # :nodoc:
-    class PickupMethodCode
+    class TaxIdentifierAttributeCode
       extend Enumerable
       extend Enumeration
-      InStorePickup = 'InStorePickup'
-      PickUpDropOff = 'PickUpDropOff'
+      IssuingCountry = 'IssuingCountry'
     end
   end
 end

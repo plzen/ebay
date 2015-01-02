@@ -50,6 +50,8 @@ module Ebay # :nodoc:
     #  boolean_node :qualifies_for_selling, 'QualifiesForSelling', 'true', 'false', :optional => true
     #  text_node :static_alias, 'StaticAlias', :optional => true
     #  object_node :shipping_address, 'ShippingAddress', :class => Address, :optional => true
+    #  text_node :user_first_name, 'UserFirstName', :optional => true
+    #  text_node :user_last_name, 'UserLastName', :optional => true
     class User
       include XML::Mapping
       include Initializer
@@ -97,6 +99,8 @@ module Ebay # :nodoc:
       boolean_node :qualifies_for_selling, 'QualifiesForSelling', 'true', 'false', :optional => true
       text_node :static_alias, 'StaticAlias', :optional => true
       object_node :shipping_address, 'ShippingAddress', :class => Address, :optional => true
+      text_node :user_first_name, 'UserFirstName', :optional => true
+      text_node :user_last_name, 'UserLastName', :optional => true
     end
   end
 end

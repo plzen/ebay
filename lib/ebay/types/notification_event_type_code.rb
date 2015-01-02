@@ -99,6 +99,7 @@ module Ebay # :nodoc:
       PaymentReminder = 'PaymentReminder'
       EBNOrderPickedUp = 'EBNOrderPickedUp'
       EBNOrderCanceled = 'EBNOrderCanceled'
+      M2MMessageStatusChange = 'M2MMessageStatusChange'
     end
   end
 end
