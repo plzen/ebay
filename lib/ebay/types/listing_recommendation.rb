@@ -1,3 +1,4 @@
+require 'ebay/types/metadata'
 
 module Ebay # :nodoc:
   module Types # :nodoc:
@@ -12,6 +13,7 @@ end
     #  text_node :code, 'Code', :optional => true
     #  text_node :value, 'Value', :optional => true
     #  text_node :message, 'Message', :optional => true
+    #  array_node :metadata, 'Metadata', :class => Metadata, :default_value => []
     class ListingRecommendation
       include XML::Mapping
       include Initializer
@@ -26,6 +28,7 @@ end
       text_node :code, 'Code', :optional => true
       text_node :value, 'Value', :optional => true
       text_node :message, 'Message', :optional => true
+      array_node :metadata, 'Metadata', :class => Metadata, :default_value => []
     end
   end
 end

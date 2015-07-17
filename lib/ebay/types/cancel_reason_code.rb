@@ -14,6 +14,8 @@ module Ebay # :nodoc:
       PriceTooHigh = 'PriceTooHigh'
       FoundCheaperPrice = 'FoundCheaperPrice'
       WontArriveInTime = 'WontArriveInTime'
+      BuyerCancelOrAddressIssue = 'BuyerCancelOrAddressIssue'
+      OutOfStockOrCannotFulfill = 'OutOfStockOrCannotFulfill'
     end
   end
 end

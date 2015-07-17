@@ -113,6 +113,9 @@ require 'ebay/types/condition_enabled_definition'
 require 'ebay/types/condition_values_definition'
 require 'ebay/types/value_category_definition'
 require 'ebay/types/product_creation_enabled_definition'
+require 'ebay/types/ean_enabled_definition'
+require 'ebay/types/isbn_enabled_definition'
+require 'ebay/types/upc_enabled_definition'
 require 'ebay/types/compatible_vehicle_type_definition'
 require 'ebay/types/max_granular_fitment_count_definition'
 require 'ebay/types/payment_options_group_enabled_definition'
@@ -123,6 +126,7 @@ require 'ebay/types/seller_provided_title_supported_definition'
 require 'ebay/types/deposit_supported_definition'
 require 'ebay/types/global_shipping_enabled_definition'
 require 'ebay/types/additional_compatibility_enabled_definition'
+require 'ebay/types/pickup_drop_off_enabled_definition'
 
 module Ebay # :nodoc:
   module Types # :nodoc:
@@ -242,6 +246,9 @@ module Ebay # :nodoc:
     #  object_node :condition_values, 'ConditionValues', :class => ConditionValuesDefinition, :optional => true
     #  object_node :value_category, 'ValueCategory', :class => ValueCategoryDefinition, :optional => true
     #  object_node :product_creation_enabled, 'ProductCreationEnabled', :class => ProductCreationEnabledDefinition, :optional => true
+    #  object_node :ean_enabled, 'EANEnabled', :class => EANEnabledDefinition, :optional => true
+    #  object_node :isbn_enabled, 'ISBNEnabled', :class => ISBNEnabledDefinition, :optional => true
+    #  object_node :upc_enabled, 'UPCEnabled', :class => UPCEnabledDefinition, :optional => true
     #  object_node :compatible_vehicle_type, 'CompatibleVehicleType', :class => CompatibleVehicleTypeDefinition, :optional => true
     #  object_node :max_granular_fitment_count, 'MaxGranularFitmentCount', :class => MaxGranularFitmentCountDefinition, :optional => true
     #  object_node :payment_options_group, 'PaymentOptionsGroup', :class => PaymentOptionsGroupEnabledDefinition, :optional => true
@@ -254,6 +261,7 @@ module Ebay # :nodoc:
     #  object_node :deposit_supported, 'DepositSupported', :class => DepositSupportedDefinition, :optional => true
     #  object_node :global_shipping_enabled, 'GlobalShippingEnabled', :class => GlobalShippingEnabledDefinition, :optional => true
     #  object_node :additional_compatibility_enabled, 'AdditionalCompatibilityEnabled', :class => AdditionalCompatibilityEnabledDefinition, :optional => true
+    #  object_node :pickup_drop_off_enabled, 'PickupDropOffEnabled', :class => PickupDropOffEnabledDefinition, :optional => true
     class FeatureDefinitions
       include XML::Mapping
       include Initializer
@@ -373,6 +381,9 @@ module Ebay # :nodoc:
       object_node :condition_values, 'ConditionValues', :class => ConditionValuesDefinition, :optional => true
       object_node :value_category, 'ValueCategory', :class => ValueCategoryDefinition, :optional => true
       object_node :product_creation_enabled, 'ProductCreationEnabled', :class => ProductCreationEnabledDefinition, :optional => true
+      object_node :ean_enabled, 'EANEnabled', :class => EANEnabledDefinition, :optional => true
+      object_node :isbn_enabled, 'ISBNEnabled', :class => ISBNEnabledDefinition, :optional => true
+      object_node :upc_enabled, 'UPCEnabled', :class => UPCEnabledDefinition, :optional => true
       object_node :compatible_vehicle_type, 'CompatibleVehicleType', :class => CompatibleVehicleTypeDefinition, :optional => true
       object_node :max_granular_fitment_count, 'MaxGranularFitmentCount', :class => MaxGranularFitmentCountDefinition, :optional => true
       object_node :payment_options_group, 'PaymentOptionsGroup', :class => PaymentOptionsGroupEnabledDefinition, :optional => true
@@ -385,6 +396,7 @@ module Ebay # :nodoc:
       object_node :deposit_supported, 'DepositSupported', :class => DepositSupportedDefinition, :optional => true
       object_node :global_shipping_enabled, 'GlobalShippingEnabled', :class => GlobalShippingEnabledDefinition, :optional => true
       object_node :additional_compatibility_enabled, 'AdditionalCompatibilityEnabled', :class => AdditionalCompatibilityEnabledDefinition, :optional => true
+      object_node :pickup_drop_off_enabled, 'PickupDropOffEnabled', :class => PickupDropOffEnabledDefinition, :optional => true
     end
   end
 end

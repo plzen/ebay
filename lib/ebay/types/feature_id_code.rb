@@ -113,6 +113,9 @@ module Ebay # :nodoc:
       ConditionValues = 'ConditionValues'
       ValueCategory = 'ValueCategory'
       ProductCreationEnabled = 'ProductCreationEnabled'
+      EANEnabled = 'EANEnabled'
+      ISBNEnabled = 'ISBNEnabled'
+      UPCEnabled = 'UPCEnabled'
       MaxGranularFitmentCount = 'MaxGranularFitmentCount'
       CompatibleVehicleType = 'CompatibleVehicleType'
       PaymentOptionsGroup = 'PaymentOptionsGroup'
@@ -125,6 +128,7 @@ module Ebay # :nodoc:
       DepositSupported = 'DepositSupported'
       GlobalShippingEnabled = 'GlobalShippingEnabled'
       AdditionalCompatibilityEnabled = 'AdditionalCompatibilityEnabled'
+      PickupDropOffEnabled = 'PickupDropOffEnabled'
     end
   end
 end

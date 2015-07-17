@@ -7,6 +7,7 @@ module Ebay # :nodoc:
     #  text_node :pickup_status, 'PickupStatus', :optional => true
     #  text_node :merchant_pickup_code, 'MerchantPickupCode', :optional => true
     #  datetime_node :pickup_fulfillment_time, 'PickupFulfillmentTime', :optional => true
+    #  text_node :pickup_location_uuid, 'PickupLocationUUID', :optional => true
     class PickupMethodSelected
       include XML::Mapping
       include Initializer
@@ -16,6 +17,7 @@ module Ebay # :nodoc:
       text_node :pickup_status, 'PickupStatus', :optional => true
       text_node :merchant_pickup_code, 'MerchantPickupCode', :optional => true
       datetime_node :pickup_fulfillment_time, 'PickupFulfillmentTime', :optional => true
+      text_node :pickup_location_uuid, 'PickupLocationUUID', :optional => true
     end
   end
 end

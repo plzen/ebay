@@ -93,12 +93,14 @@ module Ebay # :nodoc:
       ReturnRefundOverdue = 'ReturnRefundOverdue'
       ReturnClosed = 'ReturnClosed'
       ReturnEscalated = 'ReturnEscalated'
+      BuyerCancelRequested = 'BuyerCancelRequested'
       UnmatchedPaymentReceived = 'UnmatchedPaymentReceived'
       RefundSuccess = 'RefundSuccess'
       RefundFailure = 'RefundFailure'
       PaymentReminder = 'PaymentReminder'
       EBNOrderPickedUp = 'EBNOrderPickedUp'
       EBNOrderCanceled = 'EBNOrderCanceled'
+      M2MMessageStatusChange = 'M2MMessageStatusChange'
     end
   end
 end

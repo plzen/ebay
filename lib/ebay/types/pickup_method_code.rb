@@ -4,6 +4,7 @@ module Ebay # :nodoc:
       extend Enumerable
       extend Enumeration
       InStorePickup = 'InStorePickup'
+      PickUpDropOff = 'PickUpDropOff'
     end
   end
 end

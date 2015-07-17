@@ -177,9 +177,9 @@ module Ebay # :nodoc:
     #  array_node :shipping_service_cost_override_lists, 'ShippingServiceCostOverrideList', 'ShippingServiceCostOverride', :class => ShippingServiceCostOverride, :default_value => []
     #  object_node :shipping_package_details, 'ShippingPackageDetails', :class => ShipPackageDetails, :optional => true
     #  boolean_node :top_rated_listing, 'TopRatedListing', 'true', 'false', :optional => true
+    #  object_node :quantity_restriction_per_buyer, 'QuantityRestrictionPerBuyer', :class => QuantityRestrictionPerBuyerInfo, :optional => true
     #  money_node :floor_price, 'FloorPrice', :optional => true
     #  money_node :ceiling_price, 'CeilingPrice', :optional => true
-    #  object_node :quantity_restriction_per_buyer, 'QuantityRestrictionPerBuyer', :class => QuantityRestrictionPerBuyerInfo, :optional => true
     #  boolean_node :is_intermediated_shipping_eligible, 'IsIntermediatedShippingEligible', 'true', 'false', :optional => true
     #  object_node :unit_info, 'UnitInfo', :class => UnitInfo, :optional => true
     #  numeric_node :relist_parent_id, 'RelistParentID', :optional => true
@@ -187,11 +187,13 @@ module Ebay # :nodoc:
     #  boolean_node :hide_from_search, 'HideFromSearch', 'true', 'false', :optional => true
     #  text_node :reason_hide_from_search, 'ReasonHideFromSearch', :optional => true
     #  boolean_node :include_recommendations, 'IncludeRecommendations', 'true', 'false', :optional => true
-    #  boolean_node :out_of_stock_control, 'OutOfStockControl', 'true', 'false', :optional => true
     #  object_node :pickup_in_store_details, 'PickupInStoreDetails', :class => PickupInStoreDetails, :optional => true
     #  boolean_node :ebay_now_eligible, 'eBayNowEligible', 'true', 'false', :optional => true
     #  boolean_node :ebay_now_available, 'eBayNowAvailable', 'true', 'false', :optional => true
-    #  boolean_node :ignore_quantity, 'ignoreQuantity', 'true', 'false', :optional => true
+    #  boolean_node :ignore_quantity, 'IgnoreQuantity', 'true', 'false', :optional => true
+    #  boolean_node :available_for_pickup_drop_off, 'AvailableForPickupDropOff', 'true', 'false', :optional => true
+    #  boolean_node :eligible_for_pickup_drop_off, 'EligibleForPickupDropOff', 'true', 'false', :optional => true
+    #  boolean_node :live_auction, 'LiveAuction', 'true', 'false', :optional => true
     class Item
       include XML::Mapping
       include Initializer
@@ -330,9 +332,9 @@ module Ebay # :nodoc:
       array_node :shipping_service_cost_override_lists, 'ShippingServiceCostOverrideList', 'ShippingServiceCostOverride', :class => ShippingServiceCostOverride, :default_value => []
       object_node :shipping_package_details, 'ShippingPackageDetails', :class => ShipPackageDetails, :optional => true
       boolean_node :top_rated_listing, 'TopRatedListing', 'true', 'false', :optional => true
+      object_node :quantity_restriction_per_buyer, 'QuantityRestrictionPerBuyer', :class => QuantityRestrictionPerBuyerInfo, :optional => true
       money_node :floor_price, 'FloorPrice', :optional => true
       money_node :ceiling_price, 'CeilingPrice', :optional => true
-      object_node :quantity_restriction_per_buyer, 'QuantityRestrictionPerBuyer', :class => QuantityRestrictionPerBuyerInfo, :optional => true
       boolean_node :is_intermediated_shipping_eligible, 'IsIntermediatedShippingEligible', 'true', 'false', :optional => true
       object_node :unit_info, 'UnitInfo', :class => UnitInfo, :optional => true
       numeric_node :relist_parent_id, 'RelistParentID', :optional => true
@@ -340,11 +342,13 @@ module Ebay # :nodoc:
       boolean_node :hide_from_search, 'HideFromSearch', 'true', 'false', :optional => true
       text_node :reason_hide_from_search, 'ReasonHideFromSearch', :optional => true
       boolean_node :include_recommendations, 'IncludeRecommendations', 'true', 'false', :optional => true
-      boolean_node :out_of_stock_control, 'OutOfStockControl', 'true', 'false', :optional => true
       object_node :pickup_in_store_details, 'PickupInStoreDetails', :class => PickupInStoreDetails, :optional => true
       boolean_node :ebay_now_eligible, 'eBayNowEligible', 'true', 'false', :optional => true
       boolean_node :ebay_now_available, 'eBayNowAvailable', 'true', 'false', :optional => true
-      boolean_node :ignore_quantity, 'ignoreQuantity', 'true', 'false', :optional => true
+      boolean_node :ignore_quantity, 'IgnoreQuantity', 'true', 'false', :optional => true
+      boolean_node :available_for_pickup_drop_off, 'AvailableForPickupDropOff', 'true', 'false', :optional => true
+      boolean_node :eligible_for_pickup_drop_off, 'EligibleForPickupDropOff', 'true', 'false', :optional => true
+      boolean_node :live_auction, 'LiveAuction', 'true', 'false', :optional => true
     end
   end
 end

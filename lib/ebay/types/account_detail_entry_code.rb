@@ -287,6 +287,10 @@ module Ebay # :nodoc:
       CreditAPACTNTShippingLabel = 'CreditAPACTNTShippingLabel'
       FeeEBPReimbursement = 'FeeEBPReimbursement'
       CreditEBPReimbursement = 'CreditEBPReimbursement'
+      FeePromotedListingFeature = 'FeePromotedListingFeature'
+      CreditPromotedListingFeature = 'CreditPromotedListingFeature'
+      FeeAd = 'FeeAd'
+      CreditAd = 'CreditAd'
     end
   end
 end
