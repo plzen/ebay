@@ -2,7 +2,7 @@
 $:.unshift File.dirname(__FILE__)
 $:.unshift File.join(File.dirname(__FILE__), '..', 'lib')
 
-require 'ebay'
+require 'ebay_trading'
 require 'config'
 
 # The buyer and seller must be in a transactional relationship
@@ -11,10 +11,10 @@ require 'config'
 # 
 # A new message will be delivered to the recipients My Messages inbox
 #
-ebay = Ebay::Api.new
+ebay = EbayTrading::Api.new
 begin
 
-  message = Ebay::Types::MemberMessage.new(
+  message = EbayTrading::Types::MemberMessage.new(
     :body => 'This is a test question',
     :question_type => 'General',
     :recipient_id => ARGV.first
@@ -26,7 +26,7 @@ begin
   )
 
   puts "Successfully sent the message"
-rescue Ebay::RequestError => e
+rescue EbayTrading::RequestError => e
   e.errors.each do |error|
     puts error.long_message
   end

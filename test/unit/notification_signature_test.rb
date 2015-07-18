@@ -2,7 +2,7 @@ require File.dirname(__FILE__) + '/../test_helper'
 require 'digest/md5'
 
 class NotificationSignatureTest < Test::Unit::TestCase
-  include Ebay
+  include EbayTrading
   def test_notification_signature
     timestamp = '2006-06-12T02:06:38.388Z'
     signature = 'ByWKVk2bME85RahGGTpjwQ=='

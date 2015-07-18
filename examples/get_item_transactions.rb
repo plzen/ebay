@@ -2,10 +2,10 @@
 $:.unshift File.dirname(__FILE__)
 $:.unshift File.join(File.dirname(__FILE__), '..', 'lib')
 
-require 'ebay'
+require 'ebay_trading'
 require 'config'
 
-ebay = Ebay::Api.new
+ebay = EbayTrading::Api.new
 
 begin
   # First get the item in question so that we can determine the
@@ -29,7 +29,7 @@ begin
     puts "Item Paid On: #{t.paid_time}"
     puts "Item Shipped On: #{t.shipped_time}"
   end
-rescue Ebay::RequestError => e
+rescue EbayTrading::RequestError => e
   e.errors.each do |error|
     puts error.long_message
   end

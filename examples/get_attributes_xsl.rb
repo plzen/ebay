@@ -1,10 +1,10 @@
 #!/usr/bin/ruby
 $:.unshift File.dirname(__FILE__)
 $:.unshift File.join(File.dirname(__FILE__), '..', 'lib')
-require 'ebay'
+require 'ebay_trading'
 require 'config'
 
-ebay = Ebay::Api.new
+ebay = EbayTrading::Api.new
 
 begin
   response = ebay.get_attributes_xsl(:detail_level => 'ReturnAll')
@@ -18,7 +18,7 @@ begin
   File.open(file.file_name, 'w') do |f|
     f.puts file.file_content
   end
-rescue Ebay::RequestError => e
+rescue EbayTrading::RequestError => e
   e.errors.each do |error|
     puts error.long_message
   end

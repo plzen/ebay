@@ -2,20 +2,20 @@ require File.dirname(__FILE__) + '/../test_helper'
 
 class Auction
   include XML::Mapping
-  include Ebay::Initializer
+  include EbayTrading::Initializer
   attr_accessor :name, :duration
 end
 
 class Anvil
   include XML::Mapping
-  include Ebay::Initializer
+  include EbayTrading::Initializer
 
   text_node :name, 'name'
 end
 
 class Toolbox
   include XML::Mapping
-  include Ebay::Initializer
+  include EbayTrading::Initializer
   
   text_node :size, 'size'  
   object_node :tool, 'tool', :class => Anvil
@@ -64,7 +64,7 @@ class BaseObjectTest < Test::Unit::TestCase
 end
 
 class ItemInitializationTest < Test::Unit::TestCase
-  include Ebay::Types
+  include EbayTrading::Types
 
   def test_simple_initialization
     assert_nothing_raised do

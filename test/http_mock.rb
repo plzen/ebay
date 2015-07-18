@@ -1,4 +1,4 @@
-module Ebay
+module EbayTrading
   class HttpMock
     class << self
       def responses

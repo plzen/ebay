@@ -2,10 +2,10 @@
 $:.unshift File.dirname(__FILE__)
 $:.unshift File.join(File.dirname(__FILE__),'..', 'lib')
 
-require 'ebay'
+require 'ebay_trading'
 require 'config'
 
-ebay = Ebay::Api.new
+ebay = EbayTrading::Api.new
 
 # Get the messages from MyMessages
 begin
@@ -13,7 +13,7 @@ begin
   response.messages.each do |message|
     puts "Sender: #{message.sender} Subject: #{message.subject}"
   end
-rescue Ebay::RequestError => e
+rescue EbayTrading::RequestError => e
   e.errors.each do |error|
     puts error.long_message
   end
