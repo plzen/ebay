@@ -8,7 +8,7 @@ require 'rake/testtask'
 require 'rake/contrib/rubyforgepublisher'
 require 'rdoc/task'
 
-PKG_VERSION = "0.0.1"
+PKG_VERSION = "0.0.2"
 PKG_NAME = "ebay_trading"
 PKG_FILE_NAME = "#{PKG_NAME}-#{PKG_VERSION}"
 
