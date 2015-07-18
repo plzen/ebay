@@ -2,7 +2,7 @@
 $:.unshift File.dirname(__FILE__)
 $:.unshift File.join(File.dirname(__FILE__),'..', 'lib')
 
-require 'ebay'
+require 'ebay-trading'
 
 # config.rb contains the authentication configuration for the user account
 # config.rb also tells eBay to use the Sandbox for this call
