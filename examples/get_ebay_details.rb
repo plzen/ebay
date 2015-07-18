@@ -2,10 +2,10 @@
 $:.unshift File.dirname(__FILE__)
 $:.unshift File.join(File.dirname(__FILE__),'..', 'lib')
 
-require 'ebay'
+require 'ebay_trading'
 require 'config'
 
-ebay = Ebay::Api.new
+ebay = EbayTrading::Api.new
 
 begin
   # Get the eBay site details.  This time we only want the SiteDetails, so
@@ -15,7 +15,7 @@ begin
   response.site_details.each do |site|
     puts "#{site.site} (#{site.site_id})"
   end
-rescue Ebay::RequestError => e
+rescue EbayTrading::RequestError => e
   e.errors.each do |error|
     puts error.long_message
   end

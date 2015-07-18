@@ -9,7 +9,7 @@ require 'rake/contrib/rubyforgepublisher'
 require 'rdoc/task'
 
 PKG_VERSION = "0.0.1"
-PKG_NAME = "ebay-trading"
+PKG_NAME = "ebay_trading"
 PKG_FILE_NAME = "#{PKG_NAME}-#{PKG_VERSION}"
 
 PKG_FILES = FileList[
@@ -45,7 +45,7 @@ namespace :schema do
   task :update do
     puts 'Updating the eBay schema'
   
-      folder = File.dirname(__FILE__) + "/lib/ebay-trading/schema"
+      folder = File.dirname(__FILE__) + "/lib/ebay_trading/schema"
       url = 'http://developer.ebay.com/webservices/latest/ebaySvc.xsd'
 
       cd folder do
@@ -56,12 +56,12 @@ namespace :schema do
 
   desc "Update the schema version"
   task :update_version do
-    schema = File.dirname(__FILE__) + '/lib/ebay-trading/schema/ebaySvc.xsd'
+    schema = File.dirname(__FILE__) + '/lib/ebay_trading/schema/ebaySvc.xsd'
     # Update the schema version string
 
     File.read(schema) =~ /Version (\d+)/m
     if version = $1
-      version_file_path = File.dirname(__FILE__) + "/lib/ebay-trading/schema/version.rb"
+      version_file_path = File.dirname(__FILE__) + "/lib/ebay_trading/schema/version.rb"
       version_file = File.read(version_file_path)
       version_file.gsub!(/VERSION = \d+/, "VERSION = #{version}")
       File.open(version_file_path, 'w') do |f|
@@ -77,22 +77,22 @@ namespace :classes do
   desc "Remove the generated Ruby classes"
   task :cleanup do
     FileList[
-      "lib/ebay-trading/requests.rb", "lib/ebay-trading/responses.rb", "lib/ebay-trading/types.rb", "lib/ebay-trading/requests/*.rb", 
-      "lib/ebay-trading/responses/*.rb", "lib/ebay-trading/types/*.rb"
+      "lib/ebay_trading/requests.rb", "lib/ebay_trading/responses.rb", "lib/ebay_trading/types.rb", "lib/ebay_trading/requests/*.rb", 
+      "lib/ebay_trading/responses/*.rb", "lib/ebay_trading/types/*.rb"
     ].each{|f| rm_rf f }
   end 
   
   desc "Generate Ruby classes from the schema file and updates the schema version"
   task :generate => [:cleanup, 'schema:update_version'] do
-    require 'ebay-trading'
-    require 'ebay-trading/schema/mapper'
+    require 'ebay_trading'
+    require 'ebay_trading/schema/mapper'
     %w(requests responses types).each do |dir|
-      folder = File.dirname(__FILE__) + "/lib/ebay-trading/#{dir}"
+      folder = File.dirname(__FILE__) + "/lib/ebay_trading/#{dir}"
       Dir.mkdir(folder) unless File.directory?(folder)
     end
-    schema = File.dirname(__FILE__) + '/lib/ebay-trading/schema/ebaySvc.xsd'
+    schema = File.dirname(__FILE__) + '/lib/ebay_trading/schema/ebaySvc.xsd'
     data = File.read(schema)
-    Ebay::Schema::XSD2eBay.run(data, File.dirname(__FILE__) + '/lib/ebay-trading')
+    EbayTrading::Schema::XSD2eBay.run(data, File.dirname(__FILE__) + '/lib/ebay_trading')
   end
 end
 
@@ -102,6 +102,6 @@ Rake::RDocTask.new { |rdoc|
   rdoc.options << '--line-numbers' << '--inline-source' << '--main=README'
   rdoc.rdoc_files.include('README', 'CHANGELOG')
   rdoc.rdoc_files.include('lib/**/*.rb')
-  rdoc.rdoc_files.exclude('lib/ebay-trading/schema')
+  rdoc.rdoc_files.exclude('lib/ebay_trading/schema')
   rdoc.rdoc_files.exclude('lib/support')
 }

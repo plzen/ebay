@@ -2,12 +2,12 @@
 $:.unshift File.dirname(__FILE__)
 $:.unshift File.join(File.dirname(__FILE__),'..', 'lib')
 
-require 'ebay'
+require 'ebay_trading'
 require 'config'
 
-include Ebay::Types
+include EbayTrading::Types
 
-ebay = Ebay::Api.new
+ebay = EbayTrading::Api.new
 
 begin
   
@@ -44,7 +44,7 @@ begin
     current_page += 1
   end while response.has_more_items
   
-rescue Ebay::RequestError => e
+rescue EbayTrading::RequestError => e
   e.errors.each do |error|
     puts error.long_message
   end

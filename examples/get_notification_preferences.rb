@@ -2,12 +2,12 @@
 $:.unshift File.dirname(__FILE__)
 $:.unshift File.join(File.dirname(__FILE__), '..', 'lib')
 
-require 'ebay'
+require 'ebay_trading'
 require 'config'
 
 scope = ARGV.first
 
-ebay = Ebay::Api.new
+ebay = EbayTrading::Api.new
 
 begin
   # Get the notificiation preferences for either the Application or User scope
@@ -27,7 +27,7 @@ begin
   else
     puts "Please specify 'Application' or 'User'"
   end
-rescue Ebay::RequestError => e
+rescue EbayTrading::RequestError => e
   e.errors.each do |error|
     puts error.long_message
   end

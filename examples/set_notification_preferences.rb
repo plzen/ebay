@@ -2,13 +2,13 @@
 $:.unshift File.dirname(__FILE__)
 $:.unshift File.join(File.dirname(__FILE__),'..', 'lib')
 
-require 'ebay'
+require 'ebay_trading'
 require 'config'
 
-ebay = Ebay::Api.new
+ebay = EbayTrading::Api.new
 
 # Set the 'Disable' to 'Enable' to enable the notifications
-preferences = Ebay::Types::ApplicationDeliveryPreferences.new( 
+preferences = EbayTrading::Types::ApplicationDeliveryPreferences.new( 
   :application_url => 'http://example.com/notify', 
   :application_enable => 'Disable', 
   :alert_enable => 'Disable' 
@@ -20,7 +20,7 @@ begin
     :application_delivery_preferences => preferences
   )
   puts "Successfully disabled application platform notifications: #{response.success?}"
-rescue Ebay::RequestError => e
+rescue EbayTrading::RequestError => e
   e.errors.each do |error|
     puts error.long_message
   end

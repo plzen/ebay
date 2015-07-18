@@ -1,13 +1,13 @@
 #!/usr/bin/ruby
 $:.unshift File.dirname(__FILE__)
 $:.unshift File.join(File.dirname(__FILE__), '..', 'lib')
-require 'ebay'
+require 'ebay_trading'
 require 'config'
 
-ebay = Ebay::Api.new
+ebay = EbayTrading::Api.new
 
 # Revise the item identified by the item_id passed in on the command line
-item = Ebay::Types::Item.new(
+item = EbayTrading::Types::Item.new(
   :item_id => ARGV.first, 
   :description => 'Revised Body'
 )
@@ -27,7 +27,7 @@ begin
       puts "  #{f.name}: #{f.fee.format(:with_currency)}"
     end
   end
-rescue Ebay::RequestError => e
+rescue EbayTrading::RequestError => e
   e.errors.each do |error|
     puts error.long_message
   end

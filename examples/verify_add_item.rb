@@ -2,14 +2,14 @@
 $:.unshift File.dirname(__FILE__)
 $:.unshift File.join(File.dirname(__FILE__),'..', 'lib')
 
-require 'ebay'
+require 'ebay_trading'
 require 'config'
 
 # This is the same as add_item, but doesn't actually list the item
-ebay = Ebay::Api.new
+ebay = EbayTrading::Api.new
 
-item = Ebay::Types::Item.new(
-  :primary_category => Ebay::Types::Category.new(:category_id => 57882),
+item = EbayTrading::Types::Item.new(
+  :primary_category => EbayTrading::Types::Category.new(:category_id => 57882),
   :title => 'Ruby eBay API Test Listing',
   :description => 'Welcome!',
   :location => 'Ottawa, On',
@@ -30,7 +30,7 @@ begin
   response.fees.select{|f| !f.fee.zero? }.each do |f|
     puts "  #{f.name}: #{f.fee.format(:with_currency)}"
   end
-rescue Ebay::RequestError => e
+rescue EbayTrading::RequestError => e
   e.errors.each do |error|
     puts error.long_message
   end

@@ -2,11 +2,11 @@
 $:.unshift File.dirname(__FILE__)
 $:.unshift File.join(File.dirname(__FILE__),'..', 'lib')
 
-require 'ebay'
+require 'ebay_trading'
 require 'config'
 
-include Ebay
-include Ebay::Types
+include EbayTrading
+include EbayTrading::Types
 
 # With no options, the default is to use the default site_id and the default
 # auth_token configured on the Api class.
@@ -78,7 +78,7 @@ begin
   response.fees.select{|f| !f.fee.zero? }.each do |f|
     puts "  #{f.name}: #{f.fee.format(:with_currency)}"
   end
-rescue Ebay::RequestError => e
+rescue EbayTrading::RequestError => e
   e.errors.each do |error|
     puts error.long_message
   end

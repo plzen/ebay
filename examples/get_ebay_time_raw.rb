@@ -2,14 +2,14 @@
 $:.unshift File.dirname(__FILE__)
 $:.unshift File.join(File.dirname(__FILE__),'..', 'lib')
 
-require 'ebay'
+require 'ebay_trading'
 require 'config'
 
 # Sometimes it is better to receive the raw XML response from eBay.
 # This is beneficial for calls like get_categories(:detail_level => 'ReturnAll'),
 # which can return 27,000+ categories.  It is usefull in a case like that
 # to use an event based XML listener and process the tags as you go.
-ebay = Ebay::Api.new(:format => :raw)
+ebay = EbayTrading::Api.new(:format => :raw)
 
 begin
   # Get the raw XML response.  This can also be done by passing in :format => :raw
@@ -21,7 +21,7 @@ begin
   xml = REXML::Document.new(response)
   xml.write(STDOUT, 0)
 
-rescue Ebay::RequestError => e
+rescue EbayTrading::RequestError => e
   # Display any request errors to the user.  A RequestError is only raised when
   # the request has a Failure or PartialFailure status.
   e.errors.each do |error|

@@ -1,2 +1,2 @@
-require 'ebay-trading'
+require 'ebay_trading'
 

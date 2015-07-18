@@ -2,10 +2,10 @@
 $:.unshift File.dirname(__FILE__)
 $:.unshift File.join(File.dirname(__FILE__),'..', 'lib')
 
-require 'ebay'
+require 'ebay_trading'
 require 'config'
 
-ebay = Ebay::Api.new
+ebay = EbayTrading::Api.new
 
 begin
   # Get details about the user passed in as the first argument
@@ -18,7 +18,7 @@ begin
   puts "The user is registered in #{user.site}"
   puts "The user is new? #{user.new_user}"
   puts "The user is in good standing with eBay? #{user.ebay_good_standing}"
-rescue Ebay::RequestError => e
+rescue EbayTrading::RequestError => e
   e.errors.each do |error|
     puts error.long_message
   end
