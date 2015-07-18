@@ -1,9 +1,9 @@
 require File.dirname(__FILE__) + '/../test_helper'
-require 'ebay/responses/get_ebay_official_time'
-require 'ebay/responses/verify_add_item'
+require 'ebay_trading/responses/get_ebay_official_time'
+require 'ebay_trading/responses/verify_add_item'
 
 class EbayMappingTest < Test::Unit::TestCase
-  include Ebay::Responses
+  include EbayTrading::Responses
 
 	def setup
 		@ebay_time = GeteBayOfficialTime.load_from_file(response_file_path('official_time_success'))

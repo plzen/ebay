@@ -2,7 +2,7 @@ require File.dirname(__FILE__) + '/../test_helper'
 require 'yaml'
 
 class NotificationsTest < Test::Unit::TestCase
-  include Ebay
+  include EbayTrading
  
   def setup
     @notification = Notification.new(notifications('ask_seller_question'))

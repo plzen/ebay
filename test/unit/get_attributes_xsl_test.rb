@@ -1,8 +1,8 @@
 require File.dirname(__FILE__) + '/../test_helper'
 
 class GetAttributesXSLTest < Test::Unit::TestCase
-  include Ebay
-  include Ebay::Types
+  include EbayTrading
+  include EbayTrading::Types
 
   def setup
     @ebay = Api.new

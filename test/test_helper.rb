@@ -3,7 +3,7 @@ $:.unshift File.join(File.dirname(__FILE__), "..", "lib")
 $:.unshift File.join(File.dirname(__FILE__), "..", "lib", "schema")
 
 require 'test/unit'
-require 'ebay'
+require 'ebay_trading'
 require 'http_mock'
 require 'credentials'
 
@@ -13,7 +13,7 @@ class Test::Unit::TestCase #:nodoc:
 
   protected
   def responses(name, code = 200)
-    Ebay::Response.new(load_response(name), code)
+    EbayTrading::Response.new(load_response(name), code)
   end
 
   def load_response(name)

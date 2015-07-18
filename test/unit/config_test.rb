@@ -1,8 +1,8 @@
 require File.dirname(__FILE__) + '/../test_helper'
 
 class ConfigTest < Test::Unit::TestCase
-  include Ebay
-  include Ebay::Requests
+  include EbayTrading
+  include EbayTrading::Requests
 
   def test_production_configuration
     assert !Api.using_sandbox?
